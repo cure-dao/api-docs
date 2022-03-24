@@ -1705,27 +1705,20 @@ components:
         additionalSettings:
           type: object
           properties: {}
-          description: null
         appDescription:
           type: string
-          description: null
         appDesign:
           type: object
           properties: {}
-          description: null
         appDisplayName:
           type: string
-          description: null
         appStatus:
           type: object
           properties: {}
-          description: null
         appType:
           type: string
-          description: null
         buildEnabled:
           type: string
-          description: null
         clientId:
           type: string
           description: 'Get yours at https:://builder.quantimo.do'
@@ -1734,42 +1727,32 @@ components:
           description: 'Get yours at https:://builder.quantimo.do'
         collaborators:
           type: array
-          description: null
           items:
             $ref: '#/components/schemas/User'
         createdAt:
           type: string
-          description: null
         userId:
           type: integer
           description: User id of the owner of the application
           format: int32
         users:
           type: array
-          description: null
           items:
             $ref: '#/components/schemas/User'
         redirectUri:
           type: string
-          description: null
         companyName:
           type: string
-          description: null
         homepageUrl:
           type: string
-          description: null
         iconUrl:
           type: string
-          description: null
         longDescription:
           type: string
-          description: null
         splashScreen:
           type: string
-          description: null
         textLogo:
           type: string
-          description: null
     AppSettingsResponse:
       required:
         - description
@@ -2618,46 +2601,33 @@ components:
       properties:
         displayName:
           type: string
-          description: null
         helpText:
           type: string
-          description: null
         hint:
           type: string
-          description: null
         icon:
           type: string
-          description: null
         id:
           type: string
           description: HTML element id
         image:
           type: string
-          description: null
         key:
           type: string
-          description: null
         labelLeft:
           type: string
-          description: null
         labelRight:
           type: string
-          description: null
         link:
           type: string
-          description: null
         maxLength:
           type: integer
-          description: null
         maxValue:
           type: number
-          description: null
         minLength:
           type: integer
-          description: null
         minValue:
           type: number
-          description: null
         options:
           type: array
           description: Selector list options
@@ -2668,10 +2638,8 @@ components:
           description: 'Ex: Title'
         postUrl:
           type: string
-          description: null
         required:
           type: boolean
-          description: null
         show:
           type: boolean
           description: 'Ex: Title'
@@ -2697,7 +2665,6 @@ components:
           description: 'See http://html5pattern.com/ for examples'
         value:
           type: string
-          description: null
     GetConnectorsResponse:
       required:
         - description
