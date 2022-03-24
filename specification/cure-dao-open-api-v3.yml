@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
-  title: cure-dao-unified-health-api
-  description: 'A platform for participant-centered research and personal data exploration'
+  title: CureDAO Unified Health API
+  description: A platform for participant-centered research and personal data exploration
   termsOfService: 'https://quantimo.do/tos'
   contact:
     name: hello@curedao.org
@@ -2411,27 +2411,27 @@ components:
         additionalSettings:
           type: object
           properties: {}
-          description: 
+          description: null
         appDescription:
           type: string
-          description: 
+          description: null
         appDesign:
           type: object
           properties: {}
-          description: 
+          description: null
         appDisplayName:
           type: string
-          description: 
+          description: null
         appStatus:
           type: object
           properties: {}
-          description: 
+          description: null
         appType:
           type: string
-          description: 
+          description: null
         buildEnabled:
           type: string
-          description: 
+          description: null
         clientId:
           type: string
           description: 'Get yours at https:://builder.quantimo.do'
@@ -2440,42 +2440,42 @@ components:
           description: 'Get yours at https:://builder.quantimo.do'
         collaborators:
           type: array
-          description: 
+          description: null
           items:
             $ref: '#/components/schemas/User'
         createdAt:
           type: string
-          description: 
+          description: null
         userId:
           type: integer
           description: User id of the owner of the application
           format: int32
         users:
           type: array
-          description: 
+          description: null
           items:
             $ref: '#/components/schemas/User'
         redirectUri:
           type: string
-          description: 
+          description: null
         companyName:
           type: string
-          description: 
+          description: null
         homepageUrl:
           type: string
-          description: 
+          description: null
         iconUrl:
           type: string
-          description: 
+          description: null
         longDescription:
           type: string
-          description: 
+          description: null
         splashScreen:
           type: string
-          description: 
+          description: null
         textLogo:
           type: string
-          description: 
+          description: null
     AppSettingsResponse:
       required:
         - description
@@ -3324,46 +3324,46 @@ components:
       properties:
         displayName:
           type: string
-          description: 
+          description: null
         helpText:
           type: string
-          description: 
+          description: null
         hint:
           type: string
-          description: 
+          description: null
         icon:
           type: string
-          description: 
+          description: null
         id:
           type: string
           description: HTML element id
         image:
           type: string
-          description: 
+          description: null
         key:
           type: string
-          description: 
+          description: null
         labelLeft:
           type: string
-          description: 
+          description: null
         labelRight:
           type: string
-          description: 
+          description: null
         link:
           type: string
-          description: 
+          description: null
         maxLength:
           type: integer
-          description: 
+          description: null
         maxValue:
           type: number
-          description: 
+          description: null
         minLength:
           type: integer
-          description: 
+          description: null
         minValue:
           type: number
-          description: 
+          description: null
         options:
           type: array
           description: Selector list options
@@ -3374,10 +3374,10 @@ components:
           description: 'Ex: Title'
         postUrl:
           type: string
-          description: 
+          description: null
         required:
           type: boolean
-          description: 
+          description: null
         show:
           type: boolean
           description: 'Ex: Title'
@@ -3403,7 +3403,7 @@ components:
           description: 'See http://html5pattern.com/ for examples'
         value:
           type: string
-          description: 
+          description: null
     GetConnectorsResponse:
       required:
         - description
@@ -4445,10 +4445,10 @@ components:
           description: Formatted study text sections
         socialSharingButtonHtml:
           type: string
-          description: 
+          description: null
         studySummaryBoxHtml:
           type: string
-          description: 
+          description: null
     StudyImages:
       required:
         - gaugeImage
@@ -5846,7 +5846,7 @@ components:
           description: 'Ex: 95614'
         imageUrl:
           type: string
-          description: 
+          description: null
         informationalUrl:
           type: string
           description: 'Ex: https://google.com'
@@ -5875,7 +5875,7 @@ components:
           description: Type of input field to show for recording measurements
         ionIcon:
           type: string
-          description: 
+          description: null
         joinedCommonTagVariables:
           type: array
           description: 'Commonly defined for all users.  Joining can be used used to merge duplicate variables. For instance, if two variables called Apples (Red Delicious) and Red Delicious Apples are joined, when one of them is analyzed, the measurements for the other will be included as well.'
@@ -6450,46 +6450,46 @@ components:
       properties:
         id:
           type: integer
-          description: 
+          description: null
         userId:
           type: integer
-          description: 
+          description: null
         component:
           type: string
-          description: 
+          description: null
         type:
           type: string
-          description: 
+          description: null
         action:
           type: string
-          description: 
+          description: null
         content:
           type: string
-          description: 
+          description: null
         primaryLink:
           type: string
-          description: 
+          description: null
         itemId:
           type: integer
-          description: 
+          description: null
         secondaryItemId:
           type: integer
-          description: 
+          description: null
         dateRecorded:
           type: string
-          description: 
+          description: null
         hideSitewide:
           type: integer
-          description: 
+          description: null
         mpttLeft:
           type: integer
-          description: 
+          description: null
         mpttRight:
           type: integer
-          description: 
+          description: null
         isSpam:
           type: integer
-          description: 
+          description: null
         metaDataArray:
           type: array
           description: Additional activity key-value data
@@ -6553,22 +6553,22 @@ components:
       properties:
         id:
           type: integer
-          description: 
+          description: null
         initiatorUserId:
           type: integer
-          description: 
+          description: null
         friendUserId:
           type: integer
-          description: 
+          description: null
         isConfirmed:
           type: integer
-          description: 
+          description: null
         isLimited:
           type: integer
-          description: 
+          description: null
         dateCreated:
           type: string
-          description: 
+          description: null
         metaDataArray:
           type: array
           description: Additional friend key-value data
@@ -6635,31 +6635,31 @@ components:
       properties:
         id:
           type: integer
-          description: 
+          description: null
         creatorId:
           type: integer
-          description: 
+          description: null
         name:
           type: string
-          description: 
+          description: null
         slug:
           type: string
-          description: 
+          description: null
         description:
           type: string
-          description: 
+          description: null
         status:
           type: string
-          description: 
+          description: null
         parentId:
           type: integer
-          description: 
+          description: null
         enableForum:
           type: integer
-          description: 
+          description: null
         dateCreated:
           type: string
-          description: 
+          description: null
         metaDataArray:
           type: array
           description: Additional group key-value data
@@ -6729,40 +6729,40 @@ components:
       properties:
         id:
           type: integer
-          description: 
+          description: null
         groupId:
           type: integer
-          description: 
+          description: null
         userId:
           type: integer
-          description: 
+          description: null
         inviterId:
           type: integer
-          description: 
+          description: null
         isAdmin:
           type: integer
-          description: 
+          description: null
         isMod:
           type: integer
-          description: 
+          description: null
         userTitle:
           type: string
-          description: 
+          description: null
         dateModified:
           type: string
-          description: 
+          description: null
         comments:
           type: string
-          description: 
+          description: null
         isConfirmed:
           type: integer
-          description: 
+          description: null
         isBanned:
           type: integer
-          description: 
+          description: null
         inviteSent:
           type: integer
-          description: 
+          description: null
         metaDataArray:
           type: array
           description: Additional groupsmember key-value data
@@ -6826,22 +6826,22 @@ components:
       properties:
         id:
           type: integer
-          description: 
+          description: null
         threadId:
           type: integer
-          description: 
+          description: null
         senderId:
           type: integer
-          description: 
+          description: null
         subject:
           type: string
-          description: 
+          description: null
         message:
           type: string
-          description: 
+          description: null
         dateSent:
           type: string
-          description: 
+          description: null
         metaDataArray:
           type: array
           description: Additional messagesmessage key-value data
@@ -6904,19 +6904,19 @@ components:
       properties:
         id:
           type: integer
-          description: 
+          description: null
         subject:
           type: string
-          description: 
+          description: null
         message:
           type: string
-          description: 
+          description: null
         dateSent:
           type: string
-          description: 
+          description: null
         isActive:
           type: integer
-          description: 
+          description: null
         metaDataArray:
           type: array
           description: Additional messagesnotice key-value data
@@ -6986,22 +6986,22 @@ components:
       properties:
         id:
           type: integer
-          description: 
+          description: null
         userId:
           type: integer
-          description: 
+          description: null
         threadId:
           type: integer
-          description: 
+          description: null
         unreadCount:
           type: integer
-          description: 
+          description: null
         senderOnly:
           type: integer
-          description: 
+          description: null
         isDeleted:
           type: integer
-          description: 
+          description: null
         metaDataArray:
           type: array
           description: Additional messagesrecipient key-value data
@@ -7067,28 +7067,28 @@ components:
       properties:
         id:
           type: integer
-          description: 
+          description: null
         userId:
           type: integer
-          description: 
+          description: null
         itemId:
           type: integer
-          description: 
+          description: null
         secondaryItemId:
           type: integer
-          description: 
+          description: null
         componentName:
           type: string
-          description: 
+          description: null
         componentAction:
           type: string
-          description: 
+          description: null
         dateNotified:
           type: string
-          description: 
+          description: null
         isNew:
           type: integer
-          description: 
+          description: null
         metaDataArray:
           type: array
           description: Additional notification key-value data
