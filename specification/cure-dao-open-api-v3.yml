@@ -12,6 +12,21 @@ info:
 servers:
   - url: 'https://app.quantimo.do/api'
 tags:
+  - name: units
+    description: Available units for measurements
+    externalDocs:
+      description: See it in action
+      url: 'https://web.quantimo.do/#/app/measurement-search?accessToken=demo'
+  - name: variables
+    description: 'Can be used for search auto-complete for data types like symptoms, foods and treatments and include statistics'
+    externalDocs:
+      description: Search for a variable
+      url: 'https://web.quantimo.do/#/app/reminder-search?accessToken=demo'
+  - name: measurements
+    description: 'Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten.'
+    externalDocs:
+      description: See it in action
+      url: 'https://web.quantimo.do/#/app/history-all-category/Anything?accessToken=demo'
   - name: analytics
     description: Identify the strongest predictors of a given outcome and generate studies
     externalDocs:
@@ -22,31 +37,16 @@ tags:
     externalDocs:
       description: Import your data now
       url: 'https://web.quantimo.do/#/app/import'
-  - name: measurements
-    description: 'Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten.'
-    externalDocs:
-      description: See it in action
-      url: 'https://web.quantimo.do/#/app/history-all-category/Anything?accessToken=demo'
   - name: reminders
     description: Users can be reminded to track certain variables at a specified frequency with a default value.
     externalDocs:
       description: See it in action
       url: 'https://web.quantimo.do/#/app/reminders-inbox?accessToken=demo'
-  - name: units
-    description: Available units for measurements
-    externalDocs:
-      description: See it in action
-      url: 'https://web.quantimo.do/#/app/measurement-search?accessToken=demo'
   - name: user
     description: Get or update user info and settings
     externalDocs:
       description: See it in action
       url: 'https://web.quantimo.do/#/app/settings?accessToken=demo'
-  - name: variables
-    description: 'Can be used for search auto-complete for data types like symptoms, foods and treatments and include statistics'
-    externalDocs:
-      description: Search for a variable
-      url: 'https://web.quantimo.do/#/app/reminder-search?accessToken=demo'
   - name: studies
     description: Automatically generated natural language studies examining the relationship between a predictor and outcome variable including charts.
     externalDocs:
