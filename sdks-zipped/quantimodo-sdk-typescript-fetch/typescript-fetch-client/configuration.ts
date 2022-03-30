@@ -1,7 +1,7 @@
 // tslint:disable
 /**
  * curedao
- * We make it easy to retrieve and analyze normalized user data from a wide array of devices and applications. Check out our [docs and sdk's](https://github.com/QuantiModo/docs) or [contact us](https://help.quantimo.do).
+ * We make it easy to retrieve and analyze normalized user data from a wide array of devices and applications. Check out our [docs and sdk's](https://github.com/CureDAO/docs) or [contact us](https://help.quantimo.do).
  *
  * OpenAPI spec version: 5.8.112513
  * 

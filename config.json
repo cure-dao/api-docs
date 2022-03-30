@@ -1,8 +1,8 @@
 {
-  "invokerPackage": "QuantiModo\\Client",
+  "invokerPackage": "CureDAO\\Client",
   "modelPackage": "Model",
   "apiPackage": "Api",
-  "packagePath": "QuantiModoClient",
+  "packagePath": "CureDAOClient",
   "composerProjectName": "curedao-sdk-php",
   "composerVendorName": "curedao",
   "artifactVersion": "5.0.5"

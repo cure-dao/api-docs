@@ -60,19 +60,19 @@ let languages = [
 ];
 const sdkSwaggerCodegenOptions = {
     "php": {
-        "invokerPackage": "QuantiModo\\Client",
+        "invokerPackage": "CureDAO\\Client",
         "composerProjectName": "curedao-sdk-php",
         "composerVendorName": "curedao",
         "modelPackage": "Model",
         "apiPackage": "Api",
-        "packagePath": "QuantiModoClient"
+        "packagePath": "CureDAOClient"
     },
     "javascript": {
         //"projectName": "curedao",
     },
     "ruby": {
         "gemName": "curedaoApi",
-        "moduleName": "QuantiModoApi",
+        "moduleName": "CureDAOApi",
         "gemVersion": getAppVersionNumber(),
         "gemHomepage": "https://curedao.org",
         "gemSummary": "A ruby wrapper for the CureDAO API",
@@ -160,7 +160,7 @@ function executeCommand(command, callback) {
         if(callback){callback(err);}
     });
 }
-const swaggerJsonUrl = 'https://raw.githubusercontent.com/QuantiModo/docs/master/specification/swagger.json';
+const swaggerJsonUrl = 'https://raw.githubusercontent.com/CureDAO/docs/master/specification/swagger.json';
 //swaggerJsonUrl = 'https://utopia.quantimo.do:4443/api/docs/specification/swagger.json';
 function clone(organization, repoName, destinationFolder, callback){
     const repoUrl = 'https://github.com/' + organization + '/' + repoName;
@@ -234,7 +234,7 @@ function unzipFileToFolder(sourceFile, destinationFolder) {
         .pipe(gulp.dest(destinationFolder));
 }
 const pathToQmDocker = "../../..";
-const pathToQuantiModoNodeModule = 'node_modules/curedao';
+const pathToCureDAONodeModule = 'node_modules/curedao';
 String.prototype.replaceAll = function(search, replacement) {
     const target = this;
     return target.replace(new RegExp(search, 'g'), replacement);
@@ -337,7 +337,7 @@ function getSwaggerDownloadRequestOptions(language, useLocalSpec) {
         opts.body.options = sdkSwaggerCodegenOptions[language];
     } else {
         opts.body.options = {};
-        opts.body.options.apiPackage = "QuantiModoApi";
+        opts.body.options.apiPackage = "CureDAOApi";
         opts.body.options.artifactId = "curedaoApi";
         opts.body.options.authorEmail = "mike@quantimo.do";
         opts.body.options.authorName = "Mike P. Sinn";
@@ -348,8 +348,8 @@ function getSwaggerDownloadRequestOptions(language, useLocalSpec) {
         opts.body.options.modelPackage = "curedaoApi";
         opts.body.options.moduleName = "curedaoApi";
         opts.body.options.packageName = "curedao_api";
-        opts.body.options.packagePath = "QuantiModoClient";
-        opts.body.options.podName = "QuantiModoApi";
+        opts.body.options.packagePath = "CureDAOClient";
+        opts.body.options.podName = "CureDAOApi";
         //requestOptions.body.options.podVersion = getAppVersionNumber();
         opts.body.options.projectName = (sdkSwaggerCodegenOptions[language] && sdkSwaggerCodegenOptions[language].projectName) ? sdkSwaggerCodegenOptions[language].projectName : "curedaoApi";
     }
@@ -463,7 +463,7 @@ function copyUnzippedJsSdkToRepo(){
     return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage(javascriptFlavor), getRepoRelativePathForSdkLanguage(javascriptFlavor));
 }
 function copyUnzippedJsSdkToApiDocsNodeModules(){
-    return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage(javascriptFlavor), pathToQuantiModoNodeModule);
+    return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage(javascriptFlavor), pathToCureDAONodeModule);
 }
 function copyUnzippedJsSdkToIonicSrcLibForTesting(){
     return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage(javascriptFlavor), pathToIonic+'/src/lib/curedao');
@@ -500,11 +500,11 @@ gulp.task('js-4-reset-package-json-readme', [], function(){
     resetNonGeneratedFiles();
 });
 gulp.task('php-2-sdk-copy-to-repo', [], function(){
-    return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage('php') + '/QuantiModoClient/**/*',
+    return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage('php') + '/CureDAOClient/**/*',
         getRepoRelativePathForSdkLanguage('php'))
 });
 gulp.task('php-3-move-client-to-repo-root', [], function(){
-    return copyOneFoldersContentsToAnother(getRepoRelativePathForSdkLanguage('php') + '/QuantiModoClient/**/*',
+    return copyOneFoldersContentsToAnother(getRepoRelativePathForSdkLanguage('php') + '/CureDAOClient/**/*',
         getRepoRelativePathForSdkLanguage('php'));
 });
 gulp.task('php-4-update-sdk-composer', [], function(){
@@ -567,11 +567,11 @@ gulp.task('5-commit-changes', [], function(){
     }
 });
 try {
-    authenticateQuantiModoSdk();
+    authenticateCureDAOSdk();
 } catch (error) {
     logError(error);
 }
-function authenticateQuantiModoSdk() {
+function authenticateCureDAOSdk() {
     const Quantimodo = require('curedao');
     let defaultClient = Quantimodo.ApiClient.instance;
     if(process.env.APP_HOST_NAME){defaultClient.basePath = process.env.APP_HOST_NAME + '/api';}
@@ -859,11 +859,11 @@ gulp.task('check-responses', ['test-endpoints'], function (callback) {
     callback();
 });
 gulp.task('delete-qm-node-module', [], function(){
-    return cleanOneFolderExceptGit(pathToQuantiModoNodeModule);
+    return cleanOneFolderExceptGit(pathToCureDAONodeModule);
 });
 gulp.task('js-sdk-copy-to-node-modules', ['delete-qm-node-module'], function(){
     language = javascriptFlavor;
-    return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage(language), pathToQuantiModoNodeModule);
+    return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage(language), pathToCureDAONodeModule);
 });
 gulp.task('JS-SDK-UPDATE', function(callback){
     language = javascriptFlavor;

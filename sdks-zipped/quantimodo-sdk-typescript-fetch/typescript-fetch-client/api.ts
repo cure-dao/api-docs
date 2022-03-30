@@ -2,7 +2,7 @@
 // tslint:disable
 /**
  * curedao
- * We make it easy to retrieve and analyze normalized user data from a wide array of devices and applications. Check out our [docs and sdk's](https://github.com/QuantiModo/docs) or [contact us](https://help.quantimo.do).
+ * We make it easy to retrieve and analyze normalized user data from a wide array of devices and applications. Check out our [docs and sdk's](https://github.com/CureDAO/docs) or [contact us](https://help.quantimo.do).
  *
  * OpenAPI spec version: 5.8.112513
  * 
@@ -1567,7 +1567,7 @@ export interface DataSource {
      */
     card?: Card;
     /**
-     * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @type {string}
      * @memberof DataSource
      */
@@ -1627,7 +1627,7 @@ export interface DataSource {
      */
     defaultVariableCategoryName: string;
     /**
-     * Ex: QuantiModo
+     * Ex: CureDAO
      * @type {string}
      * @memberof DataSource
      */
@@ -1657,7 +1657,7 @@ export interface DataSource {
      */
     image: string;
     /**
-     * Ex: <a href=\"https://curedao.org\"><img id=\"curedao_image\" title=\"QuantiModo\" src=\"https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png\" alt=\"QuantiModo\"></a>
+     * Ex: <a href=\"https://curedao.org\"><img id=\"curedao_image\" title=\"CureDAO\" src=\"https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
      * @type {string}
      * @memberof DataSource
      */
@@ -1675,13 +1675,13 @@ export interface DataSource {
      */
     lastUpdate?: number;
     /**
-     * Ex: <a href=\"https://curedao.org\">QuantiModo</a>
+     * Ex: <a href=\"https://curedao.org\">CureDAO</a>
      * @type {string}
      * @memberof DataSource
      */
     linkedDisplayNameHtml: string;
     /**
-     * Ex: QuantiModo is a Chrome extension, Android app, iOS app, and web app that allows you to easily track mood, symptoms, or any outcome you want to optimize in a fraction of a second.  You can also import your data from over 30 other apps and devices like Fitbit, Rescuetime, Jawbone Up, Withings, Facebook, Github, Google Calendar, Runkeeper, MoodPanda, Slice, Google Fit, and more.  QuantiModo then analyzes your data to identify which hidden factors are most likely to be influencing your mood or symptoms and their optimal daily values.
+     * Ex: CureDAO is a Chrome extension, Android app, iOS app, and web app that allows you to easily track mood, symptoms, or any outcome you want to optimize in a fraction of a second.  You can also import your data from over 30 other apps and devices like Fitbit, Rescuetime, Jawbone Up, Withings, Facebook, Github, Google Calendar, Runkeeper, MoodPanda, Slice, Google Fit, and more.  CureDAO then analyzes your data to identify which hidden factors are most likely to be influencing your mood or symptoms and their optimal daily values.
      * @type {string}
      * @memberof DataSource
      */
@@ -4091,13 +4091,13 @@ export interface Pair {
  */
 export interface ParticipantInstruction {
     /**
-     * Ex: <a href=\"https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e\">Obtain Fitbit</a> and use it to record your Sleep Duration. Once you have a <a href=\"https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e\">Fitbit</a> account, <a href=\"https://web.quantimo.do/#/app/import\">connect your  Fitbit account at QuantiModo</a> to automatically import and analyze your data.
+     * Ex: <a href=\"https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e\">Obtain Fitbit</a> and use it to record your Sleep Duration. Once you have a <a href=\"https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e\">Fitbit</a> account, <a href=\"https://web.quantimo.do/#/app/import\">connect your  Fitbit account at CureDAO</a> to automatically import and analyze your data.
      * @type {string}
      * @memberof ParticipantInstruction
      */
     instructionsForCauseVariable?: string;
     /**
-     * Ex: <a href=\"https://curedao.org\">Obtain QuantiModo</a> and use it to record your Overall Mood. Once you have a <a href=\"https://curedao.org\">QuantiModo</a> account, <a href=\"https://web.quantimo.do/#/app/import\">connect your  QuantiModo account at QuantiModo</a> to automatically import and analyze your data.
+     * Ex: <a href=\"https://curedao.org\">Obtain CureDAO</a> and use it to record your Overall Mood. Once you have a <a href=\"https://curedao.org\">CureDAO</a> account, <a href=\"https://web.quantimo.do/#/app/import\">connect your  CureDAO account at CureDAO</a> to automatically import and analyze your data.
      * @type {string}
      * @memberof ParticipantInstruction
      */
@@ -5261,7 +5261,7 @@ export interface StudyText {
      */
     studyAbstract: string;
     /**
-     * Ex: This study is based on data donated by  21 QuantiModo users. Thus, the study design is equivalent to the aggregation of 21 separate n=1 observational natural experiments.
+     * Ex: This study is based on data donated by  21 CureDAO users. Thus, the study design is equivalent to the aggregation of 21 separate n=1 observational natural experiments.
      * @type {string}
      * @memberof StudyText
      */
@@ -5409,7 +5409,7 @@ export interface TrackingReminder {
      */
     card?: Card;
     /**
-     * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @type {string}
      * @memberof TrackingReminder
      */
@@ -5965,7 +5965,7 @@ export interface TrackingReminderNotification {
      */
     card?: Card;
     /**
-     * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @type {string}
      * @memberof TrackingReminderNotification
      */
@@ -7321,7 +7321,7 @@ export interface Variable {
      */
     childUserTagVariables?: Array<Variable>;
     /**
-     * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @type {string}
      * @memberof Variable
      */
@@ -8335,7 +8335,7 @@ export interface Vote {
      */
     causeVariableId: number;
     /**
-     * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @type {string}
      * @memberof Vote
      */
@@ -8853,7 +8853,7 @@ export const ActivitiesApiFetchParamCreator = function (configuration?: Configur
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -8933,7 +8933,7 @@ export const ActivitiesApiFetchParamCreator = function (configuration?: Configur
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -9022,7 +9022,7 @@ export const ActivitiesApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -9048,7 +9048,7 @@ export const ActivitiesApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -9083,7 +9083,7 @@ export const ActivitiesApiFactory = function (configuration?: Configuration, fet
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -9100,7 +9100,7 @@ export const ActivitiesApiFactory = function (configuration?: Configuration, fet
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -9127,7 +9127,7 @@ export class ActivitiesApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActivitiesApi
@@ -9146,7 +9146,7 @@ export class ActivitiesApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActivitiesApi
@@ -9249,7 +9249,7 @@ export const AnalyticsApiFetchParamCreator = function (configuration?: Configura
          * @param {string} [correlationCoefficient] Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {boolean} [outcomesOfInterest] Only include correlations for which the effect is an outcome of interest for the user
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [commonOnly] Return only public, anonymized and aggregated population data instead of user-specific variables
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9397,7 +9397,7 @@ export const AnalyticsApiFp = function(configuration?: Configuration) {
          * @param {string} [correlationCoefficient] Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {boolean} [outcomesOfInterest] Only include correlations for which the effect is an outcome of interest for the user
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [commonOnly] Return only public, anonymized and aggregated population data instead of user-specific variables
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9454,7 +9454,7 @@ export const AnalyticsApiFactory = function (configuration?: Configuration, fetc
          * @param {string} [correlationCoefficient] Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {boolean} [outcomesOfInterest] Only include correlations for which the effect is an outcome of interest for the user
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [commonOnly] Return only public, anonymized and aggregated population data instead of user-specific variables
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9505,7 +9505,7 @@ export class AnalyticsApi extends BaseAPI {
      * @param {string} [correlationCoefficient] Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
      * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {boolean} [outcomesOfInterest] Only include correlations for which the effect is an outcome of interest for the user
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {boolean} [commonOnly] Return only public, anonymized and aggregated population data instead of user-specific variables
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -9526,7 +9526,7 @@ export const AppSettingsApiFetchParamCreator = function (configuration?: Configu
         /**
          * Get the settings for your application configurable at https://build.quantimo.do
          * @summary Get client app settings
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9568,7 +9568,7 @@ export const AppSettingsApiFp = function(configuration?: Configuration) {
         /**
          * Get the settings for your application configurable at https://build.quantimo.do
          * @summary Get client app settings
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9597,7 +9597,7 @@ export const AppSettingsApiFactory = function (configuration?: Configuration, fe
         /**
          * Get the settings for your application configurable at https://build.quantimo.do
          * @summary Get client app settings
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9618,7 +9618,7 @@ export class AppSettingsApi extends BaseAPI {
     /**
      * Get the settings for your application configurable at https://build.quantimo.do
      * @summary Get client app settings
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -9643,7 +9643,7 @@ export const AuthenticationApiFetchParamCreator = function (configuration?: Conf
          * @param {string} code Authorization code you received with the previous request.
          * @param {string} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
          * @param {string} scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
          * @param {string} [redirectUri] The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
          * @param {string} [state] An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
@@ -9737,7 +9737,7 @@ export const AuthenticationApiFetchParamCreator = function (configuration?: Conf
          * @summary Request Authorization Code
          * @param {string} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
          * @param {string} scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
          * @param {string} [redirectUri] The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
          * @param {string} [state] An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
@@ -9849,7 +9849,7 @@ export const AuthenticationApiFp = function(configuration?: Configuration) {
          * @param {string} code Authorization code you received with the previous request.
          * @param {string} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
          * @param {string} scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
          * @param {string} [redirectUri] The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
          * @param {string} [state] An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
@@ -9873,7 +9873,7 @@ export const AuthenticationApiFp = function(configuration?: Configuration) {
          * @summary Request Authorization Code
          * @param {string} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
          * @param {string} scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
          * @param {string} [redirectUri] The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
          * @param {string} [state] An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
@@ -9926,7 +9926,7 @@ export const AuthenticationApiFactory = function (configuration?: Configuration,
          * @param {string} code Authorization code you received with the previous request.
          * @param {string} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
          * @param {string} scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
          * @param {string} [redirectUri] The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
          * @param {string} [state] An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
@@ -9941,7 +9941,7 @@ export const AuthenticationApiFactory = function (configuration?: Configuration,
          * @summary Request Authorization Code
          * @param {string} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
          * @param {string} scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
          * @param {string} [redirectUri] The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
          * @param {string} [state] An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
@@ -9977,7 +9977,7 @@ export class AuthenticationApi extends BaseAPI {
      * @param {string} code Authorization code you received with the previous request.
      * @param {string} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
      * @param {string} scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
      * @param {string} [redirectUri] The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
      * @param {string} [state] An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
@@ -9994,7 +9994,7 @@ export class AuthenticationApi extends BaseAPI {
      * @summary Request Authorization Code
      * @param {string} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
      * @param {string} scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {string} [clientSecret] This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
      * @param {string} [redirectUri] The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
      * @param {string} [state] An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
@@ -10125,7 +10125,7 @@ export const ConnectorsApiFetchParamCreator = function (configuration?: Configur
         /**
          * A connector pulls data from other data providers using their API or a screenscraper. Returns a list of all available connectors and information about them such as their id, name, whether the user has provided access, logo url, connection instructions, and the update history.
          * @summary List of Connectors
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10170,7 +10170,7 @@ export const ConnectorsApiFetchParamCreator = function (configuration?: Configur
         /**
          * Get embeddable connect javascript. Usage:   - Embedding in applications with popups for 3rd-party authentication windows.     Use `qmSetupInPopup` function after connecting `connect.js`.   - Embedding in applications with popups for 3rd-party authentication windows.     Requires a selector to block. It will be embedded in this block.     Use `qmSetupOnPage` function after connecting `connect.js`.   - Embedding in mobile applications without popups for 3rd-party authentication.     Use `qmSetupOnMobile` function after connecting `connect.js`.     If using in a Cordova application call  `qmSetupOnIonic` function after connecting `connect.js`.
          * @summary Get embeddable connect javascript
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10325,7 +10325,7 @@ export const ConnectorsApiFp = function(configuration?: Configuration) {
         /**
          * A connector pulls data from other data providers using their API or a screenscraper. Returns a list of all available connectors and information about them such as their id, name, whether the user has provided access, logo url, connection instructions, and the update history.
          * @summary List of Connectors
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10344,7 +10344,7 @@ export const ConnectorsApiFp = function(configuration?: Configuration) {
         /**
          * Get embeddable connect javascript. Usage:   - Embedding in applications with popups for 3rd-party authentication windows.     Use `qmSetupInPopup` function after connecting `connect.js`.   - Embedding in applications with popups for 3rd-party authentication windows.     Requires a selector to block. It will be embedded in this block.     Use `qmSetupOnPage` function after connecting `connect.js`.   - Embedding in mobile applications without popups for 3rd-party authentication.     Use `qmSetupOnMobile` function after connecting `connect.js`.     If using in a Cordova application call  `qmSetupOnIonic` function after connecting `connect.js`.
          * @summary Get embeddable connect javascript
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10432,7 +10432,7 @@ export const ConnectorsApiFactory = function (configuration?: Configuration, fet
         /**
          * A connector pulls data from other data providers using their API or a screenscraper. Returns a list of all available connectors and information about them such as their id, name, whether the user has provided access, logo url, connection instructions, and the update history.
          * @summary List of Connectors
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10442,7 +10442,7 @@ export const ConnectorsApiFactory = function (configuration?: Configuration, fet
         /**
          * Get embeddable connect javascript. Usage:   - Embedding in applications with popups for 3rd-party authentication windows.     Use `qmSetupInPopup` function after connecting `connect.js`.   - Embedding in applications with popups for 3rd-party authentication windows.     Requires a selector to block. It will be embedded in this block.     Use `qmSetupOnPage` function after connecting `connect.js`.   - Embedding in mobile applications without popups for 3rd-party authentication.     Use `qmSetupOnMobile` function after connecting `connect.js`.     If using in a Cordova application call  `qmSetupOnIonic` function after connecting `connect.js`.
          * @summary Get embeddable connect javascript
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10508,7 +10508,7 @@ export class ConnectorsApi extends BaseAPI {
     /**
      * A connector pulls data from other data providers using their API or a screenscraper. Returns a list of all available connectors and information about them such as their id, name, whether the user has provided access, logo url, connection instructions, and the update history.
      * @summary List of Connectors
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConnectorsApi
@@ -10520,7 +10520,7 @@ export class ConnectorsApi extends BaseAPI {
     /**
      * Get embeddable connect javascript. Usage:   - Embedding in applications with popups for 3rd-party authentication windows.     Use `qmSetupInPopup` function after connecting `connect.js`.   - Embedding in applications with popups for 3rd-party authentication windows.     Requires a selector to block. It will be embedded in this block.     Use `qmSetupOnPage` function after connecting `connect.js`.   - Embedding in mobile applications without popups for 3rd-party authentication.     Use `qmSetupOnMobile` function after connecting `connect.js`.     If using in a Cordova application call  `qmSetupOnIonic` function after connecting `connect.js`.
      * @summary Get embeddable connect javascript
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConnectorsApi
@@ -10571,7 +10571,7 @@ export const FeedApiFetchParamCreator = function (configuration?: Configuration)
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10642,7 +10642,7 @@ export const FeedApiFetchParamCreator = function (configuration?: Configuration)
          * @summary Post user interactions with feed
          * @param {Array<Card>} body Id of the tracking reminder notification to be snoozed
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10714,7 +10714,7 @@ export const FeedApiFp = function(configuration?: Configuration) {
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10735,7 +10735,7 @@ export const FeedApiFp = function(configuration?: Configuration) {
          * @summary Post user interactions with feed
          * @param {Array<Card>} body Id of the tracking reminder notification to be snoozed
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10769,7 +10769,7 @@ export const FeedApiFactory = function (configuration?: Configuration, fetch?: F
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10781,7 +10781,7 @@ export const FeedApiFactory = function (configuration?: Configuration, fetch?: F
          * @summary Post user interactions with feed
          * @param {Array<Card>} body Id of the tracking reminder notification to be snoozed
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10807,7 +10807,7 @@ export class FeedApi extends BaseAPI {
      * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
      * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FeedApi
@@ -10821,7 +10821,7 @@ export class FeedApi extends BaseAPI {
      * @summary Post user interactions with feed
      * @param {Array<Card>} body Id of the tracking reminder notification to be snoozed
      * @param {number} [userId] User&#39;s id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FeedApi
@@ -10843,7 +10843,7 @@ export const FileApiFetchParamCreator = function (configuration?: Configuration)
          * @summary Get File
          * @param {number} [userId] User&#39;s id
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -10965,7 +10965,7 @@ export const FileApiFp = function(configuration?: Configuration) {
          * @summary Get File
          * @param {number} [userId] User&#39;s id
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11015,7 +11015,7 @@ export const FileApiFactory = function (configuration?: Configuration, fetch?: F
          * @summary Get File
          * @param {number} [userId] User&#39;s id
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11048,7 +11048,7 @@ export class FileApi extends BaseAPI {
      * @summary Get File
      * @param {number} [userId] User&#39;s id
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileApi
@@ -11088,7 +11088,7 @@ export const FriendsApiFetchParamCreator = function (configuration?: Configurati
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11168,7 +11168,7 @@ export const FriendsApiFetchParamCreator = function (configuration?: Configurati
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11257,7 +11257,7 @@ export const FriendsApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11283,7 +11283,7 @@ export const FriendsApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11318,7 +11318,7 @@ export const FriendsApiFactory = function (configuration?: Configuration, fetch?
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11335,7 +11335,7 @@ export const FriendsApiFactory = function (configuration?: Configuration, fetch?
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11362,7 +11362,7 @@ export class FriendsApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendsApi
@@ -11381,7 +11381,7 @@ export class FriendsApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendsApi
@@ -11408,7 +11408,7 @@ export const GroupsApiFetchParamCreator = function (configuration?: Configuratio
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11488,7 +11488,7 @@ export const GroupsApiFetchParamCreator = function (configuration?: Configuratio
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11568,7 +11568,7 @@ export const GroupsApiFetchParamCreator = function (configuration?: Configuratio
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11648,7 +11648,7 @@ export const GroupsApiFetchParamCreator = function (configuration?: Configuratio
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11737,7 +11737,7 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11763,7 +11763,7 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11789,7 +11789,7 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11815,7 +11815,7 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11850,7 +11850,7 @@ export const GroupsApiFactory = function (configuration?: Configuration, fetch?:
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11867,7 +11867,7 @@ export const GroupsApiFactory = function (configuration?: Configuration, fetch?:
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11884,7 +11884,7 @@ export const GroupsApiFactory = function (configuration?: Configuration, fetch?:
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11901,7 +11901,7 @@ export const GroupsApiFactory = function (configuration?: Configuration, fetch?:
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -11928,7 +11928,7 @@ export class GroupsApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
@@ -11947,7 +11947,7 @@ export class GroupsApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
@@ -11966,7 +11966,7 @@ export class GroupsApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
@@ -11985,7 +11985,7 @@ export class GroupsApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
@@ -12072,7 +12072,7 @@ export const MeasurementsApiFetchParamCreator = function (configuration?: Config
          * @param {number} [groupingWidth] The time (in seconds) over which measurements are grouped together
          * @param {string} [groupingTimezone] The time (in seconds) over which measurements are grouped together
          * @param {boolean} [doNotProcess] Ex: true
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [doNotConvert] Ex: 1
          * @param {boolean} [minMaxFilter] Ex: 1
          * @param {*} [options] Override http request option.
@@ -12513,7 +12513,7 @@ export const MeasurementsApiFp = function(configuration?: Configuration) {
          * @param {number} [groupingWidth] The time (in seconds) over which measurements are grouped together
          * @param {string} [groupingTimezone] The time (in seconds) over which measurements are grouped together
          * @param {boolean} [doNotProcess] Ex: true
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [doNotConvert] Ex: 1
          * @param {boolean} [minMaxFilter] Ex: 1
          * @param {*} [options] Override http request option.
@@ -12663,7 +12663,7 @@ export const MeasurementsApiFactory = function (configuration?: Configuration, f
          * @param {number} [groupingWidth] The time (in seconds) over which measurements are grouped together
          * @param {string} [groupingTimezone] The time (in seconds) over which measurements are grouped together
          * @param {boolean} [doNotProcess] Ex: true
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [doNotConvert] Ex: 1
          * @param {boolean} [minMaxFilter] Ex: 1
          * @param {*} [options] Override http request option.
@@ -12771,7 +12771,7 @@ export class MeasurementsApi extends BaseAPI {
      * @param {number} [groupingWidth] The time (in seconds) over which measurements are grouped together
      * @param {string} [groupingTimezone] The time (in seconds) over which measurements are grouped together
      * @param {boolean} [doNotProcess] Ex: true
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {boolean} [doNotConvert] Ex: 1
      * @param {boolean} [minMaxFilter] Ex: 1
      * @param {*} [options] Override http request option.
@@ -12864,7 +12864,7 @@ export const MessagesApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -12944,7 +12944,7 @@ export const MessagesApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13024,7 +13024,7 @@ export const MessagesApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13104,7 +13104,7 @@ export const MessagesApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13184,7 +13184,7 @@ export const MessagesApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13264,7 +13264,7 @@ export const MessagesApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13353,7 +13353,7 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13379,7 +13379,7 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13405,7 +13405,7 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13431,7 +13431,7 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13457,7 +13457,7 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13483,7 +13483,7 @@ export const MessagesApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13518,7 +13518,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13535,7 +13535,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13552,7 +13552,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13569,7 +13569,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13586,7 +13586,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13603,7 +13603,7 @@ export const MessagesApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13630,7 +13630,7 @@ export class MessagesApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessagesApi
@@ -13649,7 +13649,7 @@ export class MessagesApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessagesApi
@@ -13668,7 +13668,7 @@ export class MessagesApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessagesApi
@@ -13687,7 +13687,7 @@ export class MessagesApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessagesApi
@@ -13706,7 +13706,7 @@ export class MessagesApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessagesApi
@@ -13725,7 +13725,7 @@ export class MessagesApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessagesApi
@@ -13775,7 +13775,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13887,7 +13887,7 @@ export const NotificationsApiFetchParamCreator = function (configuration?: Confi
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -13994,7 +13994,7 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14039,7 +14039,7 @@ export const NotificationsApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14083,7 +14083,7 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14110,7 +14110,7 @@ export const NotificationsApiFactory = function (configuration?: Configuration, 
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14148,7 +14148,7 @@ export class NotificationsApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14179,7 +14179,7 @@ export class NotificationsApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationsApi
@@ -14261,7 +14261,7 @@ export const RemindersApiFetchParamCreator = function (configuration?: Configura
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [variableCategoryName] Options: Activities, Books, Causes of Illness, Cognitive Performance, Conditions, Emotions, Environment, Foods, Location, Miscellaneous, Movies and TV, Music, Nutrients, Payments, Physical Activity, Physique, Sleep, Social Interactions, Software, Symptoms, Treatments, Vital Signs, Goals
          * @param {string} [reminderTime] Ex: (lt)2017-07-31 21:43:26
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [onlyPast] Ex: 1
          * @param {boolean} [includeDeleted] Include deleted variables
          * @param {*} [options] Override http request option.
@@ -14355,7 +14355,7 @@ export const RemindersApiFetchParamCreator = function (configuration?: Configura
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -14435,7 +14435,7 @@ export const RemindersApiFetchParamCreator = function (configuration?: Configura
          * @summary Snooze, skip, or track a tracking reminder notification
          * @param {Array<TrackingReminderNotificationPost>} body Id of the tracking reminder notification to be snoozed
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14578,7 +14578,7 @@ export const RemindersApiFp = function(configuration?: Configuration) {
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [variableCategoryName] Options: Activities, Books, Causes of Illness, Cognitive Performance, Conditions, Emotions, Environment, Foods, Location, Miscellaneous, Movies and TV, Music, Nutrients, Payments, Physical Activity, Physique, Sleep, Social Interactions, Software, Symptoms, Treatments, Vital Signs, Goals
          * @param {string} [reminderTime] Ex: (lt)2017-07-31 21:43:26
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [onlyPast] Ex: 1
          * @param {boolean} [includeDeleted] Include deleted variables
          * @param {*} [options] Override http request option.
@@ -14606,7 +14606,7 @@ export const RemindersApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -14628,7 +14628,7 @@ export const RemindersApiFp = function(configuration?: Configuration) {
          * @summary Snooze, skip, or track a tracking reminder notification
          * @param {Array<TrackingReminderNotificationPost>} body Id of the tracking reminder notification to be snoozed
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14694,7 +14694,7 @@ export const RemindersApiFactory = function (configuration?: Configuration, fetc
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [variableCategoryName] Options: Activities, Books, Causes of Illness, Cognitive Performance, Conditions, Emotions, Environment, Foods, Location, Miscellaneous, Movies and TV, Music, Nutrients, Payments, Physical Activity, Physique, Sleep, Social Interactions, Software, Symptoms, Treatments, Vital Signs, Goals
          * @param {string} [reminderTime] Ex: (lt)2017-07-31 21:43:26
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [onlyPast] Ex: 1
          * @param {boolean} [includeDeleted] Include deleted variables
          * @param {*} [options] Override http request option.
@@ -14713,7 +14713,7 @@ export const RemindersApiFactory = function (configuration?: Configuration, fetc
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -14726,7 +14726,7 @@ export const RemindersApiFactory = function (configuration?: Configuration, fetc
          * @summary Snooze, skip, or track a tracking reminder notification
          * @param {Array<TrackingReminderNotificationPost>} body Id of the tracking reminder notification to be snoozed
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14777,7 +14777,7 @@ export class RemindersApi extends BaseAPI {
      * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {string} [variableCategoryName] Options: Activities, Books, Causes of Illness, Cognitive Performance, Conditions, Emotions, Environment, Foods, Location, Miscellaneous, Movies and TV, Music, Nutrients, Payments, Physical Activity, Physique, Sleep, Social Interactions, Software, Symptoms, Treatments, Vital Signs, Goals
      * @param {string} [reminderTime] Ex: (lt)2017-07-31 21:43:26
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {boolean} [onlyPast] Ex: 1
      * @param {boolean} [includeDeleted] Include deleted variables
      * @param {*} [options] Override http request option.
@@ -14798,7 +14798,7 @@ export class RemindersApi extends BaseAPI {
      * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
      * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {string} [appVersion] Ex: 2.1.1.0
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -14813,7 +14813,7 @@ export class RemindersApi extends BaseAPI {
      * @summary Snooze, skip, or track a tracking reminder notification
      * @param {Array<TrackingReminderNotificationPost>} body Id of the tracking reminder notification to be snoozed
      * @param {number} [userId] User&#39;s id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemindersApi
@@ -14902,7 +14902,7 @@ export const SharesApiFetchParamCreator = function (configuration?: Configuratio
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {string} [log] Username or email
          * @param {string} [pwd] User password
@@ -14975,7 +14975,7 @@ export const SharesApiFetchParamCreator = function (configuration?: Configuratio
          * Invite someone to view your measurements
          * @summary Delete share
          * @param {ShareInvitationBody} body Details about person to share with
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -15060,7 +15060,7 @@ export const SharesApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {string} [log] Username or email
          * @param {string} [pwd] User password
@@ -15083,7 +15083,7 @@ export const SharesApiFp = function(configuration?: Configuration) {
          * Invite someone to view your measurements
          * @summary Delete share
          * @param {ShareInvitationBody} body Details about person to share with
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -15125,7 +15125,7 @@ export const SharesApiFactory = function (configuration?: Configuration, fetch?:
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {string} [log] Username or email
          * @param {string} [pwd] User password
@@ -15139,7 +15139,7 @@ export const SharesApiFactory = function (configuration?: Configuration, fetch?:
          * Invite someone to view your measurements
          * @summary Delete share
          * @param {ShareInvitationBody} body Details about person to share with
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -15175,7 +15175,7 @@ export class SharesApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {string} [appVersion] Ex: 2.1.1.0
      * @param {string} [log] Username or email
      * @param {string} [pwd] User password
@@ -15191,7 +15191,7 @@ export class SharesApi extends BaseAPI {
      * Invite someone to view your measurements
      * @summary Delete share
      * @param {ShareInvitationBody} body Details about person to share with
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SharesApi
@@ -15212,7 +15212,7 @@ export const StudiesApiFetchParamCreator = function (configuration?: Configurati
          * Create an individual, group, or population study examining the relationship between a predictor and outcome variable. You will be given a study id which you can invite participants to join and share their measurements for the specified variables.
          * @summary Create a Study
          * @param {StudyCreationBody} body Details about the study you want to create
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -15326,7 +15326,7 @@ export const StudiesApiFetchParamCreator = function (configuration?: Configurati
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -15421,7 +15421,7 @@ export const StudiesApiFetchParamCreator = function (configuration?: Configurati
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -15580,7 +15580,7 @@ export const StudiesApiFetchParamCreator = function (configuration?: Configurati
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {number} [userId] User&#39;s id
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -15682,7 +15682,7 @@ export const StudiesApiFetchParamCreator = function (configuration?: Configurati
          * @param {string} [correlationCoefficient] Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {boolean} [outcomesOfInterest] Only include correlations for which the effect is an outcome of interest for the user
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -15786,7 +15786,7 @@ export const StudiesApiFetchParamCreator = function (configuration?: Configurati
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -15882,7 +15882,7 @@ export const StudiesApiFetchParamCreator = function (configuration?: Configurati
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16020,7 +16020,7 @@ export const StudiesApiFetchParamCreator = function (configuration?: Configurati
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -16118,7 +16118,7 @@ export const StudiesApiFp = function(configuration?: Configuration) {
          * Create an individual, group, or population study examining the relationship between a predictor and outcome variable. You will be given a study id which you can invite participants to join and share their measurements for the specified variables.
          * @summary Create a Study
          * @param {StudyCreationBody} body Details about the study you want to create
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16164,7 +16164,7 @@ export const StudiesApiFp = function(configuration?: Configuration) {
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -16193,7 +16193,7 @@ export const StudiesApiFp = function(configuration?: Configuration) {
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -16238,7 +16238,7 @@ export const StudiesApiFp = function(configuration?: Configuration) {
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {number} [userId] User&#39;s id
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16270,7 +16270,7 @@ export const StudiesApiFp = function(configuration?: Configuration) {
          * @param {string} [correlationCoefficient] Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {boolean} [outcomesOfInterest] Only include correlations for which the effect is an outcome of interest for the user
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16296,7 +16296,7 @@ export const StudiesApiFp = function(configuration?: Configuration) {
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -16326,7 +16326,7 @@ export const StudiesApiFp = function(configuration?: Configuration) {
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16372,7 +16372,7 @@ export const StudiesApiFp = function(configuration?: Configuration) {
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -16404,7 +16404,7 @@ export const StudiesApiFactory = function (configuration?: Configuration, fetch?
          * Create an individual, group, or population study examining the relationship between a predictor and outcome variable. You will be given a study id which you can invite participants to join and share their measurements for the specified variables.
          * @summary Create a Study
          * @param {StudyCreationBody} body Details about the study you want to create
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16432,7 +16432,7 @@ export const StudiesApiFactory = function (configuration?: Configuration, fetch?
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -16452,7 +16452,7 @@ export const StudiesApiFactory = function (configuration?: Configuration, fetch?
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -16488,7 +16488,7 @@ export const StudiesApiFactory = function (configuration?: Configuration, fetch?
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {number} [userId] User&#39;s id
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16511,7 +16511,7 @@ export const StudiesApiFactory = function (configuration?: Configuration, fetch?
          * @param {string} [correlationCoefficient] Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
          * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {boolean} [outcomesOfInterest] Only include correlations for which the effect is an outcome of interest for the user
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16528,7 +16528,7 @@ export const StudiesApiFactory = function (configuration?: Configuration, fetch?
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -16549,7 +16549,7 @@ export const StudiesApiFactory = function (configuration?: Configuration, fetch?
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -16577,7 +16577,7 @@ export const StudiesApiFactory = function (configuration?: Configuration, fetch?
          * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
          * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
          * @param {number} [userId] User&#39;s id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
          * @param {boolean} [recalculate] Recalculate instead of using cached analysis
          * @param {string} [studyId] Client id for the study you want
@@ -16601,7 +16601,7 @@ export class StudiesApi extends BaseAPI {
      * Create an individual, group, or population study examining the relationship between a predictor and outcome variable. You will be given a study id which you can invite participants to join and share their measurements for the specified variables.
      * @summary Create a Study
      * @param {StudyCreationBody} body Details about the study you want to create
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StudiesApi
@@ -16633,7 +16633,7 @@ export class StudiesApi extends BaseAPI {
      * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {number} [userId] User&#39;s id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param {boolean} [recalculate] Recalculate instead of using cached analysis
      * @param {string} [studyId] Client id for the study you want
@@ -16655,7 +16655,7 @@ export class StudiesApi extends BaseAPI {
      * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {number} [userId] User&#39;s id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param {boolean} [recalculate] Recalculate instead of using cached analysis
      * @param {string} [studyId] Client id for the study you want
@@ -16693,7 +16693,7 @@ export class StudiesApi extends BaseAPI {
      * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {number} [userId] User&#39;s id
      * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StudiesApi
@@ -16718,7 +16718,7 @@ export class StudiesApi extends BaseAPI {
      * @param {string} [correlationCoefficient] Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
      * @param {string} [updatedAt] When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {boolean} [outcomesOfInterest] Only include correlations for which the effect is an outcome of interest for the user
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StudiesApi
@@ -16737,7 +16737,7 @@ export class StudiesApi extends BaseAPI {
      * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {number} [userId] User&#39;s id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param {boolean} [recalculate] Recalculate instead of using cached analysis
      * @param {string} [studyId] Client id for the study you want
@@ -16760,7 +16760,7 @@ export class StudiesApi extends BaseAPI {
      * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {number} [userId] User&#39;s id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StudiesApi
@@ -16792,7 +16792,7 @@ export class StudiesApi extends BaseAPI {
      * @param {string} [predictorVariableName] Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {string} [outcomeVariableName] Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {number} [userId] User&#39;s id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {boolean} [includeCharts] Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param {boolean} [recalculate] Recalculate instead of using cached analysis
      * @param {string} [studyId] Client id for the study you want
@@ -17008,7 +17008,7 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
          * Delete user account. Only the client app that created a user can delete that user.
          * @summary Delete user
          * @param {string} reason Ex: I hate you!
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17067,7 +17067,7 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {number} [clientUserId] Ex: 74802
          * @param {string} [log] Username or email
@@ -17168,7 +17168,7 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17247,7 +17247,7 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {number} [clientUserId] Ex: 74802
          * @param {string} [log] Username or email
@@ -17343,7 +17343,7 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17417,7 +17417,7 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
          * Post UserSettings
          * @summary Post UserSettings
          * @param {User} body User settings to update
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17463,7 +17463,7 @@ export const UserApiFp = function(configuration?: Configuration) {
          * Delete user account. Only the client app that created a user can delete that user.
          * @summary Delete user
          * @param {string} reason Ex: I hate you!
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17488,7 +17488,7 @@ export const UserApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {number} [clientUserId] Ex: 74802
          * @param {string} [log] Username or email
@@ -17519,7 +17519,7 @@ export const UserApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17544,7 +17544,7 @@ export const UserApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {number} [clientUserId] Ex: 74802
          * @param {string} [log] Username or email
@@ -17574,7 +17574,7 @@ export const UserApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17594,7 +17594,7 @@ export const UserApiFp = function(configuration?: Configuration) {
          * Post UserSettings
          * @summary Post UserSettings
          * @param {User} body User settings to update
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17623,7 +17623,7 @@ export const UserApiFactory = function (configuration?: Configuration, fetch?: F
          * Delete user account. Only the client app that created a user can delete that user.
          * @summary Delete user
          * @param {string} reason Ex: I hate you!
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17639,7 +17639,7 @@ export const UserApiFactory = function (configuration?: Configuration, fetch?: F
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {number} [clientUserId] Ex: 74802
          * @param {string} [log] Username or email
@@ -17661,7 +17661,7 @@ export const UserApiFactory = function (configuration?: Configuration, fetch?: F
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17677,7 +17677,7 @@ export const UserApiFactory = function (configuration?: Configuration, fetch?: F
          * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
          * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [appVersion] Ex: 2.1.1.0
          * @param {number} [clientUserId] Ex: 74802
          * @param {string} [log] Username or email
@@ -17698,7 +17698,7 @@ export const UserApiFactory = function (configuration?: Configuration, fetch?: F
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17709,7 +17709,7 @@ export const UserApiFactory = function (configuration?: Configuration, fetch?: F
          * Post UserSettings
          * @summary Post UserSettings
          * @param {User} body User settings to update
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17730,7 +17730,7 @@ export class UserApi extends BaseAPI {
      * Delete user account. Only the client app that created a user can delete that user.
      * @summary Delete user
      * @param {string} reason Ex: I hate you!
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -17748,7 +17748,7 @@ export class UserApi extends BaseAPI {
      * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
      * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {string} [appVersion] Ex: 2.1.1.0
      * @param {number} [clientUserId] Ex: 74802
      * @param {string} [log] Username or email
@@ -17772,7 +17772,7 @@ export class UserApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -17790,7 +17790,7 @@ export class UserApi extends BaseAPI {
      * @param {number} [limit] The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
      * @param {number} [offset] OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {string} [appVersion] Ex: 2.1.1.0
      * @param {number} [clientUserId] Ex: 74802
      * @param {string} [log] Username or email
@@ -17813,7 +17813,7 @@ export class UserApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -17826,7 +17826,7 @@ export class UserApi extends BaseAPI {
      * Post UserSettings
      * @summary Post UserSettings
      * @param {User} body User settings to update
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -18002,7 +18002,7 @@ export const VariablesApiFetchParamCreator = function (configuration?: Configura
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
          * @param {boolean} [includePublic] Include variables the user has no measurements for
          * @param {boolean} [manualTracking] Only include variables tracked manually by the user
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [upc] UPC or other barcode scan result
          * @param {string} [effectOrCause] Provided variable is the effect or cause
          * @param {string} [publicEffectOrCause] Ex: 
@@ -18281,7 +18281,7 @@ export const VariablesApiFetchParamCreator = function (configuration?: Configura
          * @summary Update User Settings for a Variable
          * @param {Array<Variable>} userVariables Variable user settings data
          * @param {boolean} [includePrivate] Include user-specific variables in results
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includePublic] Include variables the user has no measurements for
          * @param {string} [searchPhrase] Ex: %Body Fat%
          * @param {boolean} [exactMatch] Require exact match
@@ -18505,7 +18505,7 @@ export const VariablesApiFp = function(configuration?: Configuration) {
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
          * @param {boolean} [includePublic] Include variables the user has no measurements for
          * @param {boolean} [manualTracking] Only include variables tracked manually by the user
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [upc] UPC or other barcode scan result
          * @param {string} [effectOrCause] Provided variable is the effect or cause
          * @param {string} [publicEffectOrCause] Ex: 
@@ -18568,7 +18568,7 @@ export const VariablesApiFp = function(configuration?: Configuration) {
          * @summary Update User Settings for a Variable
          * @param {Array<Variable>} userVariables Variable user settings data
          * @param {boolean} [includePrivate] Include user-specific variables in results
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includePublic] Include variables the user has no measurements for
          * @param {string} [searchPhrase] Ex: %Body Fat%
          * @param {boolean} [exactMatch] Require exact match
@@ -18669,7 +18669,7 @@ export const VariablesApiFactory = function (configuration?: Configuration, fetc
          * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
          * @param {boolean} [includePublic] Include variables the user has no measurements for
          * @param {boolean} [manualTracking] Only include variables tracked manually by the user
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {string} [upc] UPC or other barcode scan result
          * @param {string} [effectOrCause] Provided variable is the effect or cause
          * @param {string} [publicEffectOrCause] Ex: 
@@ -18714,7 +18714,7 @@ export const VariablesApiFactory = function (configuration?: Configuration, fetc
          * @summary Update User Settings for a Variable
          * @param {Array<Variable>} userVariables Variable user settings data
          * @param {boolean} [includePrivate] Include user-specific variables in results
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {boolean} [includePublic] Include variables the user has no measurements for
          * @param {string} [searchPhrase] Ex: %Body Fat%
          * @param {boolean} [exactMatch] Require exact match
@@ -18804,7 +18804,7 @@ export class VariablesApi extends BaseAPI {
      * @param {string} [sort] Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
      * @param {boolean} [includePublic] Include variables the user has no measurements for
      * @param {boolean} [manualTracking] Only include variables tracked manually by the user
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {string} [upc] UPC or other barcode scan result
      * @param {string} [effectOrCause] Provided variable is the effect or cause
      * @param {string} [publicEffectOrCause] Ex: 
@@ -18853,7 +18853,7 @@ export class VariablesApi extends BaseAPI {
      * @summary Update User Settings for a Variable
      * @param {Array<Variable>} userVariables Variable user settings data
      * @param {boolean} [includePrivate] Include user-specific variables in results
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {boolean} [includePublic] Include variables the user has no measurements for
      * @param {string} [searchPhrase] Ex: %Body Fat%
      * @param {boolean} [exactMatch] Require exact match
@@ -18899,7 +18899,7 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -18979,7 +18979,7 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19059,7 +19059,7 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19139,7 +19139,7 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19219,7 +19219,7 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19299,7 +19299,7 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19388,7 +19388,7 @@ export const XprofileApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19414,7 +19414,7 @@ export const XprofileApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19440,7 +19440,7 @@ export const XprofileApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19466,7 +19466,7 @@ export const XprofileApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19492,7 +19492,7 @@ export const XprofileApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19518,7 +19518,7 @@ export const XprofileApiFp = function(configuration?: Configuration) {
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19553,7 +19553,7 @@ export const XprofileApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19570,7 +19570,7 @@ export const XprofileApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19587,7 +19587,7 @@ export const XprofileApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19604,7 +19604,7 @@ export const XprofileApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19621,7 +19621,7 @@ export const XprofileApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19638,7 +19638,7 @@ export const XprofileApiFactory = function (configuration?: Configuration, fetch
          * @param {number} [userId] User&#39;s id
          * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
          * @param {number} [id] Id
-         * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+         * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -19665,7 +19665,7 @@ export class XprofileApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof XprofileApi
@@ -19684,7 +19684,7 @@ export class XprofileApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof XprofileApi
@@ -19703,7 +19703,7 @@ export class XprofileApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof XprofileApi
@@ -19722,7 +19722,7 @@ export class XprofileApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof XprofileApi
@@ -19741,7 +19741,7 @@ export class XprofileApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof XprofileApi
@@ -19760,7 +19760,7 @@ export class XprofileApi extends BaseAPI {
      * @param {number} [userId] User&#39;s id
      * @param {string} [createdAt] When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {number} [id] Id
-     * @param {string} [clientId] Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {string} [clientId] Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof XprofileApi

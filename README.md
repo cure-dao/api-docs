@@ -1,6 +1,6 @@
 # CureDAO API
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/QuantiModo/docs.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/CureDAO/docs.svg)](https://greenkeeper.io/)
 
 - Use the access token "demo" to try out the API
 
