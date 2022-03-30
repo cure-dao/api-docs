@@ -53,6 +53,309 @@ tags:
       description: Search for a study
       url: 'https://web.quantimo.do/#/app/studies'
 paths:
+  /v3/units:
+    get:
+      tags:
+        - units
+      summary: Get units
+      description: Get a list of the available measurement units
+      operationId: getUnits
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                description: Array of units
+                items:
+                  $ref: '#/components/schemas/Unit'
+        '401':
+          description: Not Authenticated
+          content: {}
+      security:
+        - access_token: []
+        - curedao_oauth2:
+            - basic
+  /v3/variables:
+    get:
+      tags:
+        - variables
+      summary: Get variables along with related user-specific analysis settings and statistics
+      description: 'Get variables. If the user has specified variable settings, these are provided instead of the common variable defaults.'
+      operationId: getVariables
+      parameters:
+        - $ref: '#/components/parameters/includeChartsParam'
+        - $ref: '#/components/parameters/numberOfRawMeasurementsParam'
+        - $ref: '#/components/parameters/userIdParam'
+        - $ref: '#/components/parameters/variableCategoryNameParam'
+        - name: name
+          in: query
+          description: 'Name of the variable. To get results matching a substring, add % as a wildcard as the first and/or last character of a query string parameter. In order to get variables that contain `Mood`, the following query should be used: ?variableName=%Mood%'
+          schema:
+            type: string
+        - $ref: '#/components/parameters/variableNameParam'
+        - $ref: '#/components/parameters/updatedAtParam'
+        - $ref: '#/components/parameters/sourceNameParam'
+        - $ref: '#/components/parameters/earliestMeasurementTimeParam'
+        - $ref: '#/components/parameters/latestMeasurementTimeParam'
+        - name: id
+          in: query
+          description: Common variable id
+          schema:
+            type: integer
+        - $ref: '#/components/parameters/lastSourceParam'
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/offsetParam'
+        - $ref: '#/components/parameters/sortParam'
+        - $ref: '#/components/parameters/includePublicParam'
+        - $ref: '#/components/parameters/manualTrackingParam'
+        - $ref: '#/components/parameters/clientIdParam'
+        - name: upc
+          in: query
+          description: UPC or other barcode scan result
+          schema:
+            type: string
+        - $ref: '#/components/parameters/effectOrCauseParam'
+        - $ref: '#/components/parameters/publicEffectOrCauseParam'
+        - $ref: '#/components/parameters/exactMatchParam'
+        - $ref: '#/components/parameters/variableCategoryIdParam'
+        - $ref: '#/components/parameters/includePrivateParam'
+        - $ref: '#/components/parameters/searchPhraseParam'
+        - $ref: '#/components/parameters/synonymsParam'
+        - $ref: '#/components/parameters/taggedVariableIdParam'
+        - $ref: '#/components/parameters/tagVariableIdParam'
+        - name: joinVariableId
+          in: query
+          description: 'Id of the variable you would like to get variables that can be joined to.  This is used to merge duplicate variables.   If joinVariableId is specified, this returns only variables eligible to be joined to the variable specified by the joinVariableId.'
+          schema:
+            type: integer
+        - name: parentUserTagVariableId
+          in: query
+          description: 'Id of the parent category variable (i.e. Fruit) you would like to get eligible child sub-type variables (i.e. Apple) for.  Child variable measurements will be included in analysis of the parent variable.  For instance, a child sub-type of the parent category Fruit could be Apple.  When Apple is tagged with the parent category Fruit, Apple measurements will be included when Fruit is analyzed.'
+          schema:
+            type: integer
+        - name: childUserTagVariableId
+          in: query
+          description: 'Id of the child sub-type variable (i.e. Apple) you would like to get eligible parent variables (i.e. Fruit) for.  Child variable measurements will be included in analysis of the parent variable.  For instance, a child sub-type of the parent category Fruit could be Apple. When Apple is tagged with the parent category Fruit, Apple measurements will be included when Fruit is analyzed.'
+          schema:
+            type: integer
+        - name: ingredientUserTagVariableId
+          in: query
+          description: 'Id of the ingredient variable (i.e. Fructose)  you would like to get eligible ingredientOf variables (i.e. Apple) for.  IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredientOf of variable Fruit could be Apple.'
+          schema:
+            type: integer
+        - name: ingredientOfUserTagVariableId
+          in: query
+          description: 'Id of the ingredientOf variable (i.e. Apple) you would like to get eligible ingredient variables (i.e. Fructose) for.  IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredientOf of variable Fruit could be Apple.'
+          schema:
+            type: integer
+        - name: commonOnly
+          in: query
+          description: Return only public and aggregated common variable data instead of user-specific variables
+          schema:
+            type: boolean
+        - name: userOnly
+          in: query
+          description: 'Return only user-specific variables and data, excluding common aggregated variable data'
+          schema:
+            type: boolean
+        - $ref: '#/components/parameters/includeTagsParam'
+        - $ref: '#/components/parameters/recalculate'
+        - $ref: '#/components/parameters/variableIdParam'
+        - $ref: '#/components/parameters/conciseParam'
+        - name: refresh
+          in: query
+          description: Regenerate charts instead of getting from the cache
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Variables returned
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Variable'
+        '401':
+          description: Not Authenticated
+          content: {}
+      security:
+        - access_token: []
+        - curedao_oauth2:
+            - basic
+    post:
+      tags:
+        - variables
+      summary: Update User Settings for a Variable
+      description: 'Users can change the parameters used in analysis of that variable such as the expected duration of action for a variable to have an effect, the estimated delay before the onset of action. In order to filter out erroneous data, they are able to set the maximum and minimum reasonable daily values for a variable.'
+      operationId: postUserVariables
+      parameters:
+        - $ref: '#/components/parameters/includePrivateParam'
+        - $ref: '#/components/parameters/clientIdParam'
+        - $ref: '#/components/parameters/includePublicParam'
+        - $ref: '#/components/parameters/searchPhraseParam'
+        - $ref: '#/components/parameters/exactMatchParam'
+        - $ref: '#/components/parameters/manualTrackingParam'
+        - $ref: '#/components/parameters/variableCategoryNameParam'
+        - $ref: '#/components/parameters/variableCategoryIdParam'
+        - $ref: '#/components/parameters/synonymsParam'
+      requestBody:
+        $ref: '#/components/requestBodies/userVariablesParam'
+      responses:
+        '201':
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '400':
+          description: The received JSON was invalid or malformed
+          content: {}
+        '401':
+          description: Not Authenticated
+          content: {}
+        '404':
+          description: Unknown target user ID
+          content: {}
+      security:
+        - access_token: []
+        - curedao_oauth2:
+            - basic
+  /v3/measurements:
+    get:
+      tags:
+        - measurements
+      summary: Get measurements for this user
+      description: 'Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten.'
+      operationId: getMeasurements
+      parameters:
+        - $ref: '#/components/parameters/variableNameParam'
+        - $ref: '#/components/parameters/sortParam'
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/offsetParam'
+        - $ref: '#/components/parameters/variableCategoryNameParam'
+        - $ref: '#/components/parameters/updatedAtParam'
+        - $ref: '#/components/parameters/userIdParam'
+        - $ref: '#/components/parameters/sourceNameParam'
+        - $ref: '#/components/parameters/connectorNameParam'
+        - $ref: '#/components/parameters/valueParam'
+        - $ref: '#/components/parameters/unitNameParam'
+        - $ref: '#/components/parameters/earliestMeasurementTimeParam'
+        - $ref: '#/components/parameters/latestMeasurementTimeParam'
+        - $ref: '#/components/parameters/createdAtParam'
+        - name: id
+          in: query
+          description: Measurement id
+          schema:
+            type: integer
+        - $ref: '#/components/parameters/groupingWidthParam'
+        - $ref: '#/components/parameters/groupingTimezoneParam'
+        - $ref: '#/components/parameters/doNotProcessParam'
+        - $ref: '#/components/parameters/clientIdParam'
+        - $ref: '#/components/parameters/doNotConvertParam'
+        - $ref: '#/components/parameters/minMaxFilterParam'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Measurement'
+        '401':
+          description: Not Authenticated
+          content: {}
+      security:
+        - access_token: []
+        - curedao_oauth2:
+            - readmeasurements
+  /v3/measurements/delete:
+    delete:
+      tags:
+        - measurements
+      summary: Delete a measurement
+      description: Delete a previously submitted measurement
+      operationId: deleteMeasurement
+      responses:
+        '204':
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '401':
+          description: Not Authenticated
+          content: {}
+      security:
+        - access_token: []
+        - curedao_oauth2:
+            - writemeasurements
+      x-codegen-request-body-name: body
+  /v3/measurements/post:
+    post:
+      tags:
+        - measurements
+      summary: Post a new set or update existing measurements to the database
+      description: 'You can submit or update multiple measurements in a "measurements" sub-array.  If the variable these measurements correspond to does not already exist in the database, it will be automatically added.'
+      operationId: postMeasurements
+      parameters:
+        - $ref: '#/components/parameters/userIdParam'
+      requestBody:
+        description: An array of measurement sets containing measurement items you want to insert.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/MeasurementSet'
+        required: true
+      responses:
+        '201':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostMeasurementsResponse'
+        '401':
+          description: Not Authenticated
+          content: {}
+      security:
+        - access_token: []
+        - curedao_oauth2:
+            - writemeasurements
+      x-codegen-request-body-name: body
+  /v3/measurements/update:
+    post:
+      tags:
+        - measurements
+      summary: Update a measurement
+      description: Update a previously submitted measurement
+      operationId: updateMeasurement
+      requestBody:
+        description: 'The id as well as the new startTime, note, and/or value of the measurement to be updated'
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MeasurementUpdate'
+        required: true
+      responses:
+        '201':
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '401':
+          description: Not Authenticated
+          content: {}
+      security:
+        - access_token: []
+        - curedao_oauth2:
+            - basic
+      x-codegen-request-body-name: body
   /v3/appSettings:
     get:
       tags:
@@ -408,139 +711,6 @@ paths:
         '200':
           description: Embeddable connect javascript was returned
           content: {}
-  /v3/measurements:
-    get:
-      tags:
-        - measurements
-      summary: Get measurements for this user
-      description: 'Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten.'
-      operationId: getMeasurements
-      parameters:
-        - $ref: '#/components/parameters/variableNameParam'
-        - $ref: '#/components/parameters/sortParam'
-        - $ref: '#/components/parameters/limitParam'
-        - $ref: '#/components/parameters/offsetParam'
-        - $ref: '#/components/parameters/variableCategoryNameParam'
-        - $ref: '#/components/parameters/updatedAtParam'
-        - $ref: '#/components/parameters/userIdParam'
-        - $ref: '#/components/parameters/sourceNameParam'
-        - $ref: '#/components/parameters/connectorNameParam'
-        - $ref: '#/components/parameters/valueParam'
-        - $ref: '#/components/parameters/unitNameParam'
-        - $ref: '#/components/parameters/earliestMeasurementTimeParam'
-        - $ref: '#/components/parameters/latestMeasurementTimeParam'
-        - $ref: '#/components/parameters/createdAtParam'
-        - name: id
-          in: query
-          description: Measurement id
-          schema:
-            type: integer
-        - $ref: '#/components/parameters/groupingWidthParam'
-        - $ref: '#/components/parameters/groupingTimezoneParam'
-        - $ref: '#/components/parameters/doNotProcessParam'
-        - $ref: '#/components/parameters/clientIdParam'
-        - $ref: '#/components/parameters/doNotConvertParam'
-        - $ref: '#/components/parameters/minMaxFilterParam'
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Measurement'
-        '401':
-          description: Not Authenticated
-          content: {}
-      security:
-        - access_token: []
-        - curedao_oauth2:
-            - readmeasurements
-  /v3/measurements/delete:
-    delete:
-      tags:
-        - measurements
-      summary: Delete a measurement
-      description: Delete a previously submitted measurement
-      operationId: deleteMeasurement
-      responses:
-        '204':
-          description: Successful Operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CommonResponse'
-        '401':
-          description: Not Authenticated
-          content: {}
-      security:
-        - access_token: []
-        - curedao_oauth2:
-            - writemeasurements
-      x-codegen-request-body-name: body
-  /v3/measurements/post:
-    post:
-      tags:
-        - measurements
-      summary: Post a new set or update existing measurements to the database
-      description: 'You can submit or update multiple measurements in a "measurements" sub-array.  If the variable these measurements correspond to does not already exist in the database, it will be automatically added.'
-      operationId: postMeasurements
-      parameters:
-        - $ref: '#/components/parameters/userIdParam'
-      requestBody:
-        description: An array of measurement sets containing measurement items you want to insert.
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                $ref: '#/components/schemas/MeasurementSet'
-        required: true
-      responses:
-        '201':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PostMeasurementsResponse'
-        '401':
-          description: Not Authenticated
-          content: {}
-      security:
-        - access_token: []
-        - curedao_oauth2:
-            - writemeasurements
-      x-codegen-request-body-name: body
-  /v3/measurements/update:
-    post:
-      tags:
-        - measurements
-      summary: Update a measurement
-      description: Update a previously submitted measurement
-      operationId: updateMeasurement
-      requestBody:
-        description: 'The id as well as the new startTime, note, and/or value of the measurement to be updated'
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/MeasurementUpdate'
-        required: true
-      responses:
-        '201':
-          description: Successful Operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CommonResponse'
-        '401':
-          description: Not Authenticated
-          content: {}
-      security:
-        - access_token: []
-        - curedao_oauth2:
-            - basic
-      x-codegen-request-body-name: body
   /v3/notificationPreferences:
     get:
       tags:
@@ -1193,30 +1363,6 @@ paths:
         - access_token: []
         - curedao_oauth2:
             - basic
-  /v3/units:
-    get:
-      tags:
-        - units
-      summary: Get units
-      description: Get a list of the available measurement units
-      operationId: getUnits
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                description: Array of units
-                items:
-                  $ref: '#/components/schemas/Unit'
-        '401':
-          description: Not Authenticated
-          content: {}
-      security:
-        - access_token: []
-        - curedao_oauth2:
-            - basic
   /v3/user:
     get:
       tags:
@@ -1396,152 +1542,6 @@ paths:
                 $ref: '#/components/schemas/CommonResponse'
         '401':
           description: Not Authenticated
-          content: {}
-      security:
-        - access_token: []
-        - curedao_oauth2:
-            - basic
-  /v3/variables:
-    get:
-      tags:
-        - variables
-      summary: Get variables along with related user-specific analysis settings and statistics
-      description: 'Get variables. If the user has specified variable settings, these are provided instead of the common variable defaults.'
-      operationId: getVariables
-      parameters:
-        - $ref: '#/components/parameters/includeChartsParam'
-        - $ref: '#/components/parameters/numberOfRawMeasurementsParam'
-        - $ref: '#/components/parameters/userIdParam'
-        - $ref: '#/components/parameters/variableCategoryNameParam'
-        - name: name
-          in: query
-          description: 'Name of the variable. To get results matching a substring, add % as a wildcard as the first and/or last character of a query string parameter. In order to get variables that contain `Mood`, the following query should be used: ?variableName=%Mood%'
-          schema:
-            type: string
-        - $ref: '#/components/parameters/variableNameParam'
-        - $ref: '#/components/parameters/updatedAtParam'
-        - $ref: '#/components/parameters/sourceNameParam'
-        - $ref: '#/components/parameters/earliestMeasurementTimeParam'
-        - $ref: '#/components/parameters/latestMeasurementTimeParam'
-        - name: id
-          in: query
-          description: Common variable id
-          schema:
-            type: integer
-        - $ref: '#/components/parameters/lastSourceParam'
-        - $ref: '#/components/parameters/limitParam'
-        - $ref: '#/components/parameters/offsetParam'
-        - $ref: '#/components/parameters/sortParam'
-        - $ref: '#/components/parameters/includePublicParam'
-        - $ref: '#/components/parameters/manualTrackingParam'
-        - $ref: '#/components/parameters/clientIdParam'
-        - name: upc
-          in: query
-          description: UPC or other barcode scan result
-          schema:
-            type: string
-        - $ref: '#/components/parameters/effectOrCauseParam'
-        - $ref: '#/components/parameters/publicEffectOrCauseParam'
-        - $ref: '#/components/parameters/exactMatchParam'
-        - $ref: '#/components/parameters/variableCategoryIdParam'
-        - $ref: '#/components/parameters/includePrivateParam'
-        - $ref: '#/components/parameters/searchPhraseParam'
-        - $ref: '#/components/parameters/synonymsParam'
-        - $ref: '#/components/parameters/taggedVariableIdParam'
-        - $ref: '#/components/parameters/tagVariableIdParam'
-        - name: joinVariableId
-          in: query
-          description: 'Id of the variable you would like to get variables that can be joined to.  This is used to merge duplicate variables.   If joinVariableId is specified, this returns only variables eligible to be joined to the variable specified by the joinVariableId.'
-          schema:
-            type: integer
-        - name: parentUserTagVariableId
-          in: query
-          description: 'Id of the parent category variable (i.e. Fruit) you would like to get eligible child sub-type variables (i.e. Apple) for.  Child variable measurements will be included in analysis of the parent variable.  For instance, a child sub-type of the parent category Fruit could be Apple.  When Apple is tagged with the parent category Fruit, Apple measurements will be included when Fruit is analyzed.'
-          schema:
-            type: integer
-        - name: childUserTagVariableId
-          in: query
-          description: 'Id of the child sub-type variable (i.e. Apple) you would like to get eligible parent variables (i.e. Fruit) for.  Child variable measurements will be included in analysis of the parent variable.  For instance, a child sub-type of the parent category Fruit could be Apple. When Apple is tagged with the parent category Fruit, Apple measurements will be included when Fruit is analyzed.'
-          schema:
-            type: integer
-        - name: ingredientUserTagVariableId
-          in: query
-          description: 'Id of the ingredient variable (i.e. Fructose)  you would like to get eligible ingredientOf variables (i.e. Apple) for.  IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredientOf of variable Fruit could be Apple.'
-          schema:
-            type: integer
-        - name: ingredientOfUserTagVariableId
-          in: query
-          description: 'Id of the ingredientOf variable (i.e. Apple) you would like to get eligible ingredient variables (i.e. Fructose) for.  IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredientOf of variable Fruit could be Apple.'
-          schema:
-            type: integer
-        - name: commonOnly
-          in: query
-          description: Return only public and aggregated common variable data instead of user-specific variables
-          schema:
-            type: boolean
-        - name: userOnly
-          in: query
-          description: 'Return only user-specific variables and data, excluding common aggregated variable data'
-          schema:
-            type: boolean
-        - $ref: '#/components/parameters/includeTagsParam'
-        - $ref: '#/components/parameters/recalculate'
-        - $ref: '#/components/parameters/variableIdParam'
-        - $ref: '#/components/parameters/conciseParam'
-        - name: refresh
-          in: query
-          description: Regenerate charts instead of getting from the cache
-          schema:
-            type: boolean
-      responses:
-        '200':
-          description: Variables returned
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Variable'
-        '401':
-          description: Not Authenticated
-          content: {}
-      security:
-        - access_token: []
-        - curedao_oauth2:
-            - basic
-    post:
-      tags:
-        - variables
-      summary: Update User Settings for a Variable
-      description: 'Users can change the parameters used in analysis of that variable such as the expected duration of action for a variable to have an effect, the estimated delay before the onset of action. In order to filter out erroneous data, they are able to set the maximum and minimum reasonable daily values for a variable.'
-      operationId: postUserVariables
-      parameters:
-        - $ref: '#/components/parameters/includePrivateParam'
-        - $ref: '#/components/parameters/clientIdParam'
-        - $ref: '#/components/parameters/includePublicParam'
-        - $ref: '#/components/parameters/searchPhraseParam'
-        - $ref: '#/components/parameters/exactMatchParam'
-        - $ref: '#/components/parameters/manualTrackingParam'
-        - $ref: '#/components/parameters/variableCategoryNameParam'
-        - $ref: '#/components/parameters/variableCategoryIdParam'
-        - $ref: '#/components/parameters/synonymsParam'
-      requestBody:
-        $ref: '#/components/requestBodies/userVariablesParam'
-      responses:
-        '201':
-          description: Successful Operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CommonResponse'
-        '400':
-          description: The received JSON was invalid or malformed
-          content: {}
-        '401':
-          description: Not Authenticated
-          content: {}
-        '404':
-          description: Unknown target user ID
           content: {}
       security:
         - access_token: []
