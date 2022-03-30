@@ -272,28 +272,6 @@ paths:
         - access_token: []
         - curedao_oauth2:
             - readmeasurements
-  /v3/measurements/delete:
-    delete:
-      tags:
-        - measurements
-      summary: Delete a measurement
-      description: Delete a previously submitted measurement
-      operationId: deleteMeasurement
-      responses:
-        '204':
-          description: Successful Operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CommonResponse'
-        '401':
-          description: Not Authenticated
-          content: {}
-      security:
-        - access_token: []
-        - curedao_oauth2:
-            - writemeasurements
-      x-codegen-request-body-name: body
   /v3/measurements/post:
     post:
       tags:
@@ -355,6 +333,28 @@ paths:
         - access_token: []
         - curedao_oauth2:
             - basic
+      x-codegen-request-body-name: body
+  /v3/measurements/delete:
+    delete:
+      tags:
+        - measurements
+      summary: Delete a measurement
+      description: Delete a previously submitted measurement
+      operationId: deleteMeasurement
+      responses:
+        '204':
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '401':
+          description: Not Authenticated
+          content: {}
+      security:
+        - access_token: []
+        - curedao_oauth2:
+            - writemeasurements
       x-codegen-request-body-name: body
   /v3/appSettings:
     get:
