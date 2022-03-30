@@ -359,7 +359,7 @@ paths:
   /v3/appSettings:
     get:
       tags:
-        - AppSettings
+        - appSettings
       summary: Get client app settings
       description: 'Get the settings for your application configurable at https://builder.quantimo.do'
       operationId: getAppSettings
@@ -1675,8 +1675,48 @@ paths:
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
-  /v4/study: {}
-  /v3/notifications: {}
+  /v4/study:
+    get:
+      tags:
+        - studies
+      summary: Get Study
+      description: Get Study
+      operationId: getStudy
+      parameters:
+        - $ref: '#/components/parameters/causeVariableNameParam'
+        - $ref: '#/components/parameters/effectVariableNameParam'
+        - $ref: '#/components/parameters/causeVariableIdParam'
+        - $ref: '#/components/parameters/effectVariableIdParam'
+        - $ref: '#/components/parameters/predictorVariableNameParam'
+        - $ref: '#/components/parameters/outcomeVariableNameParam'
+        - $ref: '#/components/parameters/userIdParam'
+        - $ref: '#/components/parameters/clientIdParam'
+        - $ref: '#/components/parameters/includeChartsParam'
+        - $ref: '#/components/parameters/recalculate'
+        - $ref: '#/components/parameters/studyClientIdParam'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Study'
+        '401':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JsonErrorResponse'
+        '404':
+          description: Not found
+          content: {}
+        '500':
+          description: Internal server error
+          content: {}
+      security:
+        - access_token: []
+        - curedao_oauth2:
+            - basic
 components:
   schemas:
     AppSettings:
