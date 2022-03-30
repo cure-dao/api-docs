@@ -160,8 +160,8 @@ function executeCommand(command, callback) {
         if(callback){callback(err);}
     });
 }
-const swaggerJsonUrl = 'https://raw.githubusercontent.com/CureDAO/docs/master/specification/swagger.json';
-//swaggerJsonUrl = 'https://utopia.quantimo.do:4443/api/docs/specification/swagger.json';
+const swaggerJsonUrl = 'https://raw.githubusercontent.com/CureDAO/docs/master/specification/cure-dao-open-api-v3.yml';
+//swaggerJsonUrl = 'https://utopia.quantimo.do:4443/api/docs/specification/cure-dao-open-api-v3.yml';
 function clone(organization, repoName, destinationFolder, callback){
     const repoUrl = 'https://github.com/' + organization + '/' + repoName;
     const repoFolder = destinationFolder + '/' + repoName;
@@ -225,7 +225,7 @@ function readJsonFile(pathToFile) {
     logInfo("Reading " + pathToFile);
     return JSON.parse(fs.readFileSync(pathToFile, 'utf8'));
 }
-const pathToSwaggerJson = "swagger/swagger.json";
+const pathToSwaggerJson = "specification/cure-dao-open-api-v3.yml";
 const swaggerJson = readJsonFile(pathToSwaggerJson);
 function unzipFileToFolder(sourceFile, destinationFolder) {
     logInfo('Unzipping files in ' + sourceFile + ' to output path ' + destinationFolder);
@@ -324,7 +324,7 @@ function getGlobalSwaggerRequestOptions(language, useLocalSpec) {
         json: true // Automatically stringifies the body to JSON
     };
     if(useLocalSpec){
-        opt.body.spec = require('./specification/swagger.json');
+        opt.body.spec = require('./specification/cure-dao-open-api-v3.yml');
     } else {
         opt.body.swaggerUrl = swaggerJsonUrl;
     }
@@ -393,10 +393,11 @@ function generateOptionsAndDownloadSdk(language, localSpec, cb){
     const opts = getSwaggerDownloadRequestOptions(language, localSpec);
     if(debug){outputAvailableOptionsForLanguage(language, localSpec);}
     if(localSpec){
-        opts.spec = require('./specification/swagger.json');
+        var file = './specification/cure-dao-open-api-v3.yml';
+        opts.spec = require(file);
         console.info("Deleting enum's because they break the typescript generator")
         deleteKeyRecursively(opts.spec, "enum")
-        logInfo("Generating " + language + " sdk using local swagger.json");
+        logInfo("Generating " + language + " sdk using local specification file: " + file);
     }else{
         logInfo("Generating " + language + " sdk using " +  swaggerJsonUrl);
     }
@@ -405,7 +406,7 @@ function generateOptionsAndDownloadSdk(language, localSpec, cb){
 gulp.task('generateExpressServer', [], function () {
     const path = require('path');
     const codegen = require('swagger-node-codegen');
-    const swagger = require('./specification/swagger.json');
+    const swagger = require('./specification/cure-dao-open-api-v3.yml');
     codegen.generate({
         swagger,
         target_dir: path.resolve(__dirname, './sdks-unzipped/'+getSdkNameForLanguage(language))
@@ -928,7 +929,7 @@ function executeSynchronously(cmd, catchExceptions, cb){
     }
 }
 function generateLocally(language, options){
-    executeSynchronously(`java -jar ${jar} generate -i swagger/swagger.json -l ${language} -o sdks-unzipped/${language} ${options}`)
+    executeSynchronously(`java -jar ${jar} generate -i specification/cure-dao-open-api-v3.yml -l ${language} -o sdks-unzipped/${language} ${options}`)
 }
 gulp.task('_typescript', function(cb){
     downloadAndExtractJavascriptClient('typescript-node', function(){

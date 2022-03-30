@@ -7,7 +7,7 @@ echo "Clone swagger-codegen..."
 
 echo "Updating maven packages..."
 #cd swagger-codegen && ./run-in-docker.sh mvn package
-cp -R swagger/swagger.json swagger-codegen/api-docs-v1.json
+cp -R specification/cure-dao-open-api-v3.yml swagger-codegen/api-docs-v1.json
 
 cd swagger-codegen
 mkdir curedao_v1_skds
