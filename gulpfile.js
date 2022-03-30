@@ -61,17 +61,17 @@ let languages = [
 const sdkSwaggerCodegenOptions = {
     "php": {
         "invokerPackage": "QuantiModo\\Client",
-        "composerProjectName": "quantimodo-sdk-php",
-        "composerVendorName": "quantimodo",
+        "composerProjectName": "curedao-sdk-php",
+        "composerVendorName": "curedao",
         "modelPackage": "Model",
         "apiPackage": "Api",
         "packagePath": "QuantiModoClient"
     },
     "javascript": {
-        //"projectName": "quantimodo",
+        //"projectName": "curedao",
     },
     "ruby": {
-        "gemName": "quantimodoApi",
+        "gemName": "curedaoApi",
         "moduleName": "QuantiModoApi",
         "gemVersion": getAppVersionNumber(),
         "gemHomepage": "https://curedao.org",
@@ -184,7 +184,7 @@ function cleanOneFolderExceptGit(folderToClean) {
         '!' + folderToClean + '/bower.json',
         '!' + folderToClean + '/package.json',
         '!' + folderToClean + '/composer.json',
-        '!' + folderToClean + '/quantimodo-api.js'
+        '!' + folderToClean + '/curedao-api.js'
     ]);
 }
 function copyOneFoldersContentsToAnotherExceptReadme(sourceFolderPath, destinationFolderPath) {
@@ -211,7 +211,7 @@ function writeToFile(filePath, stringContents, callback) {
     });
 }
 function getSdkNameForLanguage(languageName) {
-    return 'quantimodo-sdk-' + languageName;
+    return 'curedao-sdk-' + languageName;
 }
 function getUnzippedPathForSdkLanguage(languageName) {
     return sdksUnzippedPath + '/' + languageName + '-client';
@@ -234,7 +234,7 @@ function unzipFileToFolder(sourceFile, destinationFolder) {
         .pipe(gulp.dest(destinationFolder));
 }
 const pathToQmDocker = "../../..";
-const pathToQuantiModoNodeModule = 'node_modules/quantimodo';
+const pathToQuantiModoNodeModule = 'node_modules/curedao';
 String.prototype.replaceAll = function(search, replacement) {
     const target = this;
     return target.replace(new RegExp(search, 'g'), replacement);
@@ -248,7 +248,7 @@ gulp.task('js-sdk-browserify-repo', [], function (callback) {
 });
 function browserify(path, callback){
     const sourceFile = 'src/index.js';
-    const outputFile = 'quantimodo-web.js';
+    const outputFile = 'curedao-web.js';
     executeCommand('cd ' + path + ' && npm install -g browserify && browserify ' +
         sourceFile + ' --standalone Quantimodo > ' + outputFile, function () {
         callback();
@@ -281,7 +281,7 @@ gulp.task('clean-folders', [], function () {
         sdksReposPath + '/**/*'
     ]);
 });
-let laravelVendorPath = pathToQmDocker + '/laravel/vendor/quantimodo/quantimodo-sdk-php';
+let laravelVendorPath = pathToQmDocker + '/laravel/vendor/curedao/curedao-sdk-php';
 gulp.task('clean-laravel-vendor', [], function () {
     return del([laravelVendorPath + '/**/*'], {force: true});
 });
@@ -293,9 +293,9 @@ gulp.task('clean-unzipped-folders', [], function () {
 gulp.task('clone-repos', [], function (callback) {
     for(let i = 0; i < languages.length; i++){
         if(i === languages.length - 1){
-            clone('quantimodo', getSdkNameForLanguage(languages[i]), sdksReposPath, callback);
+            clone('curedao', getSdkNameForLanguage(languages[i]), sdksReposPath, callback);
         } else {
-            clone('quantimodo', getSdkNameForLanguage(languages[i]), sdksReposPath);
+            clone('curedao', getSdkNameForLanguage(languages[i]), sdksReposPath);
         }
     }
 });
@@ -338,20 +338,20 @@ function getSwaggerDownloadRequestOptions(language, useLocalSpec) {
     } else {
         opts.body.options = {};
         opts.body.options.apiPackage = "QuantiModoApi";
-        opts.body.options.artifactId = "quantimodoApi";
+        opts.body.options.artifactId = "curedaoApi";
         opts.body.options.authorEmail = "mike@quantimo.do";
         opts.body.options.authorName = "Mike P. Sinn";
         opts.body.options.classPrefix = "QM";
         opts.body.options.developerEmail = "mike@quantimo.do";
         opts.body.options.developerName = "Mike P. Sinn";
-        opts.body.options.invokerPackage = (sdkSwaggerCodegenOptions[language] && sdkSwaggerCodegenOptions[language].invokerPackage) ? sdkSwaggerCodegenOptions[language].invokerPackage : "quantimodoApi";
-        opts.body.options.modelPackage = "quantimodoApi";
-        opts.body.options.moduleName = "quantimodoApi";
-        opts.body.options.packageName = "quantimodo_api";
+        opts.body.options.invokerPackage = (sdkSwaggerCodegenOptions[language] && sdkSwaggerCodegenOptions[language].invokerPackage) ? sdkSwaggerCodegenOptions[language].invokerPackage : "curedaoApi";
+        opts.body.options.modelPackage = "curedaoApi";
+        opts.body.options.moduleName = "curedaoApi";
+        opts.body.options.packageName = "curedao_api";
         opts.body.options.packagePath = "QuantiModoClient";
         opts.body.options.podName = "QuantiModoApi";
         //requestOptions.body.options.podVersion = getAppVersionNumber();
-        opts.body.options.projectName = (sdkSwaggerCodegenOptions[language] && sdkSwaggerCodegenOptions[language].projectName) ? sdkSwaggerCodegenOptions[language].projectName : "quantimodoApi";
+        opts.body.options.projectName = (sdkSwaggerCodegenOptions[language] && sdkSwaggerCodegenOptions[language].projectName) ? sdkSwaggerCodegenOptions[language].projectName : "curedaoApi";
     }
     //requestOptions.body.options.artifactVersion = requestOptions.body.options.projectVersion = requestOptions.body.options.packageVersion = requestOptions.body.options.podVersion = getAppVersionNumber();
     opts.body.options.artifactDescription = opts.body.options.projectDescription = swaggerJson.info.description;
@@ -466,7 +466,7 @@ function copyUnzippedJsSdkToApiDocsNodeModules(){
     return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage(javascriptFlavor), pathToQuantiModoNodeModule);
 }
 function copyUnzippedJsSdkToIonicSrcLibForTesting(){
-    return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage(javascriptFlavor), pathToIonic+'/src/lib/quantimodo');
+    return copyOneFoldersContentsToAnother(getUnzippedPathForSdkLanguage(javascriptFlavor), pathToIonic+'/src/lib/curedao');
 }
 gulp.task('js-copy-to-src-lib', [], function(){
     return copyUnzippedJsSdkToIonicSrcLibForTesting();
@@ -517,7 +517,7 @@ gulp.task('php-4-update-sdk-composer', [], function(){
 });
 gulp.task('php-5-update-laravel-composer', [], function(callback){
     const composerJson = readJsonFile(pathToLaravel + '/composer.json');
-    composerJson.require["quantimodo/quantimodo-sdk-php"] = apiVersionNumber;
+    composerJson.require["curedao/curedao-sdk-php"] = apiVersionNumber;
     return writeToFile(pathToLaravel  + '/composer.json', prettyJSONStringify(composerJson, 4), function () {
         executeCommand("cd " + pathToLaravel + " && composer update --ignore-platform-reqs", function () {
             if(callback){callback();}
@@ -572,18 +572,18 @@ try {
     logError(error);
 }
 function authenticateQuantiModoSdk() {
-    const Quantimodo = require('quantimodo');
+    const Quantimodo = require('curedao');
     let defaultClient = Quantimodo.ApiClient.instance;
     if(process.env.APP_HOST_NAME){defaultClient.basePath = process.env.APP_HOST_NAME + '/api';}
-    const quantimodo_oauth2 = defaultClient.authentications['quantimodo_oauth2'];
+    const curedao_oauth2 = defaultClient.authentications['curedao_oauth2'];
     const clientId = defaultClient.authentications['client_id'];
     clientId.apiKey = "testClient";
     if(process.env.TEST_ACCESS_TOKEN){
         logInfo("Using process.env.QUANTIMODO_ACCESS_TOKEN");
-        quantimodo_oauth2.accessToken = process.env.TEST_ACCESS_TOKEN;
+        curedao_oauth2.accessToken = process.env.TEST_ACCESS_TOKEN;
     } else {
         logInfo("Using test user access token");
-        quantimodo_oauth2.accessToken = process.env.QUANTIMODO_ACCESS_TOKEN;
+        curedao_oauth2.accessToken = process.env.QUANTIMODO_ACCESS_TOKEN;
     }
 }
 function convertPathToFilename(path) {
@@ -945,7 +945,7 @@ gulp.task('_typescript-fetch', function(cb){
 });
 
 gulp.task('upload-file', function(cb){
-    var tsClient = require('./sdk-repos/quantimodo-sdk-typescript-fetch/typescript-fetch-client');
+    var tsClient = require('./sdk-repos/curedao-sdk-typescript-fetch/typescript-fetch-client');
     var time = Math.floor(Date.now() / 1000);
     var filePath = "./tmp/test-files/"+time
     writeToFile(filePath, time, function(){

@@ -100,7 +100,7 @@ paths:
                 type: integer
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/connect/mobile:
     get:
@@ -142,7 +142,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   '/v3/connectors/{connectorName}/connect':
     get:
@@ -169,7 +169,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   '/v3/connectors/{connectorName}/disconnect':
     get:
@@ -195,7 +195,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   '/v3/connectors/{connectorName}/update':
     get:
@@ -222,7 +222,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/correlations:
     get:
@@ -263,7 +263,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/correlations/explanations:
     get:
@@ -293,7 +293,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/deviceTokens:
     post:
@@ -347,7 +347,7 @@ paths:
                 $ref: '#/components/schemas/FeedResponse'
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
     post:
       tags:
@@ -380,29 +380,9 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
-  /v3/googleIdToken:
-    post:
-      tags:
-        - authentication
-      summary: Post GoogleIdToken
-      description: Post GoogleIdToken
-      operationId: postGoogleIdToken
-      responses:
-        '201':
-          description: Successful operation
-          content: {}
-        '401':
-          description: Not authenticated
-          content: {}
-        '404':
-          description: Not found
-          content: {}
-        '500':
-          description: Internal server error
-          content: {}
   /v3/integration.js:
     get:
       tags:
@@ -475,7 +455,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - readmeasurements
   /v3/measurements/delete:
     delete:
@@ -496,7 +476,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - writemeasurements
       x-codegen-request-body-name: body
   /v3/measurements/post:
@@ -529,7 +509,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - writemeasurements
       x-codegen-request-body-name: body
   /v3/measurements/update:
@@ -558,7 +538,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
   /v3/notificationPreferences:
@@ -604,7 +584,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/oauth2/token:
     get:
@@ -631,7 +611,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/pairs:
     get:
@@ -671,7 +651,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/shares:
     get:
@@ -700,7 +680,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - writemeasurements
   /v3/shares/delete:
     post:
@@ -733,7 +713,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - writemeasurements
   /v3/shares/invite:
     post:
@@ -763,7 +743,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - writemeasurements
       x-codegen-request-body-name: body
   /v3/studies:
@@ -818,7 +798,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/studies/open:
     get:
@@ -860,7 +840,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/studies/joined:
     get:
@@ -896,7 +876,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/studies/created:
     get:
@@ -930,7 +910,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/study/publish:
     post:
@@ -969,7 +949,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/study/join:
     post:
@@ -1006,7 +986,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/study/create:
     post:
@@ -1042,7 +1022,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
   /v3/trackingReminderNotifications:
@@ -1073,7 +1053,7 @@ paths:
                 $ref: '#/components/schemas/GetTrackingReminderNotificationsResponse'
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
     post:
       tags:
@@ -1106,7 +1086,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
   /v3/trackingReminders:
@@ -1137,7 +1117,7 @@ paths:
                   $ref: '#/components/schemas/TrackingReminder'
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
     post:
       tags:
@@ -1163,7 +1143,7 @@ paths:
                 $ref: '#/components/schemas/PostTrackingRemindersResponse'
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
   /v3/trackingReminders/delete:
@@ -1187,7 +1167,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
   /v3/unitCategories:
@@ -1211,7 +1191,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/units:
     get:
@@ -1235,7 +1215,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/user:
     get:
@@ -1269,7 +1249,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/users:
     get:
@@ -1302,7 +1282,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/user/delete:
     delete:
@@ -1331,7 +1311,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - writemeasurements
   /v3/userSettings:
     post:
@@ -1394,7 +1374,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
   /v3/userTags/delete:
@@ -1419,7 +1399,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/variables:
     get:
@@ -1527,7 +1507,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
     post:
       tags:
@@ -1565,7 +1545,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/userVariables/delete:
     delete:
@@ -1589,7 +1569,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/userVariables/reset:
     post:
@@ -1615,7 +1595,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/variableCategories:
     get:
@@ -1638,7 +1618,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
   /v3/votes:
     post:
@@ -1668,7 +1648,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
   /v3/votes/delete:
@@ -1692,7 +1672,7 @@ paths:
           content: {}
       security:
         - access_token: []
-        - quantimodo_oauth2:
+        - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
   /v4/study: {}
@@ -2471,10 +2451,10 @@ components:
           description: 'Ex: 72'
         image:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/logos/quantimodo-logo-qm-rainbow-200-200.png'
+          description: 'Ex: https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png'
         imageHtml:
           type: string
-          description: 'Ex: <a href="https://curedao.org"><img id="quantimodo_image" title="QuantiModo" src="https://web.quantimo.do/img/logos/quantimodo-logo-qm-rainbow-200-200.png" alt="QuantiModo"></a>'
+          description: 'Ex: <a href="https://curedao.org"><img id="curedao_image" title="QuantiModo" src="https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png" alt="QuantiModo"></a>'
         lastSuccessfulUpdatedAt:
           type: string
           description: 'Ex: 2017-07-31 10:10:34 UTC ISO 8601 YYYY-MM-DDThh:mm:ss'
@@ -2495,7 +2475,7 @@ components:
           description: 'Mobile connect method: webview, cordova, google, spreadsheet, or ip'
         name:
           type: string
-          description: 'Ex: quantimodo'
+          description: 'Ex: curedao'
         platforms:
           type: array
           description: 'Platforms (chrome, android, ios, web) that you can connect on.'
@@ -2971,7 +2951,7 @@ components:
           $ref: '#/components/schemas/Card'
         clientId:
           type: string
-          description: 'Ex: quantimodo'
+          description: 'Ex: curedao'
         connectorId:
           type: integer
           description: 'Ex: 13'
@@ -3729,10 +3709,10 @@ components:
           description: 'Ex: ion-happy-outline'
         gaugeImage:
           type: string
-          description: 'Ex: https://s3.amazonaws.com/quantimodo-docs/images/gauge-moderately-positive-relationship.png'
+          description: 'Ex: https://s3.amazonaws.com/curedao-docs/images/gauge-moderately-positive-relationship.png'
         gaugeImageSquare:
           type: string
-          description: 'Ex: https://s3.amazonaws.com/quantimodo-docs/images/gauge-moderately-positive-relationship-200-200.png'
+          description: 'Ex: https://s3.amazonaws.com/curedao-docs/images/gauge-moderately-positive-relationship-200-200.png'
         gaugeSharingImageUrl:
           type: string
           description: Image with gauge and category images
@@ -3813,7 +3793,7 @@ components:
           description: 'Ex: https://local.quantimo.do/ionic/Modo/www/index.html#/app/study?causeVariableName=Sleep%20Quality&effectVariableName=Overall%20Mood&userId=230'
         studyLinkTwitter:
           type: string
-          description: 'Ex: https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40quantimodo'
+          description: 'Ex: https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40curedao'
     StudySharing:
       required:
         - shareUserMeasurements
@@ -3857,13 +3837,13 @@ components:
           description: 'Ex: It was assumed that 0 hours would pass before a change in Very Distracting Time would produce an observable change in Video Activities.  It was assumed that Very Distracting Time could produce an observable change in Video Activities for as much as 7 days after the stimulus event.'
         dataSources:
           type: string
-          description: 'Ex: Very Distracting Time data was primarily collected using <a href="https://www.rescuetime.com/rp/quantimodo/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.<br>Video Activities data was primarily collected using <a href="https://www.rescuetime.com/rp/quantimodo/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.'
+          description: 'Ex: Very Distracting Time data was primarily collected using <a href="https://www.rescuetime.com/rp/curedao/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.<br>Video Activities data was primarily collected using <a href="https://www.rescuetime.com/rp/curedao/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.'
         dataSourcesParagraphForCause:
           type: string
-          description: 'Ex: Very Distracting Time data was primarily collected using <a href="https://www.rescuetime.com/rp/quantimodo/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.<br>Video Activities data was primarily collected using <a href="https://www.rescuetime.com/rp/quantimodo/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.'
+          description: 'Ex: Very Distracting Time data was primarily collected using <a href="https://www.rescuetime.com/rp/curedao/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.<br>Video Activities data was primarily collected using <a href="https://www.rescuetime.com/rp/curedao/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.'
         dataSourcesParagraphForEffect:
           type: string
-          description: 'Ex: Very Distracting Time data was primarily collected using <a href="https://www.rescuetime.com/rp/quantimodo/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.<br>Video Activities data was primarily collected using <a href="https://www.rescuetime.com/rp/quantimodo/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.'
+          description: 'Ex: Very Distracting Time data was primarily collected using <a href="https://www.rescuetime.com/rp/curedao/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.<br>Video Activities data was primarily collected using <a href="https://www.rescuetime.com/rp/curedao/plans">RescueTime</a>. Detailed reports show which applications and websites you spent time on. Activities are automatically grouped into pre-defined categories with built-in productivity scores covering thousands of websites and applications. You can customize categories and productivity scores to meet your needs.'
         lastCauseDailyValueSentenceExtended:
           type: string
           description: 'Ex: Sleep Quality Predicts Higher Overall Mood'
@@ -4754,7 +4734,7 @@ components:
           $ref: '#/components/schemas/Card'
         clientId:
           type: string
-          description: 'Ex: quantimodo'
+          description: 'Ex: curedao'
         clientUserId:
           type: string
           description: 'Ex: 118444693184829555362'
@@ -5009,7 +4989,7 @@ components:
           description: 'Ex: https://local.quantimo.do/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapp.quantimo.do%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png'
         chartsLinkTwitter:
           type: string
-          description: 'Ex: https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40quantimodo'
+          description: 'Ex: https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40curedao'
         childCommonTagVariables:
           type: array
           description: Commonly defined for all users. An example of a parent category variable would be Fruit when tagged with the child sub-type variables Apple.  Child variable (Apple) measurements will be included when the parent category (Fruit) is analyzed.  This allows us to see how Fruit consumption might be affecting without having to record both Fruit and Apple intake.
@@ -6277,7 +6257,7 @@ components:
       type: apiKey
       name: clientId
       in: query
-    quantimodo_oauth2:
+    curedao_oauth2:
       type: oauth2
       flows:
         authorizationCode:

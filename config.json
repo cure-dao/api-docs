@@ -3,7 +3,7 @@
   "modelPackage": "Model",
   "apiPackage": "Api",
   "packagePath": "QuantiModoClient",
-  "composerProjectName": "quantimodo-sdk-php",
-  "composerVendorName": "quantimodo",
+  "composerProjectName": "curedao-sdk-php",
+  "composerVendorName": "curedao",
   "artifactVersion": "5.0.5"
 }

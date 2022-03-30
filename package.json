@@ -1,5 +1,5 @@
 {
-  "name": "quantimodo-docs",
+  "name": "curedao-docs",
   "version": "0.0.1",
   "engines": {},
   "description": "",
@@ -13,7 +13,8 @@
     "clean-folders-and-clone-repos": "gulp clean-folders-and-clone-repos",
     "clean": "gulp clean-unzipped-folders",
     "build:js": "gulp js-1-download && js-2-unzip && js-3-copy-everywhere && js-4-reset-package-json-readme",
-    "build:php": "gulp php-0-sdk-download && gulp php-1-unzip && gulp php-2-sdk-copy-to-repo && gulp php-3-move-client-to-repo-root && gulp php-4-update-sdk-composer"
+    "build:php": "gulp php-0-sdk-download && gulp php-1-unzip && gulp php-2-sdk-copy-to-repo && gulp php-3-move-client-to-repo-root && gulp php-4-update-sdk-composer",
+    "update-readme": "rdme openapi FILE --key=zLkTHhp8NenTRLeMcAYXSIiyoQ1Oi9j0 --id=623bcb3fae01510045aaee29"
   },
   "author": "mikepsinn",
   "license": "ISC",
@@ -36,7 +37,7 @@
     "mkdirp": "^0.5.1",
     "portable-fetch": "^3.0.0",
     "q": "^1.4.1",
-    "quantimodo": "5.11.111615",
+    "curedao": "5.11.111615",
     "request-promise": "latest",
     "run-sequence": "latest",
     "swagger-js-codegen": "^1.13.0",

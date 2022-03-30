@@ -15,12 +15,12 @@ dependencies:
     #- git clone https://github.com/swagger-api/swagger-codegen
     #- cd swagger-codegen && ./run-in-docker.sh mvn package
     #- sh scripts/generate-v1-sdks-circleci.sh
-    #- cd quantimodo_v1_skds/javascript && npm install && npm test
+    #- cd curedao_v1_skds/javascript && npm install && npm test
     - npm install -g gulp browserify
     - npm install
     #- ls ./sdks-unzipped/javascript-client
     #- gulp copy-js-sdk-to-node-modules
-    #- ls ./node_modules/quantimodo
+    #- ls ./node_modules/curedao
 
 test:
   override:
@@ -37,9 +37,9 @@ test:
 
 general:
   artifacts:
-    - "swagger-codegen/quantimodo_v1_skds.zip"
+    - "swagger-codegen/curedao_v1_skds.zip"
     - "swagger-codegen/api-docs.json"
-    - "node_modules/quantimodo"
+    - "node_modules/curedao"
     - "sdks-unzipped"
     - "sdks-zipped"
     - "responses"
@@ -50,4 +50,4 @@ deployment:
     commands:
       - gulp 4-build-and-release-javascript
       - gulp 5-commit-changes
-      #- aws s3 cp ~/docs/swagger-codegen/quantimodo_v1_skds.zip s3://quantimodo-docs/
+      #- aws s3 cp ~/docs/swagger-codegen/curedao_v1_skds.zip s3://curedao-docs/
