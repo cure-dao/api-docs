@@ -74,7 +74,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/variables:
@@ -182,7 +182,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
     post:
@@ -220,7 +220,7 @@ paths:
           description: Unknown target user ID
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/measurements:
@@ -269,7 +269,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - readmeasurements
   /v3/measurements/post:
@@ -301,7 +301,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - writemeasurements
       x-codegen-request-body-name: body
@@ -330,7 +330,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
@@ -352,7 +352,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - writemeasurements
       x-codegen-request-body-name: body
@@ -402,7 +402,7 @@ paths:
               schema:
                 type: integer
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/connect/mobile:
@@ -444,7 +444,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   '/v3/connectors/{connectorName}/connect':
@@ -471,7 +471,7 @@ paths:
           description: Error during update. Unsupported response from update().
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   '/v3/connectors/{connectorName}/disconnect':
@@ -497,7 +497,7 @@ paths:
           description: Error during update. Unsupported response from update().
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   '/v3/connectors/{connectorName}/update':
@@ -524,7 +524,7 @@ paths:
           description: Error during update. Unsupported response from update().
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/correlations:
@@ -565,7 +565,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/correlations/explanations:
@@ -595,7 +595,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/deviceTokens:
@@ -649,7 +649,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FeedResponse'
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
     post:
@@ -682,7 +682,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
@@ -753,7 +753,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/oauth2/token:
@@ -780,7 +780,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/pairs:
@@ -820,7 +820,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/shares:
@@ -849,7 +849,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - writemeasurements
   /v3/shares/delete:
@@ -882,7 +882,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - writemeasurements
   /v3/shares/invite:
@@ -912,7 +912,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - writemeasurements
       x-codegen-request-body-name: body
@@ -967,7 +967,7 @@ paths:
           description: Internal server error
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/studies/open:
@@ -1009,7 +1009,7 @@ paths:
           description: Internal server error
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/studies/joined:
@@ -1045,7 +1045,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/studies/created:
@@ -1079,7 +1079,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/study/publish:
@@ -1118,7 +1118,7 @@ paths:
           description: Internal server error
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/study/join:
@@ -1155,7 +1155,7 @@ paths:
           description: Internal server error
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/study/create:
@@ -1191,7 +1191,7 @@ paths:
           description: Internal server error
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
@@ -1222,7 +1222,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/GetTrackingReminderNotificationsResponse'
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
     post:
@@ -1255,7 +1255,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
@@ -1286,7 +1286,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/TrackingReminder'
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
     post:
@@ -1312,7 +1312,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/PostTrackingRemindersResponse'
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
@@ -1336,7 +1336,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
@@ -1360,7 +1360,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/user:
@@ -1394,7 +1394,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/users:
@@ -1427,7 +1427,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/user/delete:
@@ -1456,7 +1456,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - writemeasurements
   /v3/userSettings:
@@ -1519,7 +1519,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
@@ -1544,7 +1544,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/userVariables/delete:
@@ -1568,7 +1568,7 @@ paths:
           description: Unknown target user ID
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/userVariables/reset:
@@ -1594,7 +1594,7 @@ paths:
           description: Unknown target user ID
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/variableCategories:
@@ -1617,7 +1617,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
   /v3/votes:
@@ -1647,7 +1647,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
@@ -1671,7 +1671,7 @@ paths:
           description: Not Authenticated
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
       x-codegen-request-body-name: body
@@ -1714,7 +1714,7 @@ paths:
           description: Internal server error
           content: {}
       security:
-        - access_token: []
+        - bearerAuth: []
         - curedao_oauth2:
             - basic
 components:
@@ -6293,6 +6293,10 @@ components:
       type: apiKey
       name: access_token
       in: query
+    bearerAuth: # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
     client_id:
       type: apiKey
       name: clientId
