@@ -8,5 +8,7 @@
             "email": "m@curedao.com"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-json": "*"
+    }
 }

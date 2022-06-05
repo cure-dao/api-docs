@@ -30,3 +30,5 @@ swagger-ui/
 tmp
 .env
 /vendor/
+sdk-php/
+gen/

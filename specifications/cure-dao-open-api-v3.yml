@@ -6031,10 +6031,10 @@ components:
           - android
           - ios
           - web
-    populationParam:
-      name: population
+    aggregatedParam:
+      name: aggregated
       in: query
-      description: These are studies based on the entire population of users that have shared their data
+      description: These are aggregated n=1 studies based on the entire population of users that have shared their data
       schema:
         type: boolean
     principalInvestigatorUserIdParam:
