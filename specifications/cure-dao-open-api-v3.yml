@@ -945,7 +945,7 @@ paths:
         - $ref: '#/components/parameters/openParam'
         - $ref: '#/components/parameters/joinedParam'
         - $ref: '#/components/parameters/createdParam'
-        - $ref: '#/components/parameters/populationParam'
+        - $ref: '#/components/parameters/aggregatedParam'
         - $ref: '#/components/parameters/downVotedParam'
       responses:
         '200':
