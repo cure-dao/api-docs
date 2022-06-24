@@ -17938,11 +17938,11 @@ export const UnitsApiFetchParamCreator = function (configuration?: Configuration
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -17978,11 +17978,11 @@ export const UnitsApiFetchParamCreator = function (configuration?: Configuration
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -18162,11 +18162,11 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["writemeasurements"])
+					? configuration.accessToken("curedao_oauth2", ["writemeasurements"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -18222,11 +18222,11 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -18318,11 +18318,11 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["readmeasurements"])
+					? configuration.accessToken("curedao_oauth2", ["readmeasurements"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -18401,11 +18401,11 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -18493,11 +18493,11 @@ export const UserApiFetchParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["readmeasurements"])
+					? configuration.accessToken("curedao_oauth2", ["readmeasurements"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -19102,11 +19102,11 @@ export const VariablesApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -19155,11 +19155,11 @@ export const VariablesApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -19199,11 +19199,11 @@ export const VariablesApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -19279,11 +19279,11 @@ export const VariablesApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -19485,11 +19485,11 @@ export const VariablesApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -19547,11 +19547,11 @@ export const VariablesApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -19632,11 +19632,11 @@ export const VariablesApiFetchParamCreator = function (configuration?: Configura
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["basic"])
+					? configuration.accessToken("curedao_oauth2", ["basic"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -20281,11 +20281,11 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["readmeasurements"])
+					? configuration.accessToken("curedao_oauth2", ["readmeasurements"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -20361,11 +20361,11 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["readmeasurements"])
+					? configuration.accessToken("curedao_oauth2", ["readmeasurements"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -20441,11 +20441,11 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["readmeasurements"])
+					? configuration.accessToken("curedao_oauth2", ["readmeasurements"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -20521,11 +20521,11 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["readmeasurements"])
+					? configuration.accessToken("curedao_oauth2", ["readmeasurements"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -20601,11 +20601,11 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["readmeasurements"])
+					? configuration.accessToken("curedao_oauth2", ["readmeasurements"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
@@ -20681,11 +20681,11 @@ export const XprofileApiFetchParamCreator = function (configuration?: Configurat
                 localVarQueryParameter["access_token"] = localVarApiKeyValue;
             }
 
-            // authentication quantimodo_oauth2 required
+            // authentication curedao_oauth2 required
             // oauth required
             if (configuration && configuration.accessToken) {
 				const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-					? configuration.accessToken("quantimodo_oauth2", ["readmeasurements"])
+					? configuration.accessToken("curedao_oauth2", ["readmeasurements"])
 					: configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }

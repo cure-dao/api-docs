@@ -1,15 +1,15 @@
 import {expect} from "chai";
 import {assert} from "chai";
-import * as qmGit from "../ts/qm.git";
-import * as qmShell from "../ts/qm.shell"
-import * as fileHelper from "../ts/qm.file-helper";
-import * as qmTests from "../ts/cypress-functions";
+import * as qmGit from "../../ts/qm.git";
+import * as qmShell from "../../ts/qm.shell"
+import * as fileHelper from "../../ts/qm.file-helper";
+import * as qmTests from "../../ts/cypress-functions";
 import * as urlParser from "url";
 import * as https from "https";
 import * as _str from "underscore.string";
 import * as simpleGit from 'simple-git/promise';
-import * as th from '../ts/test-helpers';
-import {Configuration, ConnectorsApiFactory} from "../typescript-fetch-client";
+import * as th from '../../ts/test-helpers';
+import {Configuration, ConnectorsApiFactory} from "../../sdk-typescript-fetch";
 const git = simpleGit();
 beforeEach(function (done) {
     let t = this.currentTest

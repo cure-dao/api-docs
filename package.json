@@ -35,9 +35,13 @@
     "swagger-node-codegen": "^1.6.3"
   },
   "devDependencies": {
+    "ajv": "8.11.0",
     "download-file": "0.1.5",
+    "expect": "28.1.1",
+    "expect.js": "0.3.1",
     "rdme": "^7.0.1",
     "simple-git": "^3.7.1",
+    "superagent": "7.1.6",
     "swagger-ts-generator": "latest",
     "swagger-typescript-codegen": "3.0.2"
   }
