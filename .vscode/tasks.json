@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Watch TS Folder",
+      "type": "typescript",
+      "tsconfig": "ts/tsconfig.json",
+      "option": "watch",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Watch Mocha",
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "option": "watch",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Bundle Mocha worker",
+      "type": "npm",
+      "script": "watch-worker",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
