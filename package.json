@@ -5,6 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "react": "npx openapi-codegen gen curedao",
+    "snippets": "./node_modules/.bin/snippet-enricher-cli --input=specifications/cure-dao-open-api-v3.yml",
     "start": "node index.js",
     "upgrade": "npm uninstall --save nocodb && npm install --save nocodb",
     "download:unzip:copy": "gulp 0-download && gulp 1-decompress && gulp 3-copy-to-repos",
@@ -35,12 +37,17 @@
     "swagger-node-codegen": "^1.6.3"
   },
   "devDependencies": {
+    "@openapi-codegen/cli": "1.5.2",
+    "@openapi-codegen/typescript": "4.0.1",
     "ajv": "8.11.0",
     "download-file": "0.1.5",
     "expect": "28.1.1",
     "expect.js": "0.3.1",
+    "har-validator": "5.1.5",
     "rdme": "^7.0.1",
+    "react-query": "3.39.1",
     "simple-git": "^3.7.1",
+    "snippet-enricher-cli": "0.0.8",
     "superagent": "7.1.6",
     "swagger-ts-generator": "latest",
     "swagger-typescript-codegen": "3.0.2"
