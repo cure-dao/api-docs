@@ -16,42 +16,42 @@ tags:
     description: Available units for measurements
     externalDocs:
       description: See it in action
-      url: 'https://web.quantimo.do/#/app/measurement-search?accessToken=demo'
+      url: 'https://app.curedao.org/#/app/measurement-search?accessToken=demo'
   - name: variables
     description: 'Can be used for search auto-complete for data types like symptoms, foods and treatments and include statistics'
     externalDocs:
       description: Search for a variable
-      url: 'https://web.quantimo.do/#/app/reminder-search?accessToken=demo'
+      url: 'https://app.curedao.org/#/app/reminder-search?accessToken=demo'
   - name: measurements
     description: 'Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten.'
     externalDocs:
       description: See it in action
-      url: 'https://web.quantimo.do/#/app/history-all-category/Anything?accessToken=demo'
+      url: 'https://app.curedao.org/#/app/history-all-category/Anything?accessToken=demo'
   - name: analytics
     description: Identify the strongest predictors of a given outcome and generate studies
     externalDocs:
       description: Try it out
-      url: 'https://web.quantimo.do/#/app/predictor-search'
+      url: 'https://app.curedao.org/#/app/predictor-search'
   - name: connectors
     description: Import data from third-party apps and devices like Fitbit and Mint.
     externalDocs:
       description: Import your data now
-      url: 'https://web.quantimo.do/#/app/import'
+      url: 'https://app.curedao.org/#/app/import'
   - name: reminders
     description: Users can be reminded to track certain variables at a specified frequency with a default value.
     externalDocs:
       description: See it in action
-      url: 'https://web.quantimo.do/#/app/reminders-inbox?accessToken=demo'
+      url: 'https://app.curedao.org/#/app/reminders-inbox?accessToken=demo'
   - name: user
     description: Get or update user info and settings
     externalDocs:
       description: See it in action
-      url: 'https://web.quantimo.do/#/app/settings?accessToken=demo'
+      url: 'https://app.curedao.org/#/app/settings?accessToken=demo'
   - name: studies
     description: Automatically generated natural language studies examining the relationship between a predictor and outcome variable including charts.
     externalDocs:
       description: Search for a study
-      url: 'https://web.quantimo.do/#/app/studies'
+      url: 'https://app.curedao.org/#/app/studies'
 paths:
   /v3/units:
     get:
@@ -537,10 +537,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/causeVariableNameParam'
         - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
         - $ref: '#/components/parameters/sortParam'
         - $ref: '#/components/parameters/limitParam'
         - $ref: '#/components/parameters/offsetParam'
@@ -561,36 +557,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCorrelationsResponse'
-        '401':
-          description: Not Authenticated
-          content: {}
-      security:
-        - bearerAuth: []
-        - curedao_oauth2:
-            - basic
-  /v3/correlations/explanations:
-    get:
-      tags:
-        - analytics
-      summary: Get correlation explanations
-      description: Get explanations of  correlations based on data from a single user.
-      operationId: getCorrelationExplanations
-      parameters:
-        - $ref: '#/components/parameters/causeVariableNameParam'
-        - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
-      responses:
-        '200':
-          description: Successful Operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Correlation'
         '401':
           description: Not Authenticated
           content: {}
@@ -784,46 +750,6 @@ paths:
         - bearerAuth: []
         - curedao_oauth2:
             - basic
-  /v3/pairs:
-    get:
-      tags:
-        - measurements
-      summary: Get pairs of measurements for correlational analysis
-      description: Pairs cause measurements with effect measurements grouped over the duration of action after the onset delay.
-      operationId: getPairs
-      parameters:
-        - $ref: '#/components/parameters/causeVariableNameParam'
-        - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
-        - $ref: '#/components/parameters/effectUnitNameParam'
-        - $ref: '#/components/parameters/userIdParam'
-        - $ref: '#/components/parameters/causeUnitNameParam'
-        - $ref: '#/components/parameters/onsetDelayParam'
-        - $ref: '#/components/parameters/durationOfActionParam'
-        - $ref: '#/components/parameters/earliestMeasurementTimeParam'
-        - $ref: '#/components/parameters/latestMeasurementTimeParam'
-        - $ref: '#/components/parameters/limitParam'
-        - $ref: '#/components/parameters/offsetParam'
-        - $ref: '#/components/parameters/sortParam'
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Pair'
-        '401':
-          description: Not Authenticated
-          content: {}
-      security:
-        - bearerAuth: []
-        - curedao_oauth2:
-            - basic
   /v3/shares:
     get:
       tags:
@@ -927,10 +853,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/causeVariableNameParam'
         - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
         - $ref: '#/components/parameters/userIdParam'
         - $ref: '#/components/parameters/clientIdParam'
         - $ref: '#/components/parameters/includeChartsParam'
@@ -981,10 +903,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/causeVariableNameParam'
         - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
         - $ref: '#/components/parameters/userIdParam'
         - $ref: '#/components/parameters/clientIdParam'
         - $ref: '#/components/parameters/includeChartsParam'
@@ -1023,10 +941,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/causeVariableNameParam'
         - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
         - $ref: '#/components/parameters/sortParam'
         - $ref: '#/components/parameters/limitParam'
         - $ref: '#/components/parameters/offsetParam'
@@ -1059,10 +973,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/causeVariableNameParam'
         - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
         - $ref: '#/components/parameters/sortParam'
         - $ref: '#/components/parameters/limitParam'
         - $ref: '#/components/parameters/offsetParam'
@@ -1093,10 +1003,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/causeVariableNameParam'
         - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
         - $ref: '#/components/parameters/userIdParam'
         - $ref: '#/components/parameters/clientIdParam'
         - $ref: '#/components/parameters/includeChartsParam'
@@ -1133,10 +1039,6 @@ paths:
         - $ref: '#/components/parameters/studyClientIdParam'
         - $ref: '#/components/parameters/causeVariableNameParam'
         - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
         - $ref: '#/components/parameters/userIdParam'
         - $ref: '#/components/parameters/clientIdParam'
       responses:
@@ -1686,10 +1588,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/causeVariableNameParam'
         - $ref: '#/components/parameters/effectVariableNameParam'
-        - $ref: '#/components/parameters/causeVariableIdParam'
-        - $ref: '#/components/parameters/effectVariableIdParam'
-        - $ref: '#/components/parameters/predictorVariableNameParam'
-        - $ref: '#/components/parameters/outcomeVariableNameParam'
         - $ref: '#/components/parameters/userIdParam'
         - $ref: '#/components/parameters/clientIdParam'
         - $ref: '#/components/parameters/includeChartsParam'
@@ -2492,10 +2390,10 @@ components:
           description: 'Ex: 72'
         image:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png'
+          description: 'Ex: https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png'
         imageHtml:
           type: string
-          description: 'Ex: <a href="https://curedao.org"><img id="curedao_image" title="CureDAO" src="https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png" alt="CureDAO"></a>'
+          description: 'Ex: <a href="https://curedao.org"><img id="curedao_image" title="CureDAO" src="https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png" alt="CureDAO"></a>'
         lastSuccessfulUpdatedAt:
           type: string
           description: 'Ex: 2017-07-31 10:10:34 UTC ISO 8601 YYYY-MM-DDThh:mm:ss'
@@ -3048,7 +2946,7 @@ components:
           description: 'Ex: img/variable_categories/treatments.png'
         pngUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/treatments.png'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/treatments.png'
         productUrl:
           type: string
           description: Link to associated product for purchase
@@ -3066,7 +2964,7 @@ components:
           description: 'Start Time for the measurement event in UTC ISO 8601 YYYY-MM-DDThh:mm:ss'
         svgUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/treatments.svg'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/treatments.svg'
         unitAbbreviatedName:
           type: string
           description: Abbreviated name for the unit of measurement
@@ -3304,10 +3202,10 @@ components:
       properties:
         instructionsForCauseVariable:
           type: string
-          description: 'Ex: <a href="https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e">Obtain Fitbit</a> and use it to record your Sleep Duration. Once you have a <a href="https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e">Fitbit</a> account, <a href="https://web.quantimo.do/#/app/import">connect your  Fitbit account at CureDAO</a> to automatically import and analyze your data.'
+          description: 'Ex: <a href="https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e">Obtain Fitbit</a> and use it to record your Sleep Duration. Once you have a <a href="https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e">Fitbit</a> account, <a href="https://app.curedao.org/#/app/import">connect your  Fitbit account at CureDAO</a> to automatically import and analyze your data.'
         instructionsForEffectVariable:
           type: string
-          description: 'Ex: <a href="https://curedao.org">Obtain CureDAO</a> and use it to record your Overall Mood. Once you have a <a href="https://curedao.org">CureDAO</a> account, <a href="https://web.quantimo.do/#/app/import">connect your  CureDAO account at CureDAO</a> to automatically import and analyze your data.'
+          description: 'Ex: <a href="https://curedao.org">Obtain CureDAO</a> and use it to record your Overall Mood. Once you have a <a href="https://curedao.org">CureDAO</a> account, <a href="https://app.curedao.org/#/app/import">connect your  CureDAO account at CureDAO</a> to automatically import and analyze your data.'
     PostMeasurementsDataResponse:
       type: object
       properties:
@@ -4138,7 +4036,7 @@ components:
           description: 'Ex: img/variable_categories/symptoms.png'
         pngUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/symptoms.png'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/symptoms.png'
         productUrl:
           type: string
           description: Link to associated product for purchase
@@ -4197,7 +4095,7 @@ components:
           format: string
         svgUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/symptoms.svg'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/symptoms.svg'
         thirdDailyReminderTime:
           type: string
           description: 'Ex: 20:00:00'
@@ -4434,7 +4332,7 @@ components:
           description: 'Ex: img/variable_categories/emotions.png'
         pngUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/emotions.png'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/emotions.png'
         popUp:
           type: boolean
           description: True if the reminders should appear as a popup notification
@@ -4475,7 +4373,7 @@ components:
           description: True if the reminders should be delivered via SMS
         svgUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/emotions.svg'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/emotions.svg'
         thirdMostCommonValue:
           type: number
           description: 'Ex: 2'
@@ -5348,7 +5246,7 @@ components:
           description: 'Ex: img/variable_categories/treatments.png'
         pngUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/treatments.png'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/treatments.png'
         predictorOfInterest:
           type: integer
           description: 'Ex: 0'
@@ -5398,7 +5296,7 @@ components:
           description: Based on sort filter and can be shown beneath variable name on search list
         svgUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/treatments.svg'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/treatments.svg'
         thirdMostCommonValue:
           type: number
           description: 'Calculated Statistic: Ex: 6. Unit: User-specified or common.'
@@ -5601,7 +5499,7 @@ components:
           description: 'Ex: img/variable_categories/emotions.png'
         pngUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/emotions.png'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/emotions.png'
         public:
           type: boolean
           description: 'Ex: true'
@@ -5610,7 +5508,7 @@ components:
           description: 'Ex: img/variable_categories/emotions.svg'
         svgUrl:
           type: string
-          description: 'Ex: https://web.quantimo.do/img/variable_categories/emotions.svg'
+          description: 'Ex: https://app.curedao.org/img/variable_categories/emotions.svg'
         updated:
           type: integer
           description: 'Ex: 1'
@@ -5733,12 +5631,6 @@ components:
       description: 'Variable id of the hypothetical predictor variable.  Ex: 1398'
       schema:
         type: integer
-    predictorVariableNameParam:
-      name: predictorVariableName
-      in: query
-      description: 'Name of the hypothetical predictor variable.  Ex: Sleep Duration'
-      schema:
-        type: string
     clientIdParam:
       name: clientId
       in: query
@@ -5874,12 +5766,6 @@ components:
       description: 'Variable id of the outcome variable of interest.  Ex: 1398'
       schema:
         type: integer
-    outcomeVariableNameParam:
-      name: outcomeVariableName
-      in: query
-      description: 'Name of the outcome variable of interest.  Ex: Overall Mood'
-      schema:
-        type: string
     exactMatchParam:
       name: exactMatch
       in: query

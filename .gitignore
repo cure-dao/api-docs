@@ -32,3 +32,4 @@ tmp
 /vendor/
 sdk-php/
 gen/
+.idea/
