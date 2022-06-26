@@ -1,0 +1,26 @@
+{
+  "name": "CureDAO",
+  "version": "1.0.0",
+  "description": "API client for CureDAO",
+  "author": "CureDao",
+  "keywords": [
+    "curedao",
+    "digitalhealth"
+  ],
+  "license": "Unlicense",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --outDir dist/",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build"
+  },
+  "dependencies": {
+    "portable-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.9",
+    "typescript": "^4.0.3",
+    "underscore.string": "^3.3.6"
+  }
+}
