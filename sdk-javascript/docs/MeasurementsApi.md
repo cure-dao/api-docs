@@ -101,7 +101,7 @@ let opts = {
   'groupingWidth': 56, // Number | The time (in seconds) over which measurements are grouped together
   'groupingTimezone': "groupingTimezone_example", // String | The time (in seconds) over which measurements are grouped together
   'doNotProcess': true, // Boolean | Ex: true
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
   'doNotConvert': true, // Boolean | Ex: 1
   'minMaxFilter': true // Boolean | Ex: 1
 };
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
  **groupingWidth** | **Number**| The time (in seconds) over which measurements are grouped together | [optional] 
  **groupingTimezone** | **String**| The time (in seconds) over which measurements are grouped together | [optional] 
  **doNotProcess** | **Boolean**| Ex: true | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
  **doNotConvert** | **Boolean**| Ex: 1 | [optional] 
  **minMaxFilter** | **Boolean**| Ex: 1 | [optional] 
 

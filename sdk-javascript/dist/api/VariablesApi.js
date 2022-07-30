@@ -166,7 +166,7 @@ var VariablesApi = /*#__PURE__*/function () {
      * @param {String} opts.sort Sort by one of the listed field names. If the field name is prefixed with `-`, it will sort in descending order.
      * @param {Boolean} opts.includePublic Include variables the user has no measurements for
      * @param {Boolean} opts.manualTracking Only include variables tracked manually by the user
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {String} opts.upc UPC or other barcode scan result
      * @param {String} opts.effectOrCause Provided variable is the effect or cause
      * @param {String} opts.publicEffectOrCause Ex: 
@@ -303,7 +303,7 @@ var VariablesApi = /*#__PURE__*/function () {
      * @param {Array.<module:model/Variable>} variable Variable user settings data
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.includePrivate Include user-specific variables in results
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {Boolean} opts.includePublic Include variables the user has no measurements for
      * @param {String} opts.searchPhrase Ex: %Body Fat%
      * @param {Boolean} opts.exactMatch Require exact match

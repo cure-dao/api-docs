@@ -49,8 +49,8 @@ var AuthenticationApi = /*#__PURE__*/function () {
    * @param {String} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
    * @param {String} scope Scopes include basic, readmeasurements, and writemeasurements. The `basic` scope allows you to read user info (displayName, email, etc). The `readmeasurements` scope allows one to read a user's data. The `writemeasurements` scope allows you to write user data. Separate multiple scopes by a space.
    * @param {Object} opts Optional parameters
-   * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
-   * @param {String} opts.clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+   * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
+   * @param {String} opts.clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
    * @param {String} opts.redirectUri The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
    * @param {String} opts.state An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
    * @param {module:api/AuthenticationApi~getAccessTokenCallback} callback The callback function, accepting three arguments: error, data, response
@@ -115,8 +115,8 @@ var AuthenticationApi = /*#__PURE__*/function () {
      * @param {String} responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
      * @param {String} scope Scopes include basic, readmeasurements, and writemeasurements. The `basic` scope allows you to read user info (displayName, email, etc). The `readmeasurements` scope allows one to read a user's data. The `writemeasurements` scope allows you to write user data. Separate multiple scopes by a space.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
-     * @param {String} opts.clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
+     * @param {String} opts.clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
      * @param {String} opts.redirectUri The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
      * @param {String} opts.state An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
      * @param {module:api/AuthenticationApi~getOauthAuthorizationCodeCallback} callback The callback function, accepting three arguments: error, data, response

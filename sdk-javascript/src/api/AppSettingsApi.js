@@ -45,10 +45,10 @@ export default class AppSettingsApi {
 
     /**
      * Get client app settings
-     * Get the settings for your application configurable at https://builder.quantimo.do
+     * Get the settings for your application configurable at https://builder.curedao.org
      * @param {Object} opts Optional parameters
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
-     * @param {String} opts.clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
+     * @param {String} opts.clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
      * @param {module:api/AppSettingsApi~getAppSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AppSettingsResponse}
      */

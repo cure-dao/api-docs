@@ -31,7 +31,7 @@ There are two main components of integrating CureDAO API:
 -   Retrieving the user's data from the Data API
 
 
-[Sign up](https://builder.quantimo.do) for a developer account.
+[Sign up](https://builder.curedao.org) for a developer account.
 
 After signing up, the first thing you'll want to do is create a CureDAO API application. An application in CureDAO API is a container that holds users and their data, and allows for custom configuration options. Above all, it is the single pipeline that you will integrate directly with your application.
 

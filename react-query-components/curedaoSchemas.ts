@@ -816,7 +816,7 @@ export type DataSource = {
   buttons?: Button[];
   card?: Card;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -2448,7 +2448,7 @@ export type TrackingReminder = {
   userOptimalValueMessage?: string;
   card?: Card;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -2832,7 +2832,7 @@ export type TrackingReminderNotification = {
   userOptimalValueMessage?: string;
   card?: Card;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -3650,7 +3650,7 @@ export type Variable = {
    */
   childUserTagVariables?: Variable[];
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -4420,7 +4420,7 @@ export type Vote = {
    */
   causeVariableId: number;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId: string;
   /*
@@ -4452,7 +4452,7 @@ export type Vote = {
    */
   value: "up" | "down" | "none";
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   type?: "causality" | "usefulness";
 };

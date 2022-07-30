@@ -353,7 +353,7 @@ class TrackingReminderNotification(ModelNormal):
             common_optimal_value_message (str): Description of relationship with variable with strongest relationship for population. [optional]  # noqa: E501
             user_optimal_value_message (str): Description of relationship with variable with strongest relationship for user. [optional]  # noqa: E501
             card (Card): [optional]  # noqa: E501
-            client_id (str): Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do. [optional]  # noqa: E501
+            client_id (str): Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org. [optional]  # noqa: E501
             combination_operation (str): The way multiple measurements are aggregated over time. [optional]  # noqa: E501
             created_at (str): Ex: 2017-07-29 20:49:54 UTC ISO 8601 YYYY-MM-DDThh:mm:ss. [optional]  # noqa: E501
             display_name (str): Ex: Trader Joe's Bedtime Tea. [optional]  # noqa: E501

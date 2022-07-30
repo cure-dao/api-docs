@@ -143,7 +143,7 @@ curedao_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new CureDaoUnifiedHealthApi.ConnectorsApi();
 let opts = {
-  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
 };
 apiInstance.getConnectors(opts, (error, data, response) => {
   if (error) {
@@ -159,7 +159,7 @@ apiInstance.getConnectors(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ import CureDaoUnifiedHealthApi from 'cure_dao_unified_health_api';
 
 let apiInstance = new CureDaoUnifiedHealthApi.ConnectorsApi();
 let opts = {
-  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
 };
 apiInstance.getIntegrationJs(opts, (error, data, response) => {
   if (error) {
@@ -206,7 +206,7 @@ apiInstance.getIntegrationJs(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
 
 ### Return type
 

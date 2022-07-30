@@ -105,7 +105,7 @@ var MeasurementsApi = /*#__PURE__*/function () {
      * @param {Number} opts.groupingWidth The time (in seconds) over which measurements are grouped together
      * @param {String} opts.groupingTimezone The time (in seconds) over which measurements are grouped together
      * @param {Boolean} opts.doNotProcess Ex: true
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {Boolean} opts.doNotConvert Ex: 1
      * @param {Boolean} opts.minMaxFilter Ex: 1
      * @param {module:api/MeasurementsApi~getMeasurementsCallback} callback The callback function, accepting three arguments: error, data, response

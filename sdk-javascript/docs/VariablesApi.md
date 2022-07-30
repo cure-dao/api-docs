@@ -205,7 +205,7 @@ let opts = {
   'sort': "sort_example", // String | Sort by one of the listed field names. If the field name is prefixed with `-`, it will sort in descending order.
   'includePublic': true, // Boolean | Include variables the user has no measurements for
   'manualTracking': true, // Boolean | Only include variables tracked manually by the user
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
   'upc': "upc_example", // String | UPC or other barcode scan result
   'effectOrCause': "effectOrCause_example", // String | Provided variable is the effect or cause
   'publicEffectOrCause': "publicEffectOrCause_example", // String | Ex: 
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
  **sort** | **String**| Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order. | [optional] 
  **includePublic** | **Boolean**| Include variables the user has no measurements for | [optional] 
  **manualTracking** | **Boolean**| Only include variables tracked manually by the user | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
  **upc** | **String**| UPC or other barcode scan result | [optional] 
  **effectOrCause** | **String**| Provided variable is the effect or cause | [optional] 
  **publicEffectOrCause** | **String**| Ex:  | [optional] 
@@ -378,7 +378,7 @@ let apiInstance = new CureDaoUnifiedHealthApi.VariablesApi();
 let variable = [new CureDaoUnifiedHealthApi.Variable()]; // [Variable] | Variable user settings data
 let opts = {
   'includePrivate': true, // Boolean | Include user-specific variables in results
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
   'includePublic': true, // Boolean | Include variables the user has no measurements for
   'searchPhrase': "searchPhrase_example", // String | Ex: %Body Fat%
   'exactMatch': true, // Boolean | Require exact match
@@ -403,7 +403,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **variable** | [**[Variable]**](Variable.md)| Variable user settings data | 
  **includePrivate** | **Boolean**| Include user-specific variables in results | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
  **includePublic** | **Boolean**| Include variables the user has no measurements for | [optional] 
  **searchPhrase** | **String**| Ex: %Body Fat% | [optional] 
  **exactMatch** | **Boolean**| Require exact match | [optional] 

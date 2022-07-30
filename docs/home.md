@@ -10,7 +10,7 @@
 - Analyze data to make discoveries
 - Securely storage health data in a HIPAA compliant manner
 
-Dig into our [documentation and quickstarts](https://builder.quantimo.do/).
+Dig into our [documentation and quickstarts](https://builder.curedao.org/).
 
 ---
 
@@ -22,11 +22,11 @@ Dig into our [documentation and quickstarts](https://builder.quantimo.do/).
 
 > 💡 Get your users onboarded quickly.
 
-[Invite Team Members](https://builder.quantimo.do/)
+[Invite Team Members](https://builder.curedao.org/)
 
 Bring stakeholders and partners on board with flexible permissions to start sharing collaborating on your design.
 
-[Explore your Projects](https://builder.quantimo.do/)
+[Explore your Projects](https://builder.curedao.org/)
 
 ---
 
@@ -87,9 +87,9 @@ title: API V2
 
 Use this amazing API to **be awesome**.
 
-- [Getting Started](https://builder.quantimo.do/)
-- [API Reference](https://builder.quantimo.do/)
-- [Try out API](https://builder.quantimo.do/)
+- [Getting Started](https://builder.curedao.org/)
+- [API Reference](https://builder.curedao.org/)
+- [Try out API](https://builder.curedao.org/)
 
 <!--
 type: tab
@@ -100,9 +100,9 @@ title: API V1
 
 Improve the design of this API in Studio and let users do amazing things with it.
 
-- [Getting Started](https://builder.quantimo.do/)
-- [API Reference](https://builder.quantimo.do/)
-- [Try out API](https://builder.quantimo.do/)
+- [Getting Started](https://builder.curedao.org/)
+- [API Reference](https://builder.curedao.org/)
+- [Try out API](https://builder.curedao.org/)
 
 <!-- type: tab-end -->
 

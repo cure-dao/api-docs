@@ -26,7 +26,7 @@ export interface Vote {
      */
     causeVariableId: number;
     /**
-     * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @type {string}
      * @memberof Vote
      */
@@ -68,7 +68,7 @@ export interface Vote {
      */
     value: VoteValueEnum;
     /**
-     * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @type {string}
      * @memberof Vote
      */

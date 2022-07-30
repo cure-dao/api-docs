@@ -34,7 +34,7 @@ curedao_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new CureDaoUnifiedHealthApi.UserApi();
 let reason = "reason_example"; // String | Ex: I hate you!
 let opts = {
-  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
 };
 apiInstance.deleteUser(reason, opts, (error, data, response) => {
   if (error) {
@@ -51,7 +51,7 @@ apiInstance.deleteUser(reason, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reason** | **String**| Ex: I hate you! | 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
 
 ### Return type
 
@@ -95,7 +95,7 @@ let opts = {
   'limit': 100, // Number | The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
   'offset': 56, // Number | OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
   'sort': "sort_example", // String | Sort by one of the listed field names. If the field name is prefixed with `-`, it will sort in descending order.
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
   'appVersion': "appVersion_example", // String | Ex: 2.1.1.0
   'clientUserId': 56, // Number | Ex: 74802
   'log': "log_example", // String | Username or email
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
  **limit** | **Number**| The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records. | [optional] [default to 100]
  **offset** | **Number**| OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned. | [optional] 
  **sort** | **String**| Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order. | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
  **appVersion** | **String**| Ex: 2.1.1.0 | [optional] 
  **clientUserId** | **Number**| Ex: 74802 | [optional] 
  **log** | **String**| Username or email | [optional] 
@@ -171,7 +171,7 @@ let opts = {
   'limit': 100, // Number | The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
   'offset': 56, // Number | OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
   'sort': "sort_example", // String | Sort by one of the listed field names. If the field name is prefixed with `-`, it will sort in descending order.
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
   'appVersion': "appVersion_example", // String | Ex: 2.1.1.0
   'clientUserId': 56, // Number | Ex: 74802
   'log': "log_example", // String | Username or email
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
  **limit** | **Number**| The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records. | [optional] [default to 100]
  **offset** | **Number**| OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned. | [optional] 
  **sort** | **String**| Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order. | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
  **appVersion** | **String**| Ex: 2.1.1.0 | [optional] 
  **clientUserId** | **Number**| Ex: 74802 | [optional] 
  **log** | **String**| Username or email | [optional] 
@@ -233,7 +233,7 @@ import CureDaoUnifiedHealthApi from 'cure_dao_unified_health_api';
 let apiInstance = new CureDaoUnifiedHealthApi.UserApi();
 let body = new CureDaoUnifiedHealthApi.User(); // User | User settings to update
 let opts = {
-  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
 };
 apiInstance.postUserSettings(body, opts, (error, data, response) => {
   if (error) {
@@ -250,7 +250,7 @@ apiInstance.postUserSettings(body, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**User**](User.md)| User settings to update | 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
 
 ### Return type
 

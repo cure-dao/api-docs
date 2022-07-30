@@ -149,7 +149,7 @@ export type GetVariablesQueryParams = {
    */
   manualTracking?: boolean;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -303,7 +303,7 @@ export type PostUserVariablesQueryParams = {
    */
   includePrivate?: boolean;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -562,7 +562,7 @@ export type GetMeasurementsQueryParams = {
    */
   doNotProcess?: boolean;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -772,11 +772,11 @@ export const useDeleteMeasurement = (
 
 export type GetAppSettingsQueryParams = {
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
-   * This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+   * This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
    */
   client_secret?: string;
 };
@@ -791,7 +791,7 @@ export type GetAppSettingsVariables = {
 } & CuredaoContext["fetcherOptions"];
 
 /**
- * Get the settings for your application configurable at https://builder.quantimo.do
+ * Get the settings for your application configurable at https://builder.curedao.org
  */
 export const fetchGetAppSettings = (variables: GetAppSettingsVariables) =>
   curedaoFetch<
@@ -804,7 +804,7 @@ export const fetchGetAppSettings = (variables: GetAppSettingsVariables) =>
   >({ url: "/v3/appSettings", method: "get", ...variables });
 
 /**
- * Get the settings for your application configurable at https://builder.quantimo.do
+ * Get the settings for your application configurable at https://builder.curedao.org
  */
 export const useGetAppSettings = (
   variables: GetAppSettingsVariables,
@@ -946,7 +946,7 @@ export const useGetMobileConnectPage = (
 
 export type GetConnectorsQueryParams = {
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -1304,7 +1304,7 @@ export type GetCorrelationsQueryParams = {
    */
   outcomesOfInterest?: boolean;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -1440,7 +1440,7 @@ export type GetFeedQueryParams = {
    */
   offset?: number;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -1500,7 +1500,7 @@ export type PostFeedQueryParams = {
    */
   userId?: number;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -1554,7 +1554,7 @@ export const usePostFeed = (
 
 export type GetIntegrationJsQueryParams = {
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -1682,11 +1682,11 @@ export const useGetNotificationPreferences = (
 
 export type GetOauthAuthorizationCodeQueryParams = {
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
-   * This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+   * This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
    */
   client_secret?: string;
   /*
@@ -1764,11 +1764,11 @@ export const useGetOauthAuthorizationCode = (
 
 export type GetAccessTokenQueryParams = {
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
-   * This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+   * This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
    */
   client_secret?: string;
   /*
@@ -1856,7 +1856,7 @@ export type GetSharesQueryParams = {
    */
   updatedAt?: string;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -1979,7 +1979,7 @@ export const useDeleteShare = (
 
 export type InviteShareQueryParams = {
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -2043,7 +2043,7 @@ export type GetStudiesQueryParams = {
    */
   userId?: number;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -2178,7 +2178,7 @@ export type GetOpenStudiesQueryParams = {
    */
   userId?: number;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -2293,7 +2293,7 @@ export type GetStudiesJoinedQueryParams = {
    */
   outcomesOfInterest?: boolean;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -2385,7 +2385,7 @@ export type GetStudiesCreatedQueryParams = {
    */
   updatedAt?: string;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -2457,7 +2457,7 @@ export type PublishStudyQueryParams = {
    */
   userId?: number;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -2536,7 +2536,7 @@ export type JoinStudyQueryParams = {
    */
   userId?: number;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -2587,7 +2587,7 @@ export const useJoinStudy = (
 
 export type CreateStudyQueryParams = {
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -2698,7 +2698,7 @@ export type GetTrackingReminderNotificationsQueryParams = {
    */
   reminderTime?: string;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -2777,7 +2777,7 @@ export type PostTrackingReminderNotificationsQueryParams = {
    */
   userId?: number;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -2893,7 +2893,7 @@ export type GetTrackingRemindersQueryParams = {
    */
   sort?: string;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -3143,7 +3143,7 @@ export type GetUserQueryParams = {
    */
   sort?: string;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -3239,7 +3239,7 @@ export type GetUsersQueryParams = {
    */
   sort?: string;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -3311,7 +3311,7 @@ export const useGetUsers = (
 
 export type DeleteUserQueryParams = {
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*
@@ -3366,7 +3366,7 @@ export const useDeleteUser = (
 
 export type PostUserSettingsQueryParams = {
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
 };
@@ -3782,7 +3782,7 @@ export type GetStudyQueryParams = {
    */
   userId?: number;
   /*
-   * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+   * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
    */
   clientId?: string;
   /*

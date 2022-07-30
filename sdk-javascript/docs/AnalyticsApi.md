@@ -108,7 +108,7 @@ let opts = {
   'correlationCoefficient': "correlationCoefficient_example", // String | Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
   'updatedAt': "updatedAt_example", // String | When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
   'outcomesOfInterest': true, // Boolean | Only include correlations for which the effect is an outcome of interest for the user
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
   'commonOnly': true // Boolean | Return only public, anonymized and aggregated population data instead of user-specific variables
 };
 apiInstance.getCorrelations(opts, (error, data, response) => {
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
  **correlationCoefficient** | **String**| Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action | [optional] 
  **updatedAt** | **String**| When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. | [optional] 
  **outcomesOfInterest** | **Boolean**| Only include correlations for which the effect is an outcome of interest for the user | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
  **commonOnly** | **Boolean**| Return only public, anonymized and aggregated population data instead of user-specific variables | [optional] 
 
 ### Return type

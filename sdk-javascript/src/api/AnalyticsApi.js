@@ -111,7 +111,7 @@ export default class AnalyticsApi {
      * @param {String} opts.correlationCoefficient Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
      * @param {String} opts.updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {Boolean} opts.outcomesOfInterest Only include correlations for which the effect is an outcome of interest for the user
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {Boolean} opts.commonOnly Return only public, anonymized and aggregated population data instead of user-specific variables
      * @param {module:api/AnalyticsApi~getCorrelationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetCorrelationsResponse}

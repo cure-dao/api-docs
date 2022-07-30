@@ -34,7 +34,7 @@ export interface GetAppSettingsRequest {
 export class AppSettingsApi extends runtime.BaseAPI {
 
     /**
-     * Get the settings for your application configurable at https://builder.quantimo.do
+     * Get the settings for your application configurable at https://builder.curedao.org
      * Get client app settings
      */
     async getAppSettingsRaw(requestParameters: GetAppSettingsRequest): Promise<runtime.ApiResponse<AppSettingsResponse>> {
@@ -61,7 +61,7 @@ export class AppSettingsApi extends runtime.BaseAPI {
     }
 
     /**
-     * Get the settings for your application configurable at https://builder.quantimo.do
+     * Get the settings for your application configurable at https://builder.curedao.org
      * Get client app settings
      */
     async getAppSettings(requestParameters: GetAppSettingsRequest): Promise<AppSettingsResponse> {

@@ -23,7 +23,7 @@ class Vote {
      * Constructs a new <code>Vote</code>.
      * @alias module:model/Vote
      * @param causeVariableId {Number} Cause variable id
-     * @param clientId {String} Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId {String} Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param effectVariableId {Number} Effect variable id
      * @param userId {Number} ID of User
      * @param value {module:model/Vote.ValueEnum} Vote down for implausible/not-useful or up for plausible/useful. Vote none to delete a previous vote.
@@ -98,7 +98,7 @@ class Vote {
 Vote.prototype['causeVariableId'] = undefined;
 
 /**
- * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+ * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
  * @member {String} clientId
  */
 Vote.prototype['clientId'] = undefined;
@@ -140,7 +140,7 @@ Vote.prototype['userId'] = undefined;
 Vote.prototype['value'] = undefined;
 
 /**
- * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+ * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
  * @member {module:model/Vote.TypeEnum} type
  */
 Vote.prototype['type'] = undefined;

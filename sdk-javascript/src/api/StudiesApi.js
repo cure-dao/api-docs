@@ -55,7 +55,7 @@ export default class StudiesApi {
      * Create an individual, group, or population study examining the relationship between a predictor and outcome variable. You will be given a study id which you can invite participants to join and share their measurements for the specified variables.
      * @param {module:model/StudyCreationBody} body Details about the study you want to create
      * @param {Object} opts Optional parameters
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/StudiesApi~createStudyCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/PostStudyCreateResponse}
      */
@@ -148,7 +148,7 @@ export default class StudiesApi {
      * @param {String} opts.predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {String} opts.outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {Number} opts.userId User's id
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {Boolean} opts.includeCharts Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param {Boolean} opts.recalculate Recalculate instead of using cached analysis
      * @param {String} opts.studyId Client id for the study you want
@@ -209,7 +209,7 @@ export default class StudiesApi {
      * @param {String} opts.predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {String} opts.outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {Number} opts.userId User's id
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {Boolean} opts.includeCharts Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param {Boolean} opts.recalculate Recalculate instead of using cached analysis
      * @param {String} opts.studyId Client id for the study you want
@@ -298,7 +298,7 @@ export default class StudiesApi {
      * @param {Number} opts.offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {Number} opts.userId User's id
      * @param {String} opts.updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/StudiesApi~getStudiesCreatedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetStudiesResponse}
      */
@@ -363,7 +363,7 @@ export default class StudiesApi {
      * @param {String} opts.correlationCoefficient Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
      * @param {String} opts.updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {Boolean} opts.outcomesOfInterest Only include correlations for which the effect is an outcome of interest for the user
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/StudiesApi~getStudiesJoinedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetStudiesResponse}
      */
@@ -424,7 +424,7 @@ export default class StudiesApi {
      * @param {String} opts.predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {String} opts.outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {Number} opts.userId User's id
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {Boolean} opts.includeCharts Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param {Boolean} opts.recalculate Recalculate instead of using cached analysis
      * @param {String} opts.studyId Client id for the study you want
@@ -486,7 +486,7 @@ export default class StudiesApi {
      * @param {String} opts.predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {String} opts.outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {Number} opts.userId User's id
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/StudiesApi~joinStudyCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/StudyJoinResponse}
      */
@@ -588,7 +588,7 @@ export default class StudiesApi {
      * @param {String} opts.predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param {String} opts.outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param {Number} opts.userId User's id
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {Boolean} opts.includeCharts Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param {Boolean} opts.recalculate Recalculate instead of using cached analysis
      * @param {String} opts.studyId Client id for the study you want

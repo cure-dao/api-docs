@@ -50,7 +50,7 @@ export default class UserApi {
      * Delete user account. Only the client app that created a user can delete that user.
      * @param {String} reason Ex: I hate you!
      * @param {Object} opts Optional parameters
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/UserApi~deleteUserCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CommonResponse}
      */
@@ -102,7 +102,7 @@ export default class UserApi {
      * @param {Number} opts.limit The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records. (default to 100)
      * @param {Number} opts.offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {String} opts.sort Sort by one of the listed field names. If the field name is prefixed with `-`, it will sort in descending order.
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {String} opts.appVersion Ex: 2.1.1.0
      * @param {Number} opts.clientUserId Ex: 74802
      * @param {String} opts.log Username or email
@@ -165,7 +165,7 @@ export default class UserApi {
      * @param {Number} opts.limit The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records. (default to 100)
      * @param {Number} opts.offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {String} opts.sort Sort by one of the listed field names. If the field name is prefixed with `-`, it will sort in descending order.
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {String} opts.appVersion Ex: 2.1.1.0
      * @param {Number} opts.clientUserId Ex: 74802
      * @param {String} opts.log Username or email
@@ -221,7 +221,7 @@ export default class UserApi {
      * Post UserSettings
      * @param {module:model/User} body User settings to update
      * @param {Object} opts Optional parameters
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/UserApi~postUserSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/PostUserSettingsResponse}
      */

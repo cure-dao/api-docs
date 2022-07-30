@@ -98,7 +98,7 @@ export default class SharesApi {
      * @param {Number} opts.userId User's id
      * @param {String} opts.createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {String} opts.updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {String} opts.appVersion Ex: 2.1.1.0
      * @param {String} opts.log Username or email
      * @param {String} opts.pwd User password
@@ -149,7 +149,7 @@ export default class SharesApi {
      * Invite someone to view your measurements
      * @param {module:model/ShareInvitationBody} body Details about person to share with
      * @param {Object} opts Optional parameters
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/SharesApi~inviteShareCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/User}
      */

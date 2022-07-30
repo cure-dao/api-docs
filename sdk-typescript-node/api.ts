@@ -2280,7 +2280,7 @@ export class DataSource {
     */
     'card'?: Card;
     /**
-    * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+    * Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
     */
     'clientId'?: string;
     /**
@@ -7783,7 +7783,7 @@ export class TrackingReminder {
     */
     'card'?: Card;
     /**
-    * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+    * Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
     */
     'clientId'?: string;
     /**
@@ -8603,7 +8603,7 @@ export class TrackingReminderNotification {
     */
     'card'?: Card;
     /**
-    * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+    * Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
     */
     'clientId'?: string;
     /**
@@ -10540,7 +10540,7 @@ export class Variable {
     */
     'childUserTagVariables'?: Array<Variable>;
     /**
-    * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+    * Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
     */
     'clientId'?: string;
     /**
@@ -12135,7 +12135,7 @@ export class Vote {
     */
     'causeVariableId': number;
     /**
-    * Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+    * Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
     */
     'clientId': string;
     /**
@@ -13088,7 +13088,7 @@ export class ActivitiesApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getActivities (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<ActivitiesResponse>;  }> {
@@ -13180,7 +13180,7 @@ export class ActivitiesApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postActivities (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<ActivitiesResponse>;  }> {
@@ -13414,7 +13414,7 @@ export class AnalyticsApi {
      * @param correlationCoefficient Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
      * @param updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param outcomesOfInterest Only include correlations for which the effect is an outcome of interest for the user
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param commonOnly Return only public, anonymized and aggregated population data instead of user-specific variables
      * @param {*} [options] Override http request options.
      */
@@ -13582,8 +13582,8 @@ export class AppSettingsApi {
     /**
      * Get the settings for your application configurable at https://build.quantimo.do
      * @summary Get client app settings
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
-     * @param clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
+     * @param clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
      * @param {*} [options] Override http request options.
      */
     public getAppSettings (clientId?: string, clientSecret?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: AppSettingsResponse;  }> {
@@ -13698,8 +13698,8 @@ export class AuthenticationApi {
      * @param code Authorization code you received with the previous request.
      * @param responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
      * @param scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
-     * @param clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
+     * @param clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
      * @param redirectUri The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
      * @param state An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
      * @param {*} [options] Override http request options.
@@ -13807,8 +13807,8 @@ export class AuthenticationApi {
      * @summary Request Authorization Code
      * @param responseType If the value is code, launches a Basic flow, requiring a POST to the token endpoint to obtain the tokens. If the value is token id_token or id_token token, launches an Implicit flow, requiring the use of Javascript at the redirect URI to retrieve tokens from the URI #fragment.
      * @param scope Scopes include basic, readmeasurements, and writemeasurements. The &#x60;basic&#x60; scope allows you to read user info (displayName, email, etc). The &#x60;readmeasurements&#x60; scope allows one to read a user&#39;s data. The &#x60;writemeasurements&#x60; scope allows you to write user data. Separate multiple scopes by a space.
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
-     * @param clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
+     * @param clientSecret This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
      * @param redirectUri The redirect URI is the URL within your client application that will receive the OAuth2 credentials.
      * @param state An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI
      * @param {*} [options] Override http request options.
@@ -14118,7 +14118,7 @@ export class ConnectorsApi {
     /**
      * A connector pulls data from other data providers using their API or a screenscraper. Returns a list of all available connectors and information about them such as their id, name, whether the user has provided access, logo url, connection instructions, and the update history.
      * @summary List of Connectors
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getConnectors (clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: GetConnectorsResponse;  }> {
@@ -14175,7 +14175,7 @@ export class ConnectorsApi {
     /**
      * Get embeddable connect javascript. Usage:   - Embedding in applications with popups for 3rd-party authentication windows.     Use `qmSetupInPopup` function after connecting `connect.js`.   - Embedding in applications with popups for 3rd-party authentication windows.     Requires a selector to block. It will be embedded in this block.     Use `qmSetupOnPage` function after connecting `connect.js`.   - Embedding in mobile applications without popups for 3rd-party authentication.     Use `qmSetupOnMobile` function after connecting `connect.js`.     If using in a Cordova application call  `qmSetupOnIonic` function after connecting `connect.js`.
      * @summary Get embeddable connect javascript
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getIntegrationJs (clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
@@ -14402,7 +14402,7 @@ export class FeedApi {
      * @param updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param limit The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
      * @param offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getFeed (sort?: string, userId?: number, createdAt?: string, updatedAt?: string, limit?: number, offset?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: FeedResponse;  }> {
@@ -14485,7 +14485,7 @@ export class FeedApi {
      * @summary Post user interactions with feed
      * @param body Id of the tracking reminder notification to be snoozed
      * @param userId User&#39;s id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postFeed (body: Array<Card>, userId?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: FeedResponse;  }> {
@@ -14613,7 +14613,7 @@ export class FriendsApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getFriends (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<FriendsResponse>;  }> {
@@ -14705,7 +14705,7 @@ export class FriendsApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postFriends (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<FriendsResponse>;  }> {
@@ -14851,7 +14851,7 @@ export class GroupsApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getGroups (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<GroupsResponse>;  }> {
@@ -14943,7 +14943,7 @@ export class GroupsApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getGroupsMembers (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<GroupsMembersResponse>;  }> {
@@ -15035,7 +15035,7 @@ export class GroupsApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postGroups (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<GroupsResponse>;  }> {
@@ -15127,7 +15127,7 @@ export class GroupsApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postGroupsMembers (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<GroupsMembersResponse>;  }> {
@@ -15343,7 +15343,7 @@ export class MeasurementsApi {
      * @param groupingWidth The time (in seconds) over which measurements are grouped together
      * @param groupingTimezone The time (in seconds) over which measurements are grouped together
      * @param doNotProcess Ex: true
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param doNotConvert Ex: 1
      * @param minMaxFilter Ex: 1
      * @param {*} [options] Override http request options.
@@ -15855,7 +15855,7 @@ export class MessagesApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getMessagesMessages (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<MessagesMessagesResponse>;  }> {
@@ -15947,7 +15947,7 @@ export class MessagesApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getMessagesNotices (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<MessagesNoticesResponse>;  }> {
@@ -16039,7 +16039,7 @@ export class MessagesApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getMessagesRecipients (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<MessagesRecipientsResponse>;  }> {
@@ -16131,7 +16131,7 @@ export class MessagesApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postMessagesMessages (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<MessagesMessagesResponse>;  }> {
@@ -16223,7 +16223,7 @@ export class MessagesApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postMessagesNotices (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<MessagesNoticesResponse>;  }> {
@@ -16315,7 +16315,7 @@ export class MessagesApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postMessagesRecipients (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<MessagesRecipientsResponse>;  }> {
@@ -16508,7 +16508,7 @@ export class NotificationsApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getNotifications (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<NotificationsResponse>;  }> {
@@ -16654,7 +16654,7 @@ export class NotificationsApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postNotifications (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<NotificationsResponse>;  }> {
@@ -16865,7 +16865,7 @@ export class RemindersApi {
      * @param offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param variableCategoryName Options: Activities, Books, Causes of Illness, Cognitive Performance, Conditions, Emotions, Environment, Foods, Location, Miscellaneous, Movies and TV, Music, Nutrients, Payments, Physical Activity, Physique, Sleep, Social Interactions, Software, Symptoms, Treatments, Vital Signs, Goals
      * @param reminderTime Ex: (lt)2017-07-31 21:43:26
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param onlyPast Ex: 1
      * @param includeDeleted Include deleted variables
      * @param {*} [options] Override http request options.
@@ -16971,7 +16971,7 @@ export class RemindersApi {
      * @param limit The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
      * @param offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param sort Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param appVersion Ex: 2.1.1.0
      * @param {*} [options] Override http request options.
      */
@@ -17063,7 +17063,7 @@ export class RemindersApi {
      * @summary Snooze, skip, or track a tracking reminder notification
      * @param body Id of the tracking reminder notification to be snoozed
      * @param userId User&#39;s id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postTrackingReminderNotifications (body: Array<TrackingReminderNotificationPost>, userId?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: CommonResponse;  }> {
@@ -17313,7 +17313,7 @@ export class SharesApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param appVersion Ex: 2.1.1.0
      * @param log Username or email
      * @param pwd User password
@@ -17398,7 +17398,7 @@ export class SharesApi {
      * Invite someone to view your measurements
      * @summary Delete share
      * @param body Details about person to share with
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public inviteShare (body: ShareInvitationBody, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: User;  }> {
@@ -17516,7 +17516,7 @@ export class StudiesApi {
      * Create an individual, group, or population study examining the relationship between a predictor and outcome variable. You will be given a study id which you can invite participants to join and share their measurements for the specified variables.
      * @summary Create a Study
      * @param body Details about the study you want to create
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public createStudy (body: StudyCreationBody, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: PostStudyCreateResponse;  }> {
@@ -17650,7 +17650,7 @@ export class StudiesApi {
      * @param predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param userId User&#39;s id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param includeCharts Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param recalculate Recalculate instead of using cached analysis
      * @param studyId Client id for the study you want
@@ -17757,7 +17757,7 @@ export class StudiesApi {
      * @param predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param userId User&#39;s id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param includeCharts Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param recalculate Recalculate instead of using cached analysis
      * @param studyId Client id for the study you want
@@ -17928,7 +17928,7 @@ export class StudiesApi {
      * @param offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param userId User&#39;s id
      * @param updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getStudiesCreated (causeVariableName?: string, effectVariableName?: string, causeVariableId?: number, effectVariableId?: number, predictorVariableName?: string, outcomeVariableName?: string, sort?: string, limit?: number, offset?: number, userId?: number, updatedAt?: string, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: GetStudiesResponse;  }> {
@@ -18042,7 +18042,7 @@ export class StudiesApi {
      * @param correlationCoefficient Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action
      * @param updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param outcomesOfInterest Only include correlations for which the effect is an outcome of interest for the user
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getStudiesJoined (causeVariableName?: string, effectVariableName?: string, causeVariableId?: number, effectVariableId?: number, predictorVariableName?: string, outcomeVariableName?: string, sort?: string, limit?: number, offset?: number, userId?: number, correlationCoefficient?: string, updatedAt?: string, outcomesOfInterest?: boolean, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: GetStudiesResponse;  }> {
@@ -18158,7 +18158,7 @@ export class StudiesApi {
      * @param predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param userId User&#39;s id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param includeCharts Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param recalculate Recalculate instead of using cached analysis
      * @param studyId Client id for the study you want
@@ -18266,7 +18266,7 @@ export class StudiesApi {
      * @param predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param userId User&#39;s id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public joinStudy (studyId?: string, causeVariableName?: string, effectVariableName?: string, causeVariableId?: number, effectVariableId?: number, predictorVariableName?: string, outcomeVariableName?: string, userId?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: StudyJoinResponse;  }> {
@@ -18426,7 +18426,7 @@ export class StudiesApi {
      * @param predictorVariableName Name of the hypothetical predictor variable.  Ex: Sleep Duration
      * @param outcomeVariableName Name of the outcome variable of interest.  Ex: Overall Mood
      * @param userId User&#39;s id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param includeCharts Highcharts configs that can be used if you have highcharts.js included on the page.  This only works if the id or name query parameter is also provided.
      * @param recalculate Recalculate instead of using cached analysis
      * @param studyId Client id for the study you want
@@ -18739,7 +18739,7 @@ export class UserApi {
      * Delete user account. Only the client app that created a user can delete that user.
      * @summary Delete user
      * @param reason Ex: I hate you!
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public deleteUser (reason: string, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: CommonResponse;  }> {
@@ -18811,7 +18811,7 @@ export class UserApi {
      * @param limit The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
      * @param offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param sort Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param appVersion Ex: 2.1.1.0
      * @param clientUserId Ex: 74802
      * @param log Username or email
@@ -18924,7 +18924,7 @@ export class UserApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getUserBlogs (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<UserBlogsResponse>;  }> {
@@ -19015,7 +19015,7 @@ export class UserApi {
      * @param limit The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
      * @param offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param sort Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param appVersion Ex: 2.1.1.0
      * @param clientUserId Ex: 74802
      * @param log Username or email
@@ -19087,7 +19087,7 @@ export class UserApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -19123,7 +19123,7 @@ export class UserApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postUserBlogs (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<UserBlogsResponse>;  }> {
@@ -19179,7 +19179,7 @@ export class UserApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -19209,7 +19209,7 @@ export class UserApi {
      * Post UserSettings
      * @summary Post UserSettings
      * @param body User settings to update
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postUserSettings (body: User, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: PostUserSettingsResponse;  }> {
@@ -19280,7 +19280,7 @@ export class VariablesApi {
         'default': <Authentication>new VoidAuth(),
         'access_token': new ApiKeyAuth('query', 'access_token'),
         'client_id': new ApiKeyAuth('query', 'clientId'),
-        'quantimodo_oauth2': new OAuth(),
+        'curedao_oauth2': new OAuth(),
     }
 
     constructor(basePath?: string);
@@ -19317,7 +19317,7 @@ export class VariablesApi {
     }
 
     set accessToken(token: string) {
-        this.authentications.quantimodo_oauth2.accessToken = token;
+        this.authentications.curedao_oauth2.accessToken = token;
     }
     /**
      * Delete previously created user tags or ingredients.
@@ -19355,7 +19355,7 @@ export class VariablesApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -19414,7 +19414,7 @@ export class VariablesApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -19465,7 +19465,7 @@ export class VariablesApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -19511,7 +19511,7 @@ export class VariablesApi {
      * @param sort Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order.
      * @param includePublic Include variables the user has no measurements for
      * @param manualTracking Only include variables tracked manually by the user
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param upc UPC or other barcode scan result
      * @param effectOrCause Provided variable is the effect or cause
      * @param publicEffectOrCause Ex:
@@ -19717,7 +19717,7 @@ export class VariablesApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -19781,7 +19781,7 @@ export class VariablesApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -19812,7 +19812,7 @@ export class VariablesApi {
      * @summary Update User Settings for a Variable
      * @param userVariables Variable user settings data
      * @param includePrivate Include user-specific variables in results
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param includePublic Include variables the user has no measurements for
      * @param searchPhrase Ex: %Body Fat%
      * @param exactMatch Require exact match
@@ -19885,7 +19885,7 @@ export class VariablesApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -19944,7 +19944,7 @@ export class VariablesApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -19984,7 +19984,7 @@ export class XprofileApi {
         'default': <Authentication>new VoidAuth(),
         'access_token': new ApiKeyAuth('query', 'access_token'),
         'client_id': new ApiKeyAuth('query', 'clientId'),
-        'quantimodo_oauth2': new OAuth(),
+        'curedao_oauth2': new OAuth(),
     }
 
     constructor(basePath?: string);
@@ -20021,7 +20021,7 @@ export class XprofileApi {
     }
 
     set accessToken(token: string) {
-        this.authentications.quantimodo_oauth2.accessToken = token;
+        this.authentications.curedao_oauth2.accessToken = token;
     }
     /**
      * Get XprofileData
@@ -20033,7 +20033,7 @@ export class XprofileApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getXprofileData (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<XprofileDataResponse>;  }> {
@@ -20089,7 +20089,7 @@ export class XprofileApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -20125,7 +20125,7 @@ export class XprofileApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getXprofileFields (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<XprofileFieldsResponse>;  }> {
@@ -20181,7 +20181,7 @@ export class XprofileApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -20217,7 +20217,7 @@ export class XprofileApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public getXprofileGroups (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<XprofileGroupsResponse>;  }> {
@@ -20273,7 +20273,7 @@ export class XprofileApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -20309,7 +20309,7 @@ export class XprofileApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postXprofileData (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<XprofileDataResponse>;  }> {
@@ -20365,7 +20365,7 @@ export class XprofileApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -20401,7 +20401,7 @@ export class XprofileApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postXprofileFields (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<XprofileFieldsResponse>;  }> {
@@ -20457,7 +20457,7 @@ export class XprofileApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 
@@ -20493,7 +20493,7 @@ export class XprofileApi {
      * @param userId User&#39;s id
      * @param createdAt When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param id Id
-     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param clientId Your QuantiModo client id can be obtained by creating an app at https://builder.curedao.org
      * @param {*} [options] Override http request options.
      */
     public postXprofileGroups (sort?: string, limit?: number, offset?: number, updatedAt?: string, userId?: number, createdAt?: string, id?: number, clientId?: string, options: any = {}) : Promise<{ response: http.IncomingMessage; body: Array<XprofileGroupsResponse>;  }> {
@@ -20549,7 +20549,7 @@ export class XprofileApi {
 
         this.authentications.access_token.applyToRequest(localVarRequestOptions);
 
-        this.authentications.quantimodo_oauth2.applyToRequest(localVarRequestOptions);
+        this.authentications.curedao_oauth2.applyToRequest(localVarRequestOptions);
 
         this.authentications.default.applyToRequest(localVarRequestOptions);
 

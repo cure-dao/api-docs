@@ -53,7 +53,7 @@ export default class FeedApi {
      * @param {String} opts.updatedAt When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
      * @param {Number} opts.limit The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records. (default to 100)
      * @param {Number} opts.offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/FeedApi~getFeedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/FeedResponse}
      */
@@ -102,7 +102,7 @@ export default class FeedApi {
      * @param {Array.<module:model/Card>} body Id of the tracking reminder notification to be snoozed
      * @param {Object} opts Optional parameters
      * @param {Number} opts.userId User's id
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/FeedApi~postFeedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/FeedResponse}
      */

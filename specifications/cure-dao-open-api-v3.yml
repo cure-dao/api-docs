@@ -361,7 +361,7 @@ paths:
       tags:
         - appSettings
       summary: Get client app settings
-      description: 'Get the settings for your application configurable at https://builder.quantimo.do'
+      description: 'Get the settings for your application configurable at https://builder.curedao.org'
       operationId: getAppSettings
       parameters:
         - $ref: '#/components/parameters/clientIdParam'
@@ -2349,7 +2349,7 @@ components:
           $ref: '#/components/schemas/Card'
         clientId:
           type: string
-          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do'
+          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org'
         connected:
           type: boolean
           description: True if the authenticated user has this connector enabled
@@ -3921,7 +3921,7 @@ components:
           $ref: '#/components/schemas/Card'
         clientId:
           type: string
-          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do'
+          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org'
         combinationOperation:
           type: string
           description: The way multiple measurements are aggregated over time
@@ -4237,7 +4237,7 @@ components:
           $ref: '#/components/schemas/Card'
         clientId:
           type: string
-          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do'
+          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org'
         combinationOperation:
           type: string
           description: The way multiple measurements are aggregated over time
@@ -4941,7 +4941,7 @@ components:
             $ref: '#/components/schemas/Variable'
         clientId:
           type: string
-          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do'
+          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org'
         combinationOperation:
           type: string
           description: 'User-Defined Variable Setting: How to aggregate measurements over time. SUM should be used for things like minutes of exercise.  If you use MEAN for exercise, then a person might exercise more minutes in one day but add separate measurements that were smaller.  So when we are doing correlational analysis, we would think that the person exercised less that day even though they exercised more.  Conversely, we must use MEAN for things such as ratings which cannot be SUMMED.'
@@ -5575,7 +5575,7 @@ components:
           description: Cause variable id
         clientId:
           type: string
-          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do'
+          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org'
         createdAt:
           type: string
           description: 'When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format'
@@ -5602,7 +5602,7 @@ components:
             - none
         type:
           type: string
-          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do'
+          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org'
           enum:
             - causality
             - usefulness
@@ -5634,13 +5634,13 @@ components:
     clientIdParam:
       name: clientId
       in: query
-      description: 'Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do'
+      description: 'Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org'
       schema:
         type: string
     clientSecretParam:
       name: client_secret
       in: query
-      description: 'This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).'
+      description: 'This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).'
       schema:
         type: string
     clientUserIdParam:

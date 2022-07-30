@@ -96,7 +96,7 @@ let opts = {
   'offset': 56, // Number | OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
   'variableCategoryName': "variableCategoryName_example", // String | Ex: Emotions, Treatments, Symptoms...
   'reminderTime': "reminderTime_example", // String | Ex: (lt)2017-07-31 21:43:26
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
   'onlyPast': true, // Boolean | Ex: 1
   'includeDeleted': true // Boolean | Include deleted variables
 };
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
  **offset** | **Number**| OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned. | [optional] 
  **variableCategoryName** | **String**| Ex: Emotions, Treatments, Symptoms... | [optional] 
  **reminderTime** | **String**| Ex: (lt)2017-07-31 21:43:26 | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
  **onlyPast** | **Boolean**| Ex: 1 | [optional] 
  **includeDeleted** | **Boolean**| Include deleted variables | [optional] 
 
@@ -169,7 +169,7 @@ let opts = {
   'limit': 100, // Number | The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.
   'offset': 56, // Number | OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
   'sort': "sort_example", // String | Sort by one of the listed field names. If the field name is prefixed with `-`, it will sort in descending order.
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
   'appVersion': "appVersion_example" // String | Ex: 2.1.1.0
 };
 apiInstance.getTrackingReminders(opts, (error, data, response) => {
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
  **limit** | **Number**| The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records. | [optional] [default to 100]
  **offset** | **Number**| OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned. | [optional] 
  **sort** | **String**| Sort by one of the listed field names. If the field name is prefixed with &#x60;-&#x60;, it will sort in descending order. | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
  **appVersion** | **String**| Ex: 2.1.1.0 | [optional] 
 
 ### Return type
@@ -234,7 +234,7 @@ let apiInstance = new CureDaoUnifiedHealthApi.RemindersApi();
 let body = [new CureDaoUnifiedHealthApi.TrackingReminderNotificationPost()]; // [TrackingReminderNotificationPost] | Id of the tracking reminder notification to be snoozed
 let opts = {
   'userId': 3.4, // Number | User's id
-  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
 };
 apiInstance.postTrackingReminderNotifications(body, opts, (error, data, response) => {
   if (error) {
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**[TrackingReminderNotificationPost]**](TrackingReminderNotificationPost.md)| Id of the tracking reminder notification to be snoozed | 
  **userId** | **Number**| User&#39;s id | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
 
 ### Return type
 

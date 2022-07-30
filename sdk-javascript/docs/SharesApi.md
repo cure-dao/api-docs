@@ -91,7 +91,7 @@ let opts = {
   'userId': 3.4, // Number | User's id
   'createdAt': "createdAt_example", // String | When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
   'updatedAt': "updatedAt_example", // String | When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local.
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
   'appVersion': "appVersion_example", // String | Ex: 2.1.1.0
   'log': "log_example", // String | Username or email
   'pwd': "pwd_example" // String | User password
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
  **userId** | **Number**| User&#39;s id | [optional] 
  **createdAt** | **String**| When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. | [optional] 
  **updatedAt** | **String**| When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. | [optional] 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
  **appVersion** | **String**| Ex: 2.1.1.0 | [optional] 
  **log** | **String**| Username or email | [optional] 
  **pwd** | **String**| User password | [optional] 
@@ -155,7 +155,7 @@ curedao_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new CureDaoUnifiedHealthApi.SharesApi();
 let body = new CureDaoUnifiedHealthApi.ShareInvitationBody(); // ShareInvitationBody | Details about person to share with
 let opts = {
-  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+  'clientId': "clientId_example" // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
 };
 apiInstance.inviteShare(body, opts, (error, data, response) => {
   if (error) {
@@ -172,7 +172,7 @@ apiInstance.inviteShare(body, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**ShareInvitationBody**](ShareInvitationBody.md)| Details about person to share with | 
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
 
 ### Return type
 

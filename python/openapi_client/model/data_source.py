@@ -231,7 +231,7 @@ class DataSource(ModelNormal):
             background_color (str): Background color HEX code that matches the icon. [optional]  # noqa: E501
             buttons ([Button]): [optional]  # noqa: E501
             card (Card): [optional]  # noqa: E501
-            client_id (str): Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do. [optional]  # noqa: E501
+            client_id (str): Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org. [optional]  # noqa: E501
             connected (bool): True if the authenticated user has this connector enabled. [optional]  # noqa: E501
             connect_error (str): Ex: Your token is expired. Please re-connect. [optional]  # noqa: E501
             connect_instructions (ConnectInstructions): [optional]  # noqa: E501

@@ -107,7 +107,7 @@ export interface TrackingReminder {
      */
     card?: Card;
     /**
-     * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @type {string}
      * @memberof TrackingReminder
      */

@@ -5,7 +5,7 @@
 - Use the access token "demo" to try out the API
 
 * Create an app to get your client id and secret at
-  [https://builder.quantimo.do](https://builder.quantimo.do)
+  [https://builder.curedao.org](https://builder.curedao.org)
 
 See our interactive API explorer at [https://app.quantimo.do/api/v2/account/api-explorer](https://app.quantimo.do/api/v2/account/api-explorer)
 

@@ -128,7 +128,7 @@ class Vote(ModelNormal):
 
         Args:
             cause_variable_id (int): Cause variable id
-            client_id (str): Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+            client_id (str): Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
             effect_variable_id (int): Effect variable id
             user_id (int): ID of User
             value (str): Vote down for implausible/not-useful or up for plausible/useful. Vote none to delete a previous vote.
@@ -167,7 +167,7 @@ class Vote(ModelNormal):
             created_at (str): When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. [optional]  # noqa: E501
             id (int): id. [optional]  # noqa: E501
             updated_at (str): When the record in the database was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. [optional]  # noqa: E501
-            type (str): Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do. [optional]  # noqa: E501
+            type (str): Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

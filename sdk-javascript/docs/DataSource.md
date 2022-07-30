@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **backgroundColor** | **String** | Background color HEX code that matches the icon | [optional] 
 **buttons** | [**[Button]**](Button.md) |  | [optional] 
 **card** | [**Card**](Card.md) |  | [optional] 
-**clientId** | **String** | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+**clientId** | **String** | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
 **connected** | **Boolean** | True if the authenticated user has this connector enabled | [optional] 
 **connectError** | **String** | Ex: Your token is expired. Please re-connect | [optional] 
 **connectInstructions** | [**ConnectInstructions**](ConnectInstructions.md) |  | [optional] 

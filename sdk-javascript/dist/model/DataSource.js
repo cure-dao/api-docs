@@ -266,7 +266,7 @@ DataSource.prototype['buttons'] = undefined;
 
 DataSource.prototype['card'] = undefined;
 /**
- * Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+ * Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
  * @member {String} clientId
  */
 

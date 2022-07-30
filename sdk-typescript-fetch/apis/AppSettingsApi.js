@@ -76,7 +76,7 @@ var AppSettingsApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
-     * Get the settings for your application configurable at https://builder.quantimo.do
+     * Get the settings for your application configurable at https://builder.curedao.org
      * Get client app settings
      */
     AppSettingsApi.prototype.getAppSettingsRaw = function (requestParameters) {
@@ -107,7 +107,7 @@ var AppSettingsApi = /** @class */ (function (_super) {
         });
     };
     /**
-     * Get the settings for your application configurable at https://builder.quantimo.do
+     * Get the settings for your application configurable at https://builder.curedao.org
      * Get client app settings
      */
     AppSettingsApi.prototype.getAppSettings = function (requestParameters) {

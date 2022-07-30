@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **commonOptimalValueMessage** | **String** | Description of relationship with variable with strongest relationship for population | [optional] 
 **userOptimalValueMessage** | **String** | Description of relationship with variable with strongest relationship for user | [optional] 
 **card** | [**Card**](Card.md) |  | [optional] 
-**clientId** | **String** | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
+**clientId** | **String** | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
 **combinationOperation** | **String** | The way multiple measurements are aggregated over time | [optional] 
 **createdAt** | **String** | Ex: 2017-07-29 20:49:54 UTC ISO 8601 YYYY-MM-DDThh:mm:ss | [optional] 
 **displayName** | **String** | Ex: Trader Joe&#39;s Bedtime Tea | [optional] 

@@ -98,7 +98,7 @@ var RemindersApi = /*#__PURE__*/function () {
      * @param {Number} opts.offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {module:model/String} opts.variableCategoryName Ex: Emotions, Treatments, Symptoms...
      * @param {String} opts.reminderTime Ex: (lt)2017-07-31 21:43:26
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {Boolean} opts.onlyPast Ex: 1
      * @param {Boolean} opts.includeDeleted Include deleted variables
      * @param {module:api/RemindersApi~getTrackingReminderNotificationsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -151,7 +151,7 @@ var RemindersApi = /*#__PURE__*/function () {
      * @param {Number} opts.limit The LIMIT is used to limit the number of results returned. So if youhave 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records. (default to 100)
      * @param {Number} opts.offset OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause.If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
      * @param {String} opts.sort Sort by one of the listed field names. If the field name is prefixed with `-`, it will sort in descending order.
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {String} opts.appVersion Ex: 2.1.1.0
      * @param {module:api/RemindersApi~getTrackingRemindersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/TrackingReminder>}
@@ -196,7 +196,7 @@ var RemindersApi = /*#__PURE__*/function () {
      * @param {Array.<module:model/TrackingReminderNotificationPost>} body Id of the tracking reminder notification to be snoozed
      * @param {Object} opts Optional parameters
      * @param {Number} opts.userId User's id
-     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
+     * @param {String} opts.clientId Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
      * @param {module:api/RemindersApi~postTrackingReminderNotificationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CommonResponse}
      */

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Get client app settings
 
-Get the settings for your application configurable at https://builder.quantimo.do
+Get the settings for your application configurable at https://builder.curedao.org
 
 ### Example
 
@@ -23,8 +23,8 @@ import CureDaoUnifiedHealthApi from 'cure_dao_unified_health_api';
 
 let apiInstance = new CureDaoUnifiedHealthApi.AppSettingsApi();
 let opts = {
-  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do
-  'clientSecret': "clientSecret_example" // String | This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do).
+  'clientId': "clientId_example", // String | Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org
+  'clientSecret': "clientSecret_example" // String | This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org).
 };
 apiInstance.getAppSettings(opts, (error, data, response) => {
   if (error) {
@@ -40,8 +40,8 @@ apiInstance.getAppSettings(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.quantimo.do | [optional] 
- **clientSecret** | **String**| This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.quantimo.do](https://builder.quantimo.do). | [optional] 
+ **clientId** | **String**| Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org | [optional] 
+ **clientSecret** | **String**| This is the secret for your obtained clientId. We use this to ensure that only your application uses the clientId.  Obtain this by creating a free application at [https://builder.curedao.org](https://builder.curedao.org). | [optional] 
 
 ### Return type
 
