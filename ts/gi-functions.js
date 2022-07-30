@@ -57,9 +57,9 @@ exports.gi = {
         if (exports.gi.suiteType === "api") {
             return th.getApiUrl() + "/api/v2/auth/login";
         }
-        var defaultValue = "https://web.quantimo.do";
+        var defaultValue = "https://app.curedao.org";
         if (th.getApiUrl().indexOf("utopia") !== -1) {
-            defaultValue = "https://dev-web.quantimo.do";
+            defaultValue = "https://dev-app.curedao.org";
         }
         if (process.env.RELEASE_STAGE === "ionic") {
             return "https://medimodo.herokuapp.com";

@@ -77,7 +77,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TextApiResponse = exports.BlobApiResponse = exports.VoidApiResponse = exports.JSONApiResponse = exports.canConsumeForm = exports.mapValues = exports.querystring = exports.exists = exports.Configuration = exports.COLLECTION_FORMATS = exports.RequiredError = exports.BaseAPI = exports.BASE_PATH = void 0;
 //declare type GlobalFetch = WindowOrWorkerGlobalScope
-exports.BASE_PATH = "https://app.quantimo.do/api".replace(/\/+$/, "");
+exports.BASE_PATH = "https://api.curedao.org/api".replace(/\/+$/, "");
 var isBlob = function (value) { return typeof Blob !== 'undefined' && value instanceof Blob; };
 /**
  * This is the base class for all generated API classes.

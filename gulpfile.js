@@ -161,7 +161,7 @@ function executeCommand(command, callback) {
     });
 }
 const swaggerJsonUrl = 'https://raw.githubusercontent.com/CureDAO/docs/master/specification/cure-dao-open-api-v3.yml';
-//swaggerJsonUrl = 'https://utopia.quantimo.do:4443/api/docs/specification/cure-dao-open-api-v3.yml';
+//swaggerJsonUrl = 'https://utopia.curedao.org:4443/api/docs/specification/cure-dao-open-api-v3.yml';
 function clone(organization, repoName, destinationFolder, callback){
     const repoUrl = 'https://github.com/' + organization + '/' + repoName;
     const repoFolder = destinationFolder + '/' + repoName;

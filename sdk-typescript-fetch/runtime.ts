@@ -3,7 +3,7 @@
 
 
 //declare type GlobalFetch = WindowOrWorkerGlobalScope
-export const BASE_PATH = "https://app.quantimo.do/api".replace(/\/+$/, "");
+export const BASE_PATH = "https://api.curedao.org/api".replace(/\/+$/, "");
 
 const isBlob = (value: any) => typeof Blob !== 'undefined' && value instanceof Blob;
 

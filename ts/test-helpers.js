@@ -75,14 +75,14 @@ exports.releaseStages = {
     staging: "staging",
 };
 exports.apiUrls = {
-    development: "https://local.quantimo.do",
-    production: "https://app.quantimo.do",
-    staging: "https://staging.quantimo.do",
+    development: "https://local.curedao.org",
+    production: "https://api.curedao.org",
+    staging: "https://staging-app.curedao.org",
 };
 function getApiUrl() {
     if (!process.env.API_URL && process.env.RELEASE_STAGE === "ionic") {
-        console.debug("Using https://app.quantimo.do as apiUrl because API_URL env not set and RELEASE_STAGE is ionic");
-        return "https://app.quantimo.do";
+        console.debug("Using https://api.curedao.org as apiUrl because API_URL env not set and RELEASE_STAGE is ionic");
+        return "https://api.curedao.org";
     }
     var url = qmEnv.getArgumentOrEnv("API_URL", null);
     if (!url) {
@@ -96,7 +96,7 @@ function getApiUrl() {
         }
         throw new Error("Please provide API_URL");
     }
-    url = url.replace("production.quantimo.do", "app.quantimo.do");
+    url = url.replace("production.curedao.org", "api.curedao.org");
     if (url.indexOf("http") !== 0) {
         url = "https://" + url;
     }

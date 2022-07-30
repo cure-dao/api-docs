@@ -654,7 +654,7 @@ TrackingReminderNotification.prototype['outcome'] = undefined;
 
 TrackingReminderNotification.prototype['pngPath'] = undefined;
 /**
- * Ex: https://web.quantimo.do/img/variable_categories/emotions.png
+ * Ex: https://app.curedao.org/img/variable_categories/emotions.png
  * @member {String} pngUrl
  */
 
@@ -732,7 +732,7 @@ TrackingReminderNotification.prototype['secondToLastValue'] = undefined;
 
 TrackingReminderNotification.prototype['sms'] = undefined;
 /**
- * Ex: https://web.quantimo.do/img/variable_categories/emotions.svg
+ * Ex: https://app.curedao.org/img/variable_categories/emotions.svg
  * @member {String} svgUrl
  */
 

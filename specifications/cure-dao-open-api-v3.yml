@@ -10,7 +10,7 @@ info:
     url: 'https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)'
   version: 0.0.1
 servers:
-  - url: 'https://app.quantimo.do/api'
+  - url: 'https://api.curedao.org/api'
 tags:
   - name: units
     description: Available units for measurements
@@ -410,7 +410,7 @@ paths:
       tags:
         - connectors
       summary: Mobile connect page
-      description: 'This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user''s access_token as a URL parameter like https://app.quantimo.do/api/v3/connect/mobile?access_token=123'
+      description: 'This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user''s access_token as a URL parameter like https://api.curedao.org/api/v3/connect/mobile?access_token=123'
       operationId: getMobileConnectPage
       parameters:
         - $ref: '#/components/parameters/userIdParam'
@@ -728,7 +728,7 @@ paths:
         - authentication
       summary: Get a user access token
       description: 'Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and 
-      receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/app.quantimo.do/v1/oauth2/authorize endpoint, you''ll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don''t have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application''s redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application''s client id. * `client_secret` Your application''s client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can''t use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](https://oauth.net/2/)'
+      receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you''ll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don''t have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application''s redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application''s client id. * `client_secret` Your application''s client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can''t use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](https://oauth.net/2/)'
       operationId: getAccessToken
       parameters:
         - $ref: '#/components/parameters/clientIdParam'
@@ -1640,10 +1640,10 @@ components:
           type: string
         clientId:
           type: string
-          description: 'Get yours at https:://builder.quantimo.do'
+          description: 'Get yours at https:://builder.curedao.org'
         clientSecret:
           type: string
-          description: 'Get yours at https:://builder.quantimo.do'
+          description: 'Get yours at https:://builder.curedao.org'
         collaborators:
           type: array
           items:
@@ -1770,7 +1770,7 @@ components:
           description: 'Ex: ion-refresh'
         link:
           type: string
-          description: 'Ex: https://local.quantimo.do'
+          description: 'Ex: https://local.curedao.org'
         stateName:
           type: string
           description: State to go to
@@ -3717,22 +3717,22 @@ components:
           description: Share this link with potential study participants
         studyLinkEmail:
           type: string
-          description: 'Ex: mailto:?subject=N1%20Study%3A%20Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood&body=Check%20out%20my%20study%20at%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%0A%0AHave%20a%20great%20day!'
+          description: 'Ex: mailto:?subject=N1%20Study%3A%20Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood&body=Check%20out%20my%20study%20at%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%0A%0AHave%20a%20great%20day!'
         studyLinkFacebook:
           type: string
-          description: 'Ex: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230'
+          description: 'Ex: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230'
         studyLinkGoogle:
           type: string
-          description: 'Ex: https://plus.google.com/share?url=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230'
+          description: 'Ex: https://plus.google.com/share?url=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230'
         studyLinkStatic:
           type: string
-          description: 'Ex: https://local.quantimo.do/api/v2/study?causeVariableName=Sleep%20Quality&effectVariableName=Overall%20Mood&userId=230'
+          description: 'Ex: https://local.curedao.org/api/v2/study?causeVariableName=Sleep%20Quality&effectVariableName=Overall%20Mood&userId=230'
         studyLinkDynamic:
           type: string
-          description: 'Ex: https://local.quantimo.do/ionic/Modo/www/index.html#/app/study?causeVariableName=Sleep%20Quality&effectVariableName=Overall%20Mood&userId=230'
+          description: 'Ex: https://local.curedao.org/ionic/Modo/www/index.html#/app/study?causeVariableName=Sleep%20Quality&effectVariableName=Overall%20Mood&userId=230'
         studyLinkTwitter:
           type: string
-          description: 'Ex: https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40curedao'
+          description: 'Ex: https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40curedao'
     StudySharing:
       required:
         - shareUserMeasurements
@@ -4913,22 +4913,22 @@ components:
           $ref: '#/components/schemas/VariableCharts'
         chartsLinkDynamic:
           type: string
-          description: 'Ex: https://local.quantimo.do/ionic/Modo/www/#/app/charts/Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapp.quantimo.do%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png'
+          description: 'Ex: https://local.curedao.org/ionic/Modo/www/#/app/charts/Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png'
         chartsLinkEmail:
           type: string
-          description: 'Ex: mailto:?subject=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21&body=See%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20history%20at%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%0A%0AHave%20a%20great%20day!'
+          description: 'Ex: mailto:?subject=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21&body=See%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20history%20at%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%0A%0AHave%20a%20great%20day!'
         chartsLinkFacebook:
           type: string
-          description: 'Ex: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png'
+          description: 'Ex: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png'
         chartsLinkGoogle:
           type: string
-          description: 'Ex: https://plus.google.com/share?url=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png'
+          description: 'Ex: https://plus.google.com/share?url=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png'
         chartsLinkStatic:
           type: string
-          description: 'Ex: https://local.quantimo.do/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapp.quantimo.do%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png'
+          description: 'Ex: https://local.curedao.org/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png'
         chartsLinkTwitter:
           type: string
-          description: 'Ex: https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40curedao'
+          description: 'Ex: https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40curedao'
         childCommonTagVariables:
           type: array
           description: Commonly defined for all users. An example of a parent category variable would be Fruit when tagged with the child sub-type variables Apple.  Child variable (Apple) measurements will be included when the parent category (Fruit) is analyzed.  This allows us to see how Fruit consumption might be affecting without having to record both Fruit and Apple intake.
@@ -6192,8 +6192,8 @@ components:
       type: oauth2
       flows:
         authorizationCode:
-          authorizationUrl: 'https://app.quantimo.do/api/v1/oauth/authorize'
-          tokenUrl: 'https://app.quantimo.do/api/v1/oauth/token'
+          authorizationUrl: 'https://api.curedao.org/api/v1/oauth/authorize'
+          tokenUrl: 'https://api.curedao.org/api/v1/oauth/token'
           scopes:
             basic: 'Allows you to read user info (display name, email, etc)'
             readmeasurements: Allows one to read a user's measurements

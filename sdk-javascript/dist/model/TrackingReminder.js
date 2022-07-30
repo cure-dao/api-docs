@@ -708,7 +708,7 @@ TrackingReminder.prototype['outcome'] = undefined;
 
 TrackingReminder.prototype['pngPath'] = undefined;
 /**
- * Ex: https://web.quantimo.do/img/variable_categories/symptoms.png
+ * Ex: https://app.curedao.org/img/variable_categories/symptoms.png
  * @member {String} pngUrl
  */
 
@@ -816,7 +816,7 @@ TrackingReminder.prototype['startTrackingDate'] = undefined;
 
 TrackingReminder.prototype['stopTrackingDate'] = undefined;
 /**
- * Ex: https://web.quantimo.do/img/variable_categories/symptoms.svg
+ * Ex: https://app.curedao.org/img/variable_categories/symptoms.svg
  * @member {String} svgUrl
  */
 

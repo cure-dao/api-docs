@@ -213,7 +213,7 @@ export default class ConnectorsApi {
 
     /**
      * Mobile connect page
-     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://app.quantimo.do/api/v3/connect/mobile?access_token=123
+     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://api.curedao.org/api/v3/connect/mobile?access_token=123
      * @param {Object} opts Optional parameters
      * @param {Number} opts.userId User's id
      * @param {module:api/ConnectorsApi~getMobileConnectPageCallback} callback The callback function, accepting three arguments: error, data, response

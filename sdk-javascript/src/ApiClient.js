@@ -32,9 +32,9 @@ class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://app.quantimo.do/api
+         * @default https://api.curedao.org/api
          */
-        this.basePath = 'https://app.quantimo.do/api'.replace(/\/+$/, '');
+        this.basePath = 'https://api.curedao.org/api'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
@@ -589,7 +589,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "https://app.quantimo.do/api",
+              'url': "https://api.curedao.org/api",
               'description': "No description provided",
             }
       ];

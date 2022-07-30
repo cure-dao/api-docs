@@ -1,15 +1,15 @@
 {
   "chromeWebSecurity": false,
-  "baseUrl": "https://app.quantimo.do",
+  "baseUrl": "https://api.curedao.org",
   "projectId": "ee8wan",
   "pageLoadTimeout": 60000,
   "videoCompression": false,
   "videoUploadOnPasses": false,
   "video": true,
   "env": {
-    "API_HOST": "app.quantimo.do",
+    "API_HOST": "api.curedao.org",
     "OAUTH_APP_HOST": "medimodo.herokuapp.com",
-    "BUILDER_HOST": "builder.quantimo.do",
+    "BUILDER_HOST": "builder.curedao.org",
     "abort_strategy": true
   },
   "reporter": "cypress-multi-reporters",

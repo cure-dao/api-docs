@@ -7,7 +7,7 @@ import * as url from "url";
 import * as portableFetch from "portable-fetch";
 import { Configuration } from "./configuration";
 
-const BASE_PATH = "https://app.quantimo.do/api".replace(/\/+$/, "");
+const BASE_PATH = "https://api.curedao.org/api".replace(/\/+$/, "");
 
 /**
  *
@@ -301,13 +301,13 @@ export interface AppSettings {
      */
     buildEnabled?: string;
     /**
-     * Get yours at https:://builder.quantimo.do
+     * Get yours at https:://builder.curedao.org
      * @type {string}
      * @memberof AppSettings
      */
     clientId: string;
     /**
-     * Get yours at https:://builder.quantimo.do
+     * Get yours at https:://builder.curedao.org
      * @type {string}
      * @memberof AppSettings
      */
@@ -541,7 +541,7 @@ export interface Button {
      */
     ionIcon?: string;
     /**
-     * Ex: https://local.quantimo.do
+     * Ex: https://local.curedao.org
      * @type {string}
      * @memberof Button
      */
@@ -1656,13 +1656,13 @@ export interface DataSource {
      */
     id: number;
     /**
-     * Ex: https://web.quantimo.do/img/logos/CureDAO-logo-qm-rainbow-200-200.png
+     * Ex: https://app.curedao.org/img/logos/CureDAO-logo-qm-rainbow-200-200.png
      * @type {string}
      * @memberof DataSource
      */
     image: string;
     /**
-     * Ex: <a href=\"https://quantimo.do\"><img id=\"CureDAO_image\" title=\"CureDAO\" src=\"https://web.quantimo.do/img/logos/CureDAO-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
+     * Ex: <a href=\"https://quantimo.do\"><img id=\"CureDAO_image\" title=\"CureDAO\" src=\"https://app.curedao.org/img/logos/CureDAO-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
      * @type {string}
      * @memberof DataSource
      */
@@ -3148,7 +3148,7 @@ export interface Measurement {
      */
     pngPath?: string;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/treatments.png
+     * Ex: https://app.curedao.org/img/variable_categories/treatments.png
      * @type {string}
      * @memberof Measurement
      */
@@ -3184,7 +3184,7 @@ export interface Measurement {
      */
     startTimeString: string;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/treatments.svg
+     * Ex: https://app.curedao.org/img/variable_categories/treatments.svg
      * @type {string}
      * @memberof Measurement
      */
@@ -4200,13 +4200,13 @@ export interface Pair {
  */
 export interface ParticipantInstruction {
     /**
-     * Ex: <a href=\"https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e\">Obtain Fitbit</a> and use it to record your Sleep Duration. Once you have a <a href=\"https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e\">Fitbit</a> account, <a href=\"https://web.quantimo.do/#/app/import\">connect your  Fitbit account at CureDAO</a> to automatically import and analyze your data.
+     * Ex: <a href=\"https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e\">Obtain Fitbit</a> and use it to record your Sleep Duration. Once you have a <a href=\"https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e\">Fitbit</a> account, <a href=\"https://app.curedao.org/#/app/import\">connect your  Fitbit account at CureDAO</a> to automatically import and analyze your data.
      * @type {string}
      * @memberof ParticipantInstruction
      */
     instructionsForCauseVariable?: string;
     /**
-     * Ex: <a href=\"https://quantimo.do\">Obtain CureDAO</a> and use it to record your Overall Mood. Once you have a <a href=\"https://quantimo.do\">CureDAO</a> account, <a href=\"https://web.quantimo.do/#/app/import\">connect your  CureDAO account at CureDAO</a> to automatically import and analyze your data.
+     * Ex: <a href=\"https://quantimo.do\">Obtain CureDAO</a> and use it to record your Overall Mood. Once you have a <a href=\"https://quantimo.do\">CureDAO</a> account, <a href=\"https://app.curedao.org/#/app/import\">connect your  CureDAO account at CureDAO</a> to automatically import and analyze your data.
      * @type {string}
      * @memberof ParticipantInstruction
      */
@@ -5220,37 +5220,37 @@ export interface StudyLinks {
      */
     studyJoinLink?: string;
     /**
-     * Ex: mailto:?subject=N1%20Study%3A%20Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood&body=Check%20out%20my%20study%20at%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%0A%0AHave%20a%20great%20day!
+     * Ex: mailto:?subject=N1%20Study%3A%20Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood&body=Check%20out%20my%20study%20at%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%0A%0AHave%20a%20great%20day!
      * @type {string}
      * @memberof StudyLinks
      */
     studyLinkEmail: string;
     /**
-     * Ex: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230
+     * Ex: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230
      * @type {string}
      * @memberof StudyLinks
      */
     studyLinkFacebook: string;
     /**
-     * Ex: https://plus.google.com/share?url=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230
+     * Ex: https://plus.google.com/share?url=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230
      * @type {string}
      * @memberof StudyLinks
      */
     studyLinkGoogle: string;
     /**
-     * Ex: https://local.quantimo.do/api/v2/study?causeVariableName=Sleep%20Quality&effectVariableName=Overall%20Mood&userId=230
+     * Ex: https://local.curedao.org/api/v2/study?causeVariableName=Sleep%20Quality&effectVariableName=Overall%20Mood&userId=230
      * @type {string}
      * @memberof StudyLinks
      */
     studyLinkStatic: string;
     /**
-     * Ex: https://local.quantimo.do/ionic/Modo/www/index.html#/app/study?causeVariableName=Sleep%20Quality&effectVariableName=Overall%20Mood&userId=230
+     * Ex: https://local.curedao.org/ionic/Modo/www/index.html#/app/study?causeVariableName=Sleep%20Quality&effectVariableName=Overall%20Mood&userId=230
      * @type {string}
      * @memberof StudyLinks
      */
     studyLinkDynamic: string;
     /**
-     * Ex: https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40CureDAO
+     * Ex: https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40CureDAO
      * @type {string}
      * @memberof StudyLinks
      */
@@ -5744,7 +5744,7 @@ export interface TrackingReminder {
      */
     pngPath?: string;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/symptoms.png
+     * Ex: https://app.curedao.org/img/variable_categories/symptoms.png
      * @type {string}
      * @memberof TrackingReminder
      */
@@ -5852,7 +5852,7 @@ export interface TrackingReminder {
      */
     stopTrackingDate?: string;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/symptoms.svg
+     * Ex: https://app.curedao.org/img/variable_categories/symptoms.svg
      * @type {string}
      * @memberof TrackingReminder
      */
@@ -6308,7 +6308,7 @@ export interface TrackingReminderNotification {
      */
     pngPath?: string;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/emotions.png
+     * Ex: https://app.curedao.org/img/variable_categories/emotions.png
      * @type {string}
      * @memberof TrackingReminderNotification
      */
@@ -6386,7 +6386,7 @@ export interface TrackingReminderNotification {
      */
     sms?: boolean;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/emotions.svg
+     * Ex: https://app.curedao.org/img/variable_categories/emotions.svg
      * @type {string}
      * @memberof TrackingReminderNotification
      */
@@ -7527,37 +7527,37 @@ export interface Variable {
      */
     charts?: VariableCharts;
     /**
-     * Ex: https://local.quantimo.do/ionic/Modo/www/#/app/charts/Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapp.quantimo.do%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png
+     * Ex: https://local.curedao.org/ionic/Modo/www/#/app/charts/Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png
      * @type {string}
      * @memberof Variable
      */
     chartsLinkDynamic?: string;
     /**
-     * Ex: mailto:?subject=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21&body=See%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20history%20at%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%0A%0AHave%20a%20great%20day!
+     * Ex: mailto:?subject=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21&body=See%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20history%20at%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%0A%0AHave%20a%20great%20day!
      * @type {string}
      * @memberof Variable
      */
     chartsLinkEmail?: string;
     /**
-     * Ex: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png
+     * Ex: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png
      * @type {string}
      * @memberof Variable
      */
     chartsLinkFacebook?: string;
     /**
-     * Ex: https://plus.google.com/share?url=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png
+     * Ex: https://plus.google.com/share?url=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png
      * @type {string}
      * @memberof Variable
      */
     chartsLinkGoogle?: string;
     /**
-     * Ex: https://local.quantimo.do/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapp.quantimo.do%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png
+     * Ex: https://local.curedao.org/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png
      * @type {string}
      * @memberof Variable
      */
     chartsLinkStatic?: string;
     /**
-     * Ex: https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40CureDAO
+     * Ex: https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40CureDAO
      * @type {string}
      * @memberof Variable
      */
@@ -8067,7 +8067,7 @@ export interface Variable {
      */
     pngPath?: string;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/treatments.png
+     * Ex: https://app.curedao.org/img/variable_categories/treatments.png
      * @type {string}
      * @memberof Variable
      */
@@ -8157,7 +8157,7 @@ export interface Variable {
      */
     subtitle?: string;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/treatments.svg
+     * Ex: https://app.curedao.org/img/variable_categories/treatments.svg
      * @type {string}
      * @memberof Variable
      */
@@ -8536,7 +8536,7 @@ export interface VariableCategory {
      */
     pngPath?: string;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/emotions.png
+     * Ex: https://app.curedao.org/img/variable_categories/emotions.png
      * @type {string}
      * @memberof VariableCategory
      */
@@ -8554,7 +8554,7 @@ export interface VariableCategory {
      */
     svgPath?: string;
     /**
-     * Ex: https://web.quantimo.do/img/variable_categories/emotions.svg
+     * Ex: https://app.curedao.org/img/variable_categories/emotions.svg
      * @type {string}
      * @memberof VariableCategory
      */
@@ -10112,7 +10112,7 @@ export class AppSettingsApi extends BaseAPI implements AppSettingsApiInterface {
 export const AuthenticationApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/app.quantimo.do/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
+         * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
          * @summary Get a user access token
          * @param {string} grantType Grant Type can be &#39;authorization_code&#39; or &#39;refresh_token&#39;
          * @param {string} code Authorization code you received with the previous request.
@@ -10318,7 +10318,7 @@ export const AuthenticationApiFetchParamCreator = function (configuration?: Conf
 export const AuthenticationApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/app.quantimo.do/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
+         * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
          * @summary Get a user access token
          * @param {string} grantType Grant Type can be &#39;authorization_code&#39; or &#39;refresh_token&#39;
          * @param {string} code Authorization code you received with the previous request.
@@ -10395,7 +10395,7 @@ export const AuthenticationApiFp = function(configuration?: Configuration) {
 export const AuthenticationApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
     return {
         /**
-         * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/app.quantimo.do/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
+         * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
          * @summary Get a user access token
          * @param {string} grantType Grant Type can be &#39;authorization_code&#39; or &#39;refresh_token&#39;
          * @param {string} code Authorization code you received with the previous request.
@@ -10445,7 +10445,7 @@ export const AuthenticationApiFactory = function (configuration?: Configuration,
  */
 export interface AuthenticationApiInterface {
     /**
-     * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/app.quantimo.do/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
+     * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
      * @summary Get a user access token
      * @param {string} grantType Grant Type can be &#39;authorization_code&#39; or &#39;refresh_token&#39;
      * @param {string} code Authorization code you received with the previous request.
@@ -10495,7 +10495,7 @@ export interface AuthenticationApiInterface {
  */
 export class AuthenticationApi extends BaseAPI implements AuthenticationApiInterface {
     /**
-     * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/app.quantimo.do/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
+     * Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you'll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don't have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application's redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application's client id. * `client_secret` Your application's client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can't use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](http://oauth.net/2/)
      * @summary Get a user access token
      * @param {string} grantType Grant Type can be &#39;authorization_code&#39; or &#39;refresh_token&#39;
      * @param {string} code Authorization code you received with the previous request.
@@ -10721,7 +10721,7 @@ export const ConnectorsApiFetchParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://app.quantimo.do/api/v3/connect/mobile?access_token=123
+         * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://api.curedao.org/api/v3/connect/mobile?access_token=123
          * @summary Mobile connect page
          * @param {number} [userId] User&#39;s id
          * @param {*} [options] Override http request option.
@@ -10887,7 +10887,7 @@ export const ConnectorsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://app.quantimo.do/api/v3/connect/mobile?access_token=123
+         * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://api.curedao.org/api/v3/connect/mobile?access_token=123
          * @summary Mobile connect page
          * @param {number} [userId] User&#39;s id
          * @param {*} [options] Override http request option.
@@ -10976,7 +10976,7 @@ export const ConnectorsApiFactory = function (configuration?: Configuration, fet
             return ConnectorsApiFp(configuration).getIntegrationJs(clientId, options)(fetch, basePath);
         },
         /**
-         * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://app.quantimo.do/api/v3/connect/mobile?access_token=123
+         * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://api.curedao.org/api/v3/connect/mobile?access_token=123
          * @summary Mobile connect page
          * @param {number} [userId] User&#39;s id
          * @param {*} [options] Override http request option.
@@ -11047,7 +11047,7 @@ export interface ConnectorsApiInterface {
     getIntegrationJs(clientId?: string, options?: any): Promise<{}>;
 
     /**
-     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://app.quantimo.do/api/v3/connect/mobile?access_token=123
+     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://api.curedao.org/api/v3/connect/mobile?access_token=123
      * @summary Mobile connect page
      * @param {number} [userId] User&#39;s id
      * @param {*} [options] Override http request option.
@@ -11126,7 +11126,7 @@ export class ConnectorsApi extends BaseAPI implements ConnectorsApiInterface {
     }
 
     /**
-     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://app.quantimo.do/api/v3/connect/mobile?access_token=123
+     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user's access_token as a URL parameter like https://api.curedao.org/api/v3/connect/mobile?access_token=123
      * @summary Mobile connect page
      * @param {number} [userId] User&#39;s id
      * @param {*} [options] Override http request option.

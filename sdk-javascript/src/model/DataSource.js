@@ -32,8 +32,8 @@ class DataSource {
      * @param enabled {Number} Ex: 0
      * @param getItUrl {String} Ex: https://curedao.org
      * @param id {Number} Ex: 72
-     * @param image {String} Ex: https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png
-     * @param imageHtml {String} Ex: <a href=\"https://curedao.org\"><img id=\"curedao_image\" title=\"CureDAO\" src=\"https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
+     * @param image {String} Ex: https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png
+     * @param imageHtml {String} Ex: <a href=\"https://curedao.org\"><img id=\"curedao_image\" title=\"CureDAO\" src=\"https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
      * @param linkedDisplayNameHtml {String} Ex: <a href=\"https://curedao.org\">CureDAO</a>
      * @param longDescription {String} Ex: CureDAO is a Chrome extension, Android app, iOS app, and web app that allows you to easily track mood, symptoms, or any outcome you want to optimize in a fraction of a second.  You can also import your data from over 30 other apps and devices like Fitbit, Rescuetime, Jawbone Up, Withings, Facebook, Github, Google Calendar, Runkeeper, MoodPanda, Slice, Google Fit, and more.  CureDAO then analyzes your data to identify which hidden factors are most likely to be influencing your mood or symptoms and their optimal daily values.
      * @param name {String} Ex: curedao
@@ -300,13 +300,13 @@ DataSource.prototype['getItUrl'] = undefined;
 DataSource.prototype['id'] = undefined;
 
 /**
- * Ex: https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png
+ * Ex: https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png
  * @member {String} image
  */
 DataSource.prototype['image'] = undefined;
 
 /**
- * Ex: <a href=\"https://curedao.org\"><img id=\"curedao_image\" title=\"CureDAO\" src=\"https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
+ * Ex: <a href=\"https://curedao.org\"><img id=\"curedao_image\" title=\"CureDAO\" src=\"https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
  * @member {String} imageHtml
  */
 DataSource.prototype['imageHtml'] = undefined;

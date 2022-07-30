@@ -86,7 +86,7 @@ export interface Button {
      */
     ionIcon?: string;
     /**
-     * Ex: https://local.quantimo.do
+     * Ex: https://local.curedao.org
      * @type {string}
      * @memberof Button
      */

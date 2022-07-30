@@ -122,7 +122,7 @@ describe("gi-tester", function () {
         assert.isUndefined(process.env.API_URL)
         process.env.RELEASE_STAGE = "staging"
         const url = th.getApiUrl()
-        expect(url).to.contain("https://staging.quantimo.do")
+        expect(url).to.contain("https://staging-app.curedao.org")
         if(previouslySetApiUrl){
             process.env.API_URL = previouslySetApiUrl
         }

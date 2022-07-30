@@ -461,12 +461,12 @@
               <div class="doc-copy">
                 <p>We make it easy to retrieve and analyze normalized user data from a wide array of devices and applications. Check out our
                   <a href="https://github.com/CureDAO/docs">docs and sdk&#39;s</a> or
-                  <a href="https://help.quantimo.do">contact us</a>.</p>
+                  <a href="https://help.curedao.org">contact us</a>.</p>
               </div>
               <div class="doc-examples">
                 <section>
                   <h5>API Endpoint</h5>
-                  <!-- <div class="hljs"> --><pre><code>https://app.quantimo.do/api</code></pre>
+                  <!-- <div class="hljs"> --><pre><code>https://api.curedao.org/api</code></pre>
                   <!-- </div> -->
                   <h5>Terms of Service:
                     <a href="https://curedao.org/tos/">https://curedao.org/tos/</a>
@@ -561,7 +561,7 @@
                     <div class="prop-name">
                       <div class="prop-title security-definition-property-name">authorizationUrl</div>
                     </div>
-                    <div class="prop-value security-definition-property-type"> https://app.quantimo.do/api/v1/oauth/authorize </div>
+                    <div class="prop-value security-definition-property-type"> https://api.curedao.org/api/v1/oauth/authorize </div>
                   </div>
                   <div class="prop-row security-definition-property">
                     <div class="prop-name">
@@ -586,7 +586,7 @@
                     <div class="prop-name">
                       <div class="prop-title security-definition-property-name">tokenUrl</div>
                     </div>
-                    <div class="prop-value security-definition-property-type"> https://app.quantimo.do/api/v1/oauth/token </div>
+                    <div class="prop-value security-definition-property-type"> https://api.curedao.org/api/v1/oauth/token </div>
                   </div>
                   <div class="prop-row security-definition-property">
                     <div class="prop-name">
@@ -1390,7 +1390,7 @@
               <div class="doc-copy">
                 <section class="swagger-operation-description">
                   <p>This page is designed to be opened in a webview. Instead of using popup authentication boxes, it uses redirection. You can include the user&#39;s access_token as a URL parameter like
-                    <a href="https://app.quantimo.do/api/v3/connect/mobile?access_token=123">https://app.quantimo.do/api/v3/connect/mobile?access_token=123</a>
+                    <a href="https://api.curedao.org/api/v3/connect/mobile?access_token=123">https://api.curedao.org/api/v3/connect/mobile?access_token=123</a>
                   </p>
                 </section>
               </div>
@@ -13947,7 +13947,7 @@
               <div class="doc-copy">
                 <section class="swagger-operation-description">
                   <p>Get the settings for your application configurable at
-                    <a href="https://build.quantimo.do">https://build.quantimo.do</a>
+                    <a href="https://build.curedao.org">https://build.curedao.org</a>
                   </p>
                 </section>
               </div>
@@ -15508,7 +15508,7 @@
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/app.quantimo.do/v1/oauth2/authorize endpoint, you&#39;ll receive an authorization code to request an access token. This time make a <code>POST</code> request to <code>/api/v1/oauth/access_token</code> with parameters including: * <code>grant_type</code> Can be <code>authorization_code</code> or <code>refresh_token</code> since we are getting the <code>access_token</code> for the first time we don&#39;t have a <code>refresh_token</code> so this must be <code>authorization_code</code>. * <code>code</code> Authorization code you received with the previous request. * <code>redirect_uri</code> Your application&#39;s redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with <code>refresh_token</code> you received along with the <code>access_token</code>. To do this make a <code>POST</code> request to <code>/api/v1/oauth/access_token</code> with correct parameters, which are: * <code>grant_type</code> This time grant type must be <code>refresh_token</code> since we have it. * <code>clientId</code> Your application&#39;s client id. * <code>client_secret</code> Your application&#39;s client secret. * <code>refresh_token</code> The refresh token you received with the <code>access_token</code>. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can&#39;t use both at the same time. * Adding access token to the request header as <code>Authorization: Bearer {access_token}</code> * Adding to the url as a query parameter <code>?access_token={access_token}</code> You can read more about OAuth2 from
+                  <p>Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you&#39;ll receive an authorization code to request an access token. This time make a <code>POST</code> request to <code>/api/v1/oauth/access_token</code> with parameters including: * <code>grant_type</code> Can be <code>authorization_code</code> or <code>refresh_token</code> since we are getting the <code>access_token</code> for the first time we don&#39;t have a <code>refresh_token</code> so this must be <code>authorization_code</code>. * <code>code</code> Authorization code you received with the previous request. * <code>redirect_uri</code> Your application&#39;s redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with <code>refresh_token</code> you received along with the <code>access_token</code>. To do this make a <code>POST</code> request to <code>/api/v1/oauth/access_token</code> with correct parameters, which are: * <code>grant_type</code> This time grant type must be <code>refresh_token</code> since we have it. * <code>clientId</code> Your application&#39;s client id. * <code>client_secret</code> Your application&#39;s client secret. * <code>refresh_token</code> The refresh token you received with the <code>access_token</code>. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can&#39;t use both at the same time. * Adding access token to the request header as <code>Authorization: Bearer {access_token}</code> * Adding to the url as a query parameter <code>?access_token={access_token}</code> You can read more about OAuth2 from
                     <a href="http://oauth.net/2/">here</a>
                   </p>
                 </section>
@@ -25767,7 +25767,7 @@
                       <span class="json-property-required"></span>
                     </dt>
                     <dd>
-                      <p>Get yours at https:://builder.quantimo.do</p>
+                      <p>Get yours at https:://builder.curedao.org</p>
                     </dd>
                     <dt data-property-name="clientSecret" class="has-description">
                       <span class="json-property-name">clientSecret:</span>
@@ -25775,7 +25775,7 @@
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
                     <dd>
-                      <p>Get yours at https:://builder.quantimo.do</p>
+                      <p>Get yours at https:://builder.curedao.org</p>
                     </dd>
                     <dt data-property-name="collaborators" class="has-description">
                       <span class="json-property-name">collaborators:</span>
@@ -26577,7 +26577,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://local.quantimo.do">https://local.quantimo.do</a>
+                        <a href="https://local.curedao.org">https://local.curedao.org</a>
                       </p>
                     </dd>
                     <dt data-property-name="stateName" class="has-description">
@@ -28767,7 +28767,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png">https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png</a>
+                        <a href="https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png">https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="imageHtml" class="has-description">
@@ -28779,7 +28779,7 @@
                     <dd>
                       <p>Ex:
                         <a href="https://curedao.org">
-                          <img id="curedao_image" title="CureDAO" src="https://web.quantimo.do/img/logos/curedao-logo-qm-rainbow-200-200.png" alt="CureDAO">
+                          <img id="curedao_image" title="CureDAO" src="https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png" alt="CureDAO">
                         </a>
                       </p>
                     </dd>
@@ -31782,7 +31782,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/treatments.png">https://web.quantimo.do/img/variable_categories/treatments.png</a>
+                        <a href="https://app.curedao.org/img/variable_categories/treatments.png">https://app.curedao.org/img/variable_categories/treatments.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="productUrl" class="has-description">
@@ -31834,7 +31834,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/treatments.svg">https://web.quantimo.do/img/variable_categories/treatments.svg</a>
+                        <a href="https://app.curedao.org/img/variable_categories/treatments.svg">https://app.curedao.org/img/variable_categories/treatments.svg</a>
                       </p>
                     </dd>
                     <dt data-property-name="unitAbbreviatedName" class="has-description">
@@ -32675,7 +32675,7 @@
                       <p>Ex:
                         <a href="https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e">Obtain Fitbit</a> and use it to record your Sleep Duration. Once you have a
                         <a href="https://www.amazon.com/Fitbit-Charge-Heart-Fitness-Wristband/dp/B01K9S260E/ref=as_li_ss_tl?ie=UTF8&qid=1493518902&sr=8-3&keywords=fitbit&th=1&linkCode=ll1&tag=quant08-20&linkId=b357b0833de73b0c4e935fd7c13a079e">Fitbit</a> account,
-                        <a href="https://web.quantimo.do/#/app/import">connect your Fitbit account at CureDAO</a> to automatically import and analyze your data.</p>
+                        <a href="https://app.curedao.org/#/app/import">connect your Fitbit account at CureDAO</a> to automatically import and analyze your data.</p>
                     </dd>
                     <dt data-property-name="instructionsForEffectVariable" class="has-description">
                       <span class="json-property-name">instructionsForEffectVariable:</span>
@@ -32686,7 +32686,7 @@
                       <p>Ex:
                         <a href="https://curedao.org">Obtain CureDAO</a> and use it to record your Overall Mood. Once you have a
                         <a href="https://curedao.org">CureDAO</a> account,
-                        <a href="https://web.quantimo.do/#/app/import">connect your CureDAO account at CureDAO</a> to automatically import and analyze your data.</p>
+                        <a href="https://app.curedao.org/#/app/import">connect your CureDAO account at CureDAO</a> to automatically import and analyze your data.</p>
                     </dd>
                   </dl>
                 </section>
@@ -35775,7 +35775,7 @@
                       <span class="json-property-required"></span>
                     </dt>
                     <dd>
-                      <p>Ex: mailto:?subject=N1%20Study%3A%20Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood&amp;body=Check%20out%20my%20study%20at%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%0A%0AHave%20a%20great%20day!</p>
+                      <p>Ex: mailto:?subject=N1%20Study%3A%20Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood&amp;body=Check%20out%20my%20study%20at%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%0A%0AHave%20a%20great%20day!</p>
                     </dd>
                     <dt data-property-name="studyLinkFacebook" class="has-description">
                       <span class="json-property-name">studyLinkFacebook:</span>
@@ -35785,7 +35785,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230">https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230">https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230</a>
                       </p>
                     </dd>
                     <dt data-property-name="studyLinkGoogle" class="has-description">
@@ -35796,7 +35796,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://plus.google.com/share?url=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230">https://plus.google.com/share?url=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230</a>
+                        <a href="https://plus.google.com/share?url=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230">https://plus.google.com/share?url=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230</a>
                       </p>
                     </dd>
                     <dt data-property-name="studyLinkStatic" class="has-description">
@@ -35807,7 +35807,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://local.quantimo.do/api/v2/study?causeVariableName=Sleep%20Quality&amp;effectVariableName=Overall%20Mood&amp;userId=230">https://local.quantimo.do/api/v2/study?causeVariableName=Sleep%20Quality&amp;effectVariableName=Overall%20Mood&amp;userId=230</a>
+                        <a href="https://local.curedao.org/api/v2/study?causeVariableName=Sleep%20Quality&amp;effectVariableName=Overall%20Mood&amp;userId=230">https://local.curedao.org/api/v2/study?causeVariableName=Sleep%20Quality&amp;effectVariableName=Overall%20Mood&amp;userId=230</a>
                       </p>
                     </dd>
                     <dt data-property-name="studyLinkDynamic" class="has-description">
@@ -35818,7 +35818,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://local.quantimo.do/ionic/Modo/www/index.html#/app/study?causeVariableName=Sleep%20Quality&amp;effectVariableName=Overall%20Mood&amp;userId=230">https://local.quantimo.do/ionic/Modo/www/index.html#/app/study?causeVariableName=Sleep%20Quality&amp;effectVariableName=Overall%20Mood&amp;userId=230</a>
+                        <a href="https://local.curedao.org/ionic/Modo/www/index.html#/app/study?causeVariableName=Sleep%20Quality&amp;effectVariableName=Overall%20Mood&amp;userId=230">https://local.curedao.org/ionic/Modo/www/index.html#/app/study?causeVariableName=Sleep%20Quality&amp;effectVariableName=Overall%20Mood&amp;userId=230</a>
                       </p>
                     </dd>
                     <dt data-property-name="studyLinkTwitter" class="has-description">
@@ -35829,7 +35829,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40curedao">https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40curedao</a>
+                        <a href="https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40curedao">https://twitter.com/home?status=Sleep%20Quality%20Predicts%20Higher%20Overall%20Mood%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fstudy%3FcauseVariableName%3DSleep%2520Quality%26effectVariableName%3DOverall%2520Mood%26userId%3D230%20%40curedao</a>
                       </p>
                     </dd>
                   </dl>
@@ -36713,7 +36713,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/symptoms.png">https://web.quantimo.do/img/variable_categories/symptoms.png</a>
+                        <a href="https://app.curedao.org/img/variable_categories/symptoms.png">https://app.curedao.org/img/variable_categories/symptoms.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="productUrl" class="has-description">
@@ -36865,7 +36865,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/symptoms.svg">https://web.quantimo.do/img/variable_categories/symptoms.svg</a>
+                        <a href="https://app.curedao.org/img/variable_categories/symptoms.svg">https://app.curedao.org/img/variable_categories/symptoms.svg</a>
                       </p>
                     </dd>
                     <dt data-property-name="thirdDailyReminderTime" class="has-description">
@@ -37653,7 +37653,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/emotions.png">https://web.quantimo.do/img/variable_categories/emotions.png</a>
+                        <a href="https://app.curedao.org/img/variable_categories/emotions.png">https://app.curedao.org/img/variable_categories/emotions.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="popUp" class="has-description">
@@ -37761,7 +37761,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/emotions.svg">https://web.quantimo.do/img/variable_categories/emotions.svg</a>
+                        <a href="https://app.curedao.org/img/variable_categories/emotions.svg">https://app.curedao.org/img/variable_categories/emotions.svg</a>
                       </p>
                     </dd>
                     <dt data-property-name="thirdMostCommonValue" class="has-description">
@@ -39742,7 +39742,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://local.quantimo.do/ionic/Modo/www/#/app/charts/Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&amp;userId=230&amp;pngUrl=https%3A%2F%2Fapp.quantimo.do%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png">https://local.quantimo.do/ionic/Modo/www/#/app/charts/Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&amp;userId=230&amp;pngUrl=https%3A%2F%2Fapp.quantimo.do%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png</a>
+                        <a href="https://local.curedao.org/ionic/Modo/www/#/app/charts/Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&amp;userId=230&amp;pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png">https://local.curedao.org/ionic/Modo/www/#/app/charts/Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&amp;userId=230&amp;pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="chartsLinkEmail" class="has-description">
@@ -39751,7 +39751,7 @@
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
                     <dd>
-                      <p>Ex: mailto:?subject=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21&amp;body=See%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20history%20at%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%0A%0AHave%20a%20great%20day!</p>
+                      <p>Ex: mailto:?subject=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21&amp;body=See%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20history%20at%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%0A%0AHave%20a%20great%20day!</p>
                     </dd>
                     <dt data-property-name="chartsLinkFacebook" class="has-description">
                       <span class="json-property-name">chartsLinkFacebook:</span>
@@ -39760,7 +39760,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png">https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png">https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="chartsLinkGoogle" class="has-description">
@@ -39770,7 +39770,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://plus.google.com/share?url=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png">https://plus.google.com/share?url=https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png</a>
+                        <a href="https://plus.google.com/share?url=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png">https://plus.google.com/share?url=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="chartsLinkStatic" class="has-description">
@@ -39780,7 +39780,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://local.quantimo.do/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&amp;userId=230&amp;pngUrl=https%3A%2F%2Fapp.quantimo.do%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png">https://local.quantimo.do/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&amp;userId=230&amp;pngUrl=https%3A%2F%2Fapp.quantimo.do%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png</a>
+                        <a href="https://local.curedao.org/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&amp;userId=230&amp;pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png">https://local.curedao.org/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&amp;userId=230&amp;pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="chartsLinkTwitter" class="has-description">
@@ -39790,7 +39790,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40curedao">https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.quantimo.do%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapp.quantimo.do%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40curedao</a>
+                        <a href="https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40curedao">https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40curedao</a>
                       </p>
                     </dd>
                     <dt data-property-name="childCommonTagVariables" class="has-description">
@@ -40710,7 +40710,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/treatments.png">https://web.quantimo.do/img/variable_categories/treatments.png</a>
+                        <a href="https://app.curedao.org/img/variable_categories/treatments.png">https://app.curedao.org/img/variable_categories/treatments.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="predictorOfInterest" class="has-description">
@@ -40837,7 +40837,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/treatments.svg">https://web.quantimo.do/img/variable_categories/treatments.svg</a>
+                        <a href="https://app.curedao.org/img/variable_categories/treatments.svg">https://app.curedao.org/img/variable_categories/treatments.svg</a>
                       </p>
                     </dd>
                     <dt data-property-name="thirdMostCommonValue" class="has-description">
@@ -41521,7 +41521,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/emotions.png">https://web.quantimo.do/img/variable_categories/emotions.png</a>
+                        <a href="https://app.curedao.org/img/variable_categories/emotions.png">https://app.curedao.org/img/variable_categories/emotions.png</a>
                       </p>
                     </dd>
                     <dt data-property-name="public" class="has-description">
@@ -41547,7 +41547,7 @@
                     </dt>
                     <dd>
                       <p>Ex:
-                        <a href="https://web.quantimo.do/img/variable_categories/emotions.svg">https://web.quantimo.do/img/variable_categories/emotions.svg</a>
+                        <a href="https://app.curedao.org/img/variable_categories/emotions.svg">https://app.curedao.org/img/variable_categories/emotions.svg</a>
                       </p>
                     </dd>
                     <dt data-property-name="updated" class="has-description">

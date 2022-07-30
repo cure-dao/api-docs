@@ -7,7 +7,7 @@
 * Create an app to get your client id and secret at
   [https://builder.curedao.org](https://builder.curedao.org)
 
-See our interactive API explorer at [https://app.quantimo.do/api/v2/account/api-explorer](https://app.quantimo.do/api/v2/account/api-explorer)
+See our interactive API explorer at [https://curedao.org/api-docs](https://curedao.org/api-docs)
 
 [Query Options](query-options.md)
 

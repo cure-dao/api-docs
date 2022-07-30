@@ -317,7 +317,7 @@ Measurement.prototype['originalValue'] = undefined;
 Measurement.prototype['pngPath'] = undefined;
 
 /**
- * Ex: https://web.quantimo.do/img/variable_categories/treatments.png
+ * Ex: https://app.curedao.org/img/variable_categories/treatments.png
  * @member {String} pngUrl
  */
 Measurement.prototype['pngUrl'] = undefined;
@@ -353,7 +353,7 @@ Measurement.prototype['startTimeEpoch'] = undefined;
 Measurement.prototype['startTimeString'] = undefined;
 
 /**
- * Ex: https://web.quantimo.do/img/variable_categories/treatments.svg
+ * Ex: https://app.curedao.org/img/variable_categories/treatments.svg
  * @member {String} svgUrl
  */
 Measurement.prototype['svgUrl'] = undefined;

@@ -270,7 +270,7 @@ VariableCategory.prototype['outcome'] = undefined;
 VariableCategory.prototype['pngPath'] = undefined;
 
 /**
- * Ex: https://web.quantimo.do/img/variable_categories/emotions.png
+ * Ex: https://app.curedao.org/img/variable_categories/emotions.png
  * @member {String} pngUrl
  */
 VariableCategory.prototype['pngUrl'] = undefined;
@@ -288,7 +288,7 @@ VariableCategory.prototype['public'] = undefined;
 VariableCategory.prototype['svgPath'] = undefined;
 
 /**
- * Ex: https://web.quantimo.do/img/variable_categories/emotions.svg
+ * Ex: https://app.curedao.org/img/variable_categories/emotions.svg
  * @member {String} svgUrl
  */
 VariableCategory.prototype['svgUrl'] = undefined;

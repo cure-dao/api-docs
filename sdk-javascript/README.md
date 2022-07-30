@@ -130,63 +130,62 @@ api.getCorrelationExplanations(opts, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://app.quantimo.do/api*
+All URIs are relative to *https://api.curedao.org/api*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*CureDaoUnifiedHealthApi.AnalyticsApi* | [**getCorrelationExplanations**](docs/AnalyticsApi.md#getCorrelationExplanations) | **GET** /v3/correlations/explanations | Get correlation explanations
-*CureDaoUnifiedHealthApi.AnalyticsApi* | [**getCorrelations**](docs/AnalyticsApi.md#getCorrelations) | **GET** /v3/correlations | Get correlations
-*CureDaoUnifiedHealthApi.AppSettingsApi* | [**getAppSettings**](docs/AppSettingsApi.md#getAppSettings) | **GET** /v3/appSettings | Get client app settings
-*CureDaoUnifiedHealthApi.AuthenticationApi* | [**getAccessToken**](docs/AuthenticationApi.md#getAccessToken) | **GET** /v3/oauth2/token | Get a user access token
-*CureDaoUnifiedHealthApi.AuthenticationApi* | [**getOauthAuthorizationCode**](docs/AuthenticationApi.md#getOauthAuthorizationCode) | **GET** /v3/oauth2/authorize | Request Authorization Code
-*CureDaoUnifiedHealthApi.ConnectorsApi* | [**connectConnector**](docs/ConnectorsApi.md#connectConnector) | **GET** /v3/connectors/{connectorName}/connect | Obtain a token from 3rd party data source
-*CureDaoUnifiedHealthApi.ConnectorsApi* | [**disconnectConnector**](docs/ConnectorsApi.md#disconnectConnector) | **GET** /v3/connectors/{connectorName}/disconnect | Delete stored connection info
-*CureDaoUnifiedHealthApi.ConnectorsApi* | [**getConnectors**](docs/ConnectorsApi.md#getConnectors) | **GET** /v3/connectors/list | List of Connectors
-*CureDaoUnifiedHealthApi.ConnectorsApi* | [**getIntegrationJs**](docs/ConnectorsApi.md#getIntegrationJs) | **GET** /v3/integration.js | Get embeddable connect javascript
-*CureDaoUnifiedHealthApi.ConnectorsApi* | [**getMobileConnectPage**](docs/ConnectorsApi.md#getMobileConnectPage) | **GET** /v3/connect/mobile | Mobile connect page
-*CureDaoUnifiedHealthApi.ConnectorsApi* | [**updateConnector**](docs/ConnectorsApi.md#updateConnector) | **GET** /v3/connectors/{connectorName}/update | Sync with data source
-*CureDaoUnifiedHealthApi.FeedApi* | [**getFeed**](docs/FeedApi.md#getFeed) | **GET** /v3/feed | Tracking reminder notifications, messages, and study results
-*CureDaoUnifiedHealthApi.FeedApi* | [**postFeed**](docs/FeedApi.md#postFeed) | **POST** /v3/feed | Post user interactions with feed
-*CureDaoUnifiedHealthApi.MeasurementsApi* | [**deleteMeasurement**](docs/MeasurementsApi.md#deleteMeasurement) | **DELETE** /v3/measurements/delete | Delete a measurement
-*CureDaoUnifiedHealthApi.MeasurementsApi* | [**getMeasurements**](docs/MeasurementsApi.md#getMeasurements) | **GET** /v3/measurements | Get measurements for this user
-*CureDaoUnifiedHealthApi.MeasurementsApi* | [**getPairs**](docs/MeasurementsApi.md#getPairs) | **GET** /v3/pairs | Get pairs of measurements for correlational analysis
-*CureDaoUnifiedHealthApi.MeasurementsApi* | [**measurementExportRequest**](docs/MeasurementsApi.md#measurementExportRequest) | **POST** /v2/measurements/exportRequest | Post Request for Measurements CSV
-*CureDaoUnifiedHealthApi.MeasurementsApi* | [**postMeasurements**](docs/MeasurementsApi.md#postMeasurements) | **POST** /v3/measurements/post | Post a new set or update existing measurements to the database
-*CureDaoUnifiedHealthApi.MeasurementsApi* | [**updateMeasurement**](docs/MeasurementsApi.md#updateMeasurement) | **POST** /v3/measurements/update | Update a measurement
-*CureDaoUnifiedHealthApi.NotificationsApi* | [**getNotificationPreferences**](docs/NotificationsApi.md#getNotificationPreferences) | **GET** /v3/notificationPreferences | Get NotificationPreferences
-*CureDaoUnifiedHealthApi.NotificationsApi* | [**postDeviceToken**](docs/NotificationsApi.md#postDeviceToken) | **POST** /v3/deviceTokens | Post DeviceTokens
-*CureDaoUnifiedHealthApi.RemindersApi* | [**deleteTrackingReminder**](docs/RemindersApi.md#deleteTrackingReminder) | **DELETE** /v3/trackingReminders/delete | Delete Tracking Reminder
-*CureDaoUnifiedHealthApi.RemindersApi* | [**getTrackingReminderNotifications**](docs/RemindersApi.md#getTrackingReminderNotifications) | **GET** /v3/trackingReminderNotifications | Get specific tracking reminder notifications
-*CureDaoUnifiedHealthApi.RemindersApi* | [**getTrackingReminders**](docs/RemindersApi.md#getTrackingReminders) | **GET** /v3/trackingReminders | Get repeating tracking reminder settings
-*CureDaoUnifiedHealthApi.RemindersApi* | [**postTrackingReminderNotifications**](docs/RemindersApi.md#postTrackingReminderNotifications) | **POST** /v3/trackingReminderNotifications | Snooze, skip, or track a tracking reminder notification
-*CureDaoUnifiedHealthApi.RemindersApi* | [**postTrackingReminders**](docs/RemindersApi.md#postTrackingReminders) | **POST** /v3/trackingReminders | Store a Tracking Reminder
-*CureDaoUnifiedHealthApi.SharesApi* | [**deleteShare**](docs/SharesApi.md#deleteShare) | **POST** /v3/shares/delete | Delete share
-*CureDaoUnifiedHealthApi.SharesApi* | [**getShares**](docs/SharesApi.md#getShares) | **GET** /v3/shares | Get Authorized Apps, Studies, and Individuals
-*CureDaoUnifiedHealthApi.SharesApi* | [**inviteShare**](docs/SharesApi.md#inviteShare) | **POST** /v3/shares/invite | Delete share
-*CureDaoUnifiedHealthApi.StudiesApi* | [**createStudy**](docs/StudiesApi.md#createStudy) | **POST** /v3/study/create | Create a Study
-*CureDaoUnifiedHealthApi.StudiesApi* | [**deleteVote**](docs/StudiesApi.md#deleteVote) | **DELETE** /v3/votes/delete | Delete vote
-*CureDaoUnifiedHealthApi.StudiesApi* | [**getOpenStudies**](docs/StudiesApi.md#getOpenStudies) | **GET** /v3/studies/open | These are open studies that anyone can join
-*CureDaoUnifiedHealthApi.StudiesApi* | [**getStudies**](docs/StudiesApi.md#getStudies) | **GET** /v3/studies | Get Personal or Population Studies
-*CureDaoUnifiedHealthApi.StudiesApi* | [**getStudiesCreated**](docs/StudiesApi.md#getStudiesCreated) | **GET** /v3/studies/created | Get studies you have created
-*CureDaoUnifiedHealthApi.StudiesApi* | [**getStudiesJoined**](docs/StudiesApi.md#getStudiesJoined) | **GET** /v3/studies/joined | Studies You Have Joined
-*CureDaoUnifiedHealthApi.StudiesApi* | [**getStudy**](docs/StudiesApi.md#getStudy) | **GET** /v4/study | Get Study
-*CureDaoUnifiedHealthApi.StudiesApi* | [**joinStudy**](docs/StudiesApi.md#joinStudy) | **POST** /v3/study/join | Join a Study
-*CureDaoUnifiedHealthApi.StudiesApi* | [**postVote**](docs/StudiesApi.md#postVote) | **POST** /v3/votes | Post or update vote
-*CureDaoUnifiedHealthApi.StudiesApi* | [**publishStudy**](docs/StudiesApi.md#publishStudy) | **POST** /v3/study/publish | Publish Your Study
-*CureDaoUnifiedHealthApi.UnitsApi* | [**getUnitCategories**](docs/UnitsApi.md#getUnitCategories) | **GET** /v3/unitCategories | Get unit categories
-*CureDaoUnifiedHealthApi.UnitsApi* | [**getUnits**](docs/UnitsApi.md#getUnits) | **GET** /v3/units | Get units
-*CureDaoUnifiedHealthApi.UserApi* | [**deleteUser**](docs/UserApi.md#deleteUser) | **DELETE** /v3/user/delete | Delete user
-*CureDaoUnifiedHealthApi.UserApi* | [**getUser**](docs/UserApi.md#getUser) | **GET** /v3/user | Get user info
-*CureDaoUnifiedHealthApi.UserApi* | [**getUsers**](docs/UserApi.md#getUsers) | **GET** /v3/users | Get users who shared data
-*CureDaoUnifiedHealthApi.UserApi* | [**postUserSettings**](docs/UserApi.md#postUserSettings) | **POST** /v3/userSettings | Post UserSettings
-*CureDaoUnifiedHealthApi.VariablesApi* | [**deleteUserTag**](docs/VariablesApi.md#deleteUserTag) | **DELETE** /v3/userTags/delete | Delete user tag or ingredient
-*CureDaoUnifiedHealthApi.VariablesApi* | [**deleteUserVariable**](docs/VariablesApi.md#deleteUserVariable) | **DELETE** /v3/userVariables/delete | Delete All Measurements For Variable
-*CureDaoUnifiedHealthApi.VariablesApi* | [**getVariableCategories**](docs/VariablesApi.md#getVariableCategories) | **GET** /v3/variableCategories | Variable categories
-*CureDaoUnifiedHealthApi.VariablesApi* | [**getVariables**](docs/VariablesApi.md#getVariables) | **GET** /v3/variables | Get variables along with related user-specific analysis settings and statistics
-*CureDaoUnifiedHealthApi.VariablesApi* | [**postUserTags**](docs/VariablesApi.md#postUserTags) | **POST** /v3/userTags | Post or update user tags or ingredients
-*CureDaoUnifiedHealthApi.VariablesApi* | [**postUserVariables**](docs/VariablesApi.md#postUserVariables) | **POST** /v3/variables | Update User Settings for a Variable
-*CureDaoUnifiedHealthApi.VariablesApi* | [**resetUserVariableSettings**](docs/VariablesApi.md#resetUserVariableSettings) | **POST** /v3/userVariables/reset | Reset user settings for a variable to defaults
-
+| Class                                       | Method                                                                                          | HTTP request                                      | Description                                                                     |
+|---------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------|
+| *CureDaoUnifiedHealthApi.AnalyticsApi*      | [**getCorrelationExplanations**](docs/AnalyticsApi.md#getCorrelationExplanations)               | **GET** /v3/correlations/explanations             | Get correlation explanations                                                    |
+| *CureDaoUnifiedHealthApi.AnalyticsApi*      | [**getCorrelations**](docs/AnalyticsApi.md#getCorrelations)                                     | **GET** /v3/correlations                          | Get correlations                                                                |
+| *CureDaoUnifiedHealthApi.AppSettingsApi*    | [**getAppSettings**](docs/AppSettingsApi.md#getAppSettings)                                     | **GET** /v3/appSettings                           | Get client app settings                                                         |
+| *CureDaoUnifiedHealthApi.AuthenticationApi* | [**getAccessToken**](docs/AuthenticationApi.md#getAccessToken)                                  | **GET** /v3/oauth2/token                          | Get a user access token                                                         |
+| *CureDaoUnifiedHealthApi.AuthenticationApi* | [**getOauthAuthorizationCode**](docs/AuthenticationApi.md#getOauthAuthorizationCode)            | **GET** /v3/oauth2/authorize                      | Request Authorization Code                                                      |
+| *CureDaoUnifiedHealthApi.ConnectorsApi*     | [**connectConnector**](docs/ConnectorsApi.md#connectConnector)                                  | **GET** /v3/connectors/{connectorName}/connect    | Obtain a token from 3rd party data source                                       |
+| *CureDaoUnifiedHealthApi.ConnectorsApi*     | [**disconnectConnector**](docs/ConnectorsApi.md#disconnectConnector)                            | **GET** /v3/connectors/{connectorName}/disconnect | Delete stored connection info                                                   |
+| *CureDaoUnifiedHealthApi.ConnectorsApi*     | [**getConnectors**](docs/ConnectorsApi.md#getConnectors)                                        | **GET** /v3/connectors/list                       | List of Connectors                                                              |
+| *CureDaoUnifiedHealthApi.ConnectorsApi*     | [**getIntegrationJs**](docs/ConnectorsApi.md#getIntegrationJs)                                  | **GET** /v3/integration.js                        | Get embeddable connect javascript                                               |
+| *CureDaoUnifiedHealthApi.ConnectorsApi*     | [**getMobileConnectPage**](docs/ConnectorsApi.md#getMobileConnectPage)                          | **GET** /v3/connect/mobile                        | Mobile connect page                                                             |
+| *CureDaoUnifiedHealthApi.ConnectorsApi*     | [**updateConnector**](docs/ConnectorsApi.md#updateConnector)                                    | **GET** /v3/connectors/{connectorName}/update     | Sync with data source                                                           |
+| *CureDaoUnifiedHealthApi.FeedApi*           | [**getFeed**](docs/FeedApi.md#getFeed)                                                          | **GET** /v3/feed                                  | Tracking reminder notifications, messages, and study results                    |
+| *CureDaoUnifiedHealthApi.FeedApi*           | [**postFeed**](docs/FeedApi.md#postFeed)                                                        | **POST** /v3/feed                                 | Post user interactions with feed                                                |
+| *CureDaoUnifiedHealthApi.MeasurementsApi*   | [**deleteMeasurement**](docs/MeasurementsApi.md#deleteMeasurement)                              | **DELETE** /v3/measurements/delete                | Delete a measurement                                                            |
+| *CureDaoUnifiedHealthApi.MeasurementsApi*   | [**getMeasurements**](docs/MeasurementsApi.md#getMeasurements)                                  | **GET** /v3/measurements                          | Get measurements for this user                                                  |
+| *CureDaoUnifiedHealthApi.MeasurementsApi*   | [**getPairs**](docs/MeasurementsApi.md#getPairs)                                                | **GET** /v3/pairs                                 | Get pairs of measurements for correlational analysis                            |
+| *CureDaoUnifiedHealthApi.MeasurementsApi*   | [**measurementExportRequest**](docs/MeasurementsApi.md#measurementExportRequest)                | **POST** /v2/measurements/exportRequest           | Post Request for Measurements CSV                                               |
+| *CureDaoUnifiedHealthApi.MeasurementsApi*   | [**postMeasurements**](docs/MeasurementsApi.md#postMeasurements)                                | **POST** /v3/measurements/post                    | Post a new set or update existing measurements to the database                  |
+| *CureDaoUnifiedHealthApi.MeasurementsApi*   | [**updateMeasurement**](docs/MeasurementsApi.md#updateMeasurement)                              | **POST** /v3/measurements/update                  | Update a measurement                                                            |
+| *CureDaoUnifiedHealthApi.NotificationsApi*  | [**getNotificationPreferences**](docs/NotificationsApi.md#getNotificationPreferences)           | **GET** /v3/notificationPreferences               | Get NotificationPreferences                                                     |
+| *CureDaoUnifiedHealthApi.NotificationsApi*  | [**postDeviceToken**](docs/NotificationsApi.md#postDeviceToken)                                 | **POST** /v3/deviceTokens                         | Post DeviceTokens                                                               |
+| *CureDaoUnifiedHealthApi.RemindersApi*      | [**deleteTrackingReminder**](docs/RemindersApi.md#deleteTrackingReminder)                       | **DELETE** /v3/trackingReminders/delete           | Delete Tracking Reminder                                                        |
+| *CureDaoUnifiedHealthApi.RemindersApi*      | [**getTrackingReminderNotifications**](docs/RemindersApi.md#getTrackingReminderNotifications)   | **GET** /v3/trackingReminderNotifications         | Get specific tracking reminder notifications                                    |
+| *CureDaoUnifiedHealthApi.RemindersApi*      | [**getTrackingReminders**](docs/RemindersApi.md#getTrackingReminders)                           | **GET** /v3/trackingReminders                     | Get repeating tracking reminder settings                                        |
+| *CureDaoUnifiedHealthApi.RemindersApi*      | [**postTrackingReminderNotifications**](docs/RemindersApi.md#postTrackingReminderNotifications) | **POST** /v3/trackingReminderNotifications        | Snooze, skip, or track a tracking reminder notification                         |
+| *CureDaoUnifiedHealthApi.RemindersApi*      | [**postTrackingReminders**](docs/RemindersApi.md#postTrackingReminders)                         | **POST** /v3/trackingReminders                    | Store a Tracking Reminder                                                       |
+| *CureDaoUnifiedHealthApi.SharesApi*         | [**deleteShare**](docs/SharesApi.md#deleteShare)                                                | **POST** /v3/shares/delete                        | Delete share                                                                    |
+| *CureDaoUnifiedHealthApi.SharesApi*         | [**getShares**](docs/SharesApi.md#getShares)                                                    | **GET** /v3/shares                                | Get Authorized Apps, Studies, and Individuals                                   |
+| *CureDaoUnifiedHealthApi.SharesApi*         | [**inviteShare**](docs/SharesApi.md#inviteShare)                                                | **POST** /v3/shares/invite                        | Delete share                                                                    |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**createStudy**](docs/StudiesApi.md#createStudy)                                               | **POST** /v3/study/create                         | Create a Study                                                                  |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**deleteVote**](docs/StudiesApi.md#deleteVote)                                                 | **DELETE** /v3/votes/delete                       | Delete vote                                                                     |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**getOpenStudies**](docs/StudiesApi.md#getOpenStudies)                                         | **GET** /v3/studies/open                          | These are open studies that anyone can join                                     |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**getStudies**](docs/StudiesApi.md#getStudies)                                                 | **GET** /v3/studies                               | Get Personal or Population Studies                                              |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**getStudiesCreated**](docs/StudiesApi.md#getStudiesCreated)                                   | **GET** /v3/studies/created                       | Get studies you have created                                                    |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**getStudiesJoined**](docs/StudiesApi.md#getStudiesJoined)                                     | **GET** /v3/studies/joined                        | Studies You Have Joined                                                         |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**getStudy**](docs/StudiesApi.md#getStudy)                                                     | **GET** /v4/study                                 | Get Study                                                                       |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**joinStudy**](docs/StudiesApi.md#joinStudy)                                                   | **POST** /v3/study/join                           | Join a Study                                                                    |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**postVote**](docs/StudiesApi.md#postVote)                                                     | **POST** /v3/votes                                | Post or update vote                                                             |
+| *CureDaoUnifiedHealthApi.StudiesApi*        | [**publishStudy**](docs/StudiesApi.md#publishStudy)                                             | **POST** /v3/study/publish                        | Publish Your Study                                                              |
+| *CureDaoUnifiedHealthApi.UnitsApi*          | [**getUnitCategories**](docs/UnitsApi.md#getUnitCategories)                                     | **GET** /v3/unitCategories                        | Get unit categories                                                             |
+| *CureDaoUnifiedHealthApi.UnitsApi*          | [**getUnits**](docs/UnitsApi.md#getUnits)                                                       | **GET** /v3/units                                 | Get units                                                                       |
+| *CureDaoUnifiedHealthApi.UserApi*           | [**deleteUser**](docs/UserApi.md#deleteUser)                                                    | **DELETE** /v3/user/delete                        | Delete user                                                                     |
+| *CureDaoUnifiedHealthApi.UserApi*           | [**getUser**](docs/UserApi.md#getUser)                                                          | **GET** /v3/user                                  | Get user info                                                                   |
+| *CureDaoUnifiedHealthApi.UserApi*           | [**getUsers**](docs/UserApi.md#getUsers)                                                        | **GET** /v3/users                                 | Get users who shared data                                                       |
+| *CureDaoUnifiedHealthApi.UserApi*           | [**postUserSettings**](docs/UserApi.md#postUserSettings)                                        | **POST** /v3/userSettings                         | Post UserSettings                                                               |
+| *CureDaoUnifiedHealthApi.VariablesApi*      | [**deleteUserTag**](docs/VariablesApi.md#deleteUserTag)                                         | **DELETE** /v3/userTags/delete                    | Delete user tag or ingredient                                                   |
+| *CureDaoUnifiedHealthApi.VariablesApi*      | [**deleteUserVariable**](docs/VariablesApi.md#deleteUserVariable)                               | **DELETE** /v3/userVariables/delete               | Delete All Measurements For Variable                                            |
+| *CureDaoUnifiedHealthApi.VariablesApi*      | [**getVariableCategories**](docs/VariablesApi.md#getVariableCategories)                         | **GET** /v3/variableCategories                    | Variable categories                                                             |
+| *CureDaoUnifiedHealthApi.VariablesApi*      | [**getVariables**](docs/VariablesApi.md#getVariables)                                           | **GET** /v3/variables                             | Get variables along with related user-specific analysis settings and statistics |
+| *CureDaoUnifiedHealthApi.VariablesApi*      | [**postUserTags**](docs/VariablesApi.md#postUserTags)                                           | **POST** /v3/userTags                             | Post or update user tags or ingredients                                         |
+| *CureDaoUnifiedHealthApi.VariablesApi*      | [**postUserVariables**](docs/VariablesApi.md#postUserVariables)                                 | **POST** /v3/variables                            | Update User Settings for a Variable                                             |
+| *CureDaoUnifiedHealthApi.VariablesApi*      | [**resetUserVariableSettings**](docs/VariablesApi.md#resetUserVariableSettings)                 | **POST** /v3/userVariables/reset                  | Reset user settings for a variable to defaults                                  |
 
 ## Documentation for Models
 
@@ -290,7 +289,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: accessCode
-- **Authorization URL**: https://app.quantimo.do/api/v1/oauth/authorize
+- **Authorization URL**: https://api.curedao.org/api/v1/oauth/authorize
 - **Scopes**: 
   - basic: Allows you to read user info (display name, email, etc)
   - readmeasurements: Allows one to read a user&#39;s measurements

@@ -70,7 +70,7 @@ window.qm.chrome = {
                 chrome.windows.update(chromeWindow.id, {focused})
             })
         }
-        if(windowParams.url.indexOf('.quantimo.do') !== -1 || windowParams.url.indexOf('popup.html') !== -1){
+        if(windowParams.url.indexOf('.curedao.org') !== -1 || windowParams.url.indexOf('popup.html') !== -1){
             qm.urlHelper.validateUrl(windowParams.url)
             createPopup(windowParams)
         }else{
@@ -255,7 +255,7 @@ window.qm.chrome = {
             height: 750,
             focused: qm.chrome.allowFocusing,
         }
-        windowParams.url = "https://web.quantimo.do/#/app/login?clientId=" + qm.getClientId()
+        windowParams.url = "https://app.curedao.org/#/app/login?clientId=" + qm.getClientId()
         windowParams.focused = true
         qm.chrome.openOrFocusChromePopupWindow(windowParams)
     },

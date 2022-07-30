@@ -140,7 +140,7 @@ class Button(ModelNormal):
         """Button - a model defined in OpenAPI
 
         Args:
-            link (str): Ex: https://local.quantimo.do
+            link (str): Ex: https://local.curedao.org
             text (str): Ex: Connect
 
         Keyword Args:

@@ -1,6 +1,6 @@
 import { CuredaoContext } from "./curedaoContext";
 
-const baseUrl = "https://app.quantimo.do/api";
+const baseUrl = "https://api.curedao.org/api";
 
 export type ErrorWrapper<TError> =
   | TError

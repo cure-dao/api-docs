@@ -22,7 +22,7 @@ class Button {
     /**
      * Constructs a new <code>Button</code>.
      * @alias module:model/Button
-     * @param link {String} Ex: https://local.quantimo.do
+     * @param link {String} Ex: https://local.curedao.org
      * @param text {String} Ex: Connect
      */
     constructor(link, text) { 
@@ -185,7 +185,7 @@ Button.prototype['image'] = undefined;
 Button.prototype['ionIcon'] = undefined;
 
 /**
- * Ex: https://local.quantimo.do
+ * Ex: https://local.curedao.org
  * @member {String} link
  */
 Button.prototype['link'] = undefined;

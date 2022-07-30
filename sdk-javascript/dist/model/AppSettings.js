@@ -180,13 +180,13 @@ AppSettings.prototype['appType'] = undefined;
 
 AppSettings.prototype['buildEnabled'] = undefined;
 /**
- * Get yours at https:://builder.quantimo.do
+ * Get yours at https:://builder.curedao.org
  * @member {String} clientId
  */
 
 AppSettings.prototype['clientId'] = undefined;
 /**
- * Get yours at https:://builder.quantimo.do
+ * Get yours at https:://builder.curedao.org
  * @member {String} clientSecret
  */
 

@@ -232,7 +232,7 @@ export class ConnectorsApi extends runtime.BaseAPI {
     }
 
     /**
-     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user\'s access_token as a URL parameter like https://app.quantimo.do/api/v3/connect/mobile?access_token=123
+     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user\'s access_token as a URL parameter like https://api.curedao.org/api/v3/connect/mobile?access_token=123
      * Mobile connect page
      */
     async getMobileConnectPageRaw(requestParameters: GetMobileConnectPageRequest): Promise<runtime.ApiResponse<void>> {
@@ -255,7 +255,7 @@ export class ConnectorsApi extends runtime.BaseAPI {
     }
 
     /**
-     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user\'s access_token as a URL parameter like https://app.quantimo.do/api/v3/connect/mobile?access_token=123
+     * This page is designed to be opened in a webview.  Instead of using popup authentication boxes, it uses redirection. You can include the user\'s access_token as a URL parameter like https://api.curedao.org/api/v3/connect/mobile?access_token=123
      * Mobile connect page
      */
     async getMobileConnectPage(requestParameters: GetMobileConnectPageRequest): Promise<void> {

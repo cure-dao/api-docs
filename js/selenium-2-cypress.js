@@ -34,7 +34,7 @@ function convertSeleniumToCypress(baseOutputFolder, seleniumTestPath){
         function addLineWithThen(line){
             addLine(line)
         }
-        let globalVariables = 'let apiUrl = process.env.API_URL || "https://app.quantimo.do";\n' +
+        let globalVariables = 'let apiUrl = process.env.API_URL || "https://api.curedao.org";\n' +
             'let testUserName = "testuser";\n' +
             'let testUserPassword = "testing123";\n' +
             'let accessToken = "test-token";\n' +
@@ -315,7 +315,7 @@ function convertSeleniumToCypress(baseOutputFolder, seleniumTestPath){
             //max_preserve_newlines: 0
         })
         code = code.replace(/;;/g, ';')
-        code = code.replace(/'https:\/\/staging.quantimo.do/g, "apiUrl +'")
+        code = code.replace(/'https:\/\/staging-app.curedao.org/g, "apiUrl +'")
         fileHelper.writeToFile(path, code)
     }
     let seleniumTests = fs.readFileSync('./' + seleniumTestPath)

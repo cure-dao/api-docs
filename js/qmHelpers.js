@@ -73,10 +73,10 @@ var qm = {
             if(window.location.origin.indexOf('http://localhost:') !== -1){
                 return true
             }
-            if(window.location.origin.indexOf('https://dev-web.quantimo.do') !== -1){
+            if(window.location.origin.indexOf('https://dev-app.curedao.org') !== -1){
                 return true
             }
-            return window.location.origin.indexOf('local.quantimo.do') !== -1
+            return window.location.origin.indexOf('local.curedao.org') !== -1
         },
         isStaging(){
             if(!qm.platform.getWindow()){
@@ -479,7 +479,7 @@ var qm = {
             if(!qm.appMode.isBrowser()){
                 return null
             }
-            if(window.location.hostname.indexOf('.quantimo.do') === -1){
+            if(window.location.hostname.indexOf('.curedao.org') === -1){
                 return null
             }
             if(qm.appMode.isBuilder()){
@@ -565,13 +565,13 @@ var qm = {
                 qm.storage.setItem(qm.items.apiUrl, apiUrl)
             }
             if(!apiUrl && qm.appMode.isDebug() && qm.platform.isMobile() && (!qm.getUser() || qm.getUser().id === 230)){
-                apiUrl = "https://utopia.quantimo.do"
+                apiUrl = "https://utopia.curedao.org"
             }
             if(!apiUrl){
                 apiUrl = qm.storage.getItem(qm.items.apiUrl)
             }
             if(qm.appMode.isBrowser() && window.location.host.indexOf('dev-') === 0){
-                return "https://local.quantimo.do"
+                return "https://local.curedao.org"
             }
             if(!apiUrl){
                 let appSettings = qm.appsManager.getAppSettingsFromMemory()
@@ -580,22 +580,22 @@ var qm = {
                 }
             }
             if(!apiUrl && !qm.appMode.isBrowser()){
-                apiUrl = "https://app.quantimo.do"
+                apiUrl = "https://api.curedao.org"
             }
-            if(!apiUrl && window.location.origin.indexOf('staging.quantimo.do') !== -1){
-                apiUrl = "https://staging.quantimo.do"
+            if(!apiUrl && window.location.origin.indexOf('staging-app.curedao.org') !== -1){
+                apiUrl = "https://staging-app.curedao.org"
             }
-            if(!apiUrl && window.location.origin.indexOf('local.quantimo.do') !== -1){
-                apiUrl = "https://local.quantimo.do"
+            if(!apiUrl && window.location.origin.indexOf('local.curedao.org') !== -1){
+                apiUrl = "https://local.curedao.org"
             }
-            if(!apiUrl && window.location.origin.indexOf('utopia.quantimo.do') !== -1){
-                apiUrl = "https://utopia.quantimo.do"
+            if(!apiUrl && window.location.origin.indexOf('utopia.curedao.org') !== -1){
+                apiUrl = "https://utopia.curedao.org"
             }
             if(!apiUrl && window.location.origin.indexOf('localhost:8100') !== -1){
-                apiUrl = "https://app.quantimo.do"
+                apiUrl = "https://api.curedao.org"
             } // Ionic serve
             if(!apiUrl){
-                apiUrl = "https://app.quantimo.do"
+                apiUrl = "https://api.curedao.org"
             }
             if(apiUrl.indexOf("https://") === -1){
                 apiUrl = "https://" + apiUrl
@@ -909,7 +909,7 @@ var qm = {
                     qm.appsManager.processAndSaveAppSettings(appSettings[0], successHandler)
                     return
                 }
-                if(qm.platform.isWeb() && qm.urlHelper.indexOfCurrentUrl('.quantimo.do') !== -1){
+                if(qm.platform.isWeb() && qm.urlHelper.indexOfCurrentUrl('.curedao.org') !== -1){
                     qm.appsManager.getAppSettingsFromApi(null, successHandler, errorHandler)
                     return
                 }
@@ -1875,7 +1875,7 @@ var qm = {
             if(qm.urlHelper.indexOfCurrentUrl('/src/') !== -1){
                 afterLogoutGoToUrl = afterLogoutGoToUrl.replace('/www/', '/src/')
             }
-            if(qm.urlHelper.indexOfCurrentUrl('.quantimo.do/') === -1){
+            if(qm.urlHelper.indexOfCurrentUrl('.curedao.org/') === -1){
                 afterLogoutGoToUrl = qm.urlHelper.getCurrentUrl()
             }
             afterLogoutGoToUrl = afterLogoutGoToUrl.replace('settings', 'intro')
@@ -2023,9 +2023,9 @@ var qm = {
                 partialPath = ''
             }
             qm.api.getClientIdWithCallback(function(clientId){
-                // TODO: Stop using quantimodo.quantimo.do for resource hosting on Github so we can point quantimodo.quantimo.do to Netlify
+                // TODO: Stop using quantimodo.curedao.org for resource hosting on Github so we can point quantimodo.curedao.org to Netlify
                 if(clientId === 'quantimodo'){ clientId = 'web' }
-                let url = "https://" + clientId + ".quantimo.do/" + partialPath
+                let url = "https://" + clientId + ".curedao.org/" + partialPath
                 url = qm.urlHelper.addUrlQueryParamsToUrlString({clientId}, url)
                 successHandler(url)
             })
@@ -8165,7 +8165,7 @@ var qm = {
         },
         urlHelper: {
             testGetQueryParamsFromQueryBeforeHash(){
-                let url = 'https://dev-web.quantimo.do/?clientId=preve-wellness-tracker#/app/onboarding'
+                let url = 'https://dev-app.curedao.org/?clientId=preve-wellness-tracker#/app/onboarding'
                 let params = qm.urlHelper.getQueryParams(url)
                 qm.assert.equals('preve-wellness-tracker', params.clientId)
             },
@@ -8587,7 +8587,7 @@ var qm = {
             if(qm.urlHelper.indexOfCurrentUrl('https://') !== 0){
                 return false
             }
-            return qm.urlHelper.indexOfCurrentUrl('.quantimo.do') !== -1
+            return qm.urlHelper.indexOfCurrentUrl('.curedao.org') !== -1
         },
         redirectToHttpsIfNecessary(){
             if(!qm.platform.getWindow()){

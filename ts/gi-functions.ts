@@ -40,9 +40,9 @@ export const gi = {
         if (gi.suiteType === "api") {
             return th.getApiUrl() + `/api/v2/auth/login`
         }
-        let defaultValue = "https://web.quantimo.do"
+        let defaultValue = "https://app.curedao.org"
         if (th.getApiUrl().indexOf("utopia") !== -1) {
-            defaultValue = "https://dev-web.quantimo.do"
+            defaultValue = "https://dev-app.curedao.org"
         }
         if(process.env.RELEASE_STAGE === "ionic") {
             return "https://medimodo.herokuapp.com"

@@ -48,8 +48,8 @@ let skip = [
     "[bugsnag] Loaded!"
 ]
 let remove = [
-    "https://app.quantimo.do/__cypress/tests?p=",
-    "https://staging.quantimo.do/__cypress/tests?p=",
+    "https://api.curedao.org/__cypress/tests?p=",
+    "https://staging-app.curedao.org/__cypress/tests?p=",
 ]
 function truncate(str, length, ending) {
     if (length == null) {length = 100;}

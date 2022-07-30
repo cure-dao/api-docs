@@ -1,15 +1,15 @@
 {
   "chromeWebSecurity": false,
-  "baseUrl": "https://local.quantimo.do",
+  "baseUrl": "https://local.curedao.org",
   "projectId": "ee8wan",
   "pageLoadTimeout": 60000,
   "videoCompression": false,
   "videoUploadOnPasses": false,
   "video": false,
   "env": {
-    "API_HOST": "local.quantimo.do",
-    "OAUTH_APP_HOST": "dev-web.quantimo.do",
-    "BUILDER_HOST": "dev-builder.quantimo.do",
+    "API_HOST": "local.curedao.org",
+    "OAUTH_APP_HOST": "dev-app.curedao.org",
+    "BUILDER_HOST": "dev-builder.curedao.org",
     "abort_strategy": true
   },
   "reporter": "cypress-multi-reporters",

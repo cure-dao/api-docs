@@ -24,7 +24,7 @@ var Button = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Button</code>.
    * @alias module:model/Button
-   * @param link {String} Ex: https://local.quantimo.do
+   * @param link {String} Ex: https://local.curedao.org
    * @param text {String} Ex: Connect
    */
   function Button(link, text) {
@@ -214,7 +214,7 @@ Button.prototype['image'] = undefined;
 
 Button.prototype['ionIcon'] = undefined;
 /**
- * Ex: https://local.quantimo.do
+ * Ex: https://local.curedao.org
  * @member {String} link
  */
 

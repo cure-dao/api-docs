@@ -120,7 +120,7 @@ describe("gi-tester", function () {
         chai_2.assert.isUndefined(process.env.API_URL)
         process.env.RELEASE_STAGE = "staging"
         var url = th.getApiUrl()
-        chai_1.expect(url).to.contain("https://staging.quantimo.do")
+        chai_1.expect(url).to.contain("https://staging-app.curedao.org")
         if (previouslySetApiUrl) {
             process.env.API_URL = previouslySetApiUrl
         }

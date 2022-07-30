@@ -182,8 +182,8 @@ class AppSettings(ModelNormal):
             app_status ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
             app_type (str): [optional]  # noqa: E501
             build_enabled (str): [optional]  # noqa: E501
-            client_id (str): Get yours at https:://builder.quantimo.do. [optional]  # noqa: E501
-            client_secret (str): Get yours at https:://builder.quantimo.do. [optional]  # noqa: E501
+            client_id (str): Get yours at https:://builder.curedao.org. [optional]  # noqa: E501
+            client_secret (str): Get yours at https:://builder.curedao.org. [optional]  # noqa: E501
             collaborators ([User]): [optional]  # noqa: E501
             created_at (str): [optional]  # noqa: E501
             user_id (int): User id of the owner of the application. [optional]  # noqa: E501

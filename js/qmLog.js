@@ -71,7 +71,7 @@ var qmLog = {
         }
     },
     getLogLevelName(){
-        //qmService.setUseif(window.location.href.indexOf('utopia.quantimo.do') > -1){return "debug";}
+        //qmService.setUseif(window.location.href.indexOf('utopia.curedao.org') > -1){return "debug";}
         if(qmLog.qm.urlHelper.getParam('debug') || qmLog.qm.urlHelper.getParam('debugMode')){
             qmLog.setLogLevelName("debug")
         }
@@ -104,7 +104,7 @@ var qmLog = {
     setDebugMode(value){
         if(value){
             if(qm.getUser() && qm.getUser().id === 230){
-                qmLog.qm.storage.setItem(qmLog.qm.items.apiUrl, 'utopia.quantimo.do')
+                qmLog.qm.storage.setItem(qmLog.qm.items.apiUrl, 'utopia.curedao.org')
             }
             qmLog.setLogLevelName("debug")
         }else{
@@ -488,7 +488,7 @@ var qmLog = {
                 let parts = window.location.href.split("#/app")
                 return parts[1]
             }
-            let url = "https://dev-web.quantimo.do/#/app" + getCurrentRoute()
+            let url = "https://dev-app.curedao.org/#/app" + getCurrentRoute()
             if(qmLog.qm.getUser()){
                 url = qmLog.qm.urlHelper.addUrlQueryParamsToUrlString({userEmail: qmLog.qm.getUser().email}, url)
             }

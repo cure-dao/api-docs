@@ -69,13 +69,13 @@ export interface AppSettings {
      */
     buildEnabled?: string;
     /**
-     * Get yours at https:://builder.quantimo.do
+     * Get yours at https:://builder.curedao.org
      * @type {string}
      * @memberof AppSettings
      */
     clientId?: string;
     /**
-     * Get yours at https:://builder.quantimo.do
+     * Get yours at https:://builder.curedao.org
      * @type {string}
      * @memberof AppSettings
      */
