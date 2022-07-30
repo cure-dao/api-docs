@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: readmeio/rdme@7.0.1
+      - uses: readmeio/rdme@7.3.0
         with:
           rdme: openapi specifications/cure-dao-open-api-v3.yml --key=${{ secrets.READMEIO_KEY }} --id=${{ secrets.API_DEFINITION_ID }}
