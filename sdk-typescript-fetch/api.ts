@@ -1644,7 +1644,7 @@ export interface DataSource {
      */
     enabled: number;
     /**
-     * Ex: https://quantimo.do
+     * Ex: https://curedao.org
      * @type {string}
      * @memberof DataSource
      */
@@ -1662,7 +1662,7 @@ export interface DataSource {
      */
     image: string;
     /**
-     * Ex: <a href=\"https://quantimo.do\"><img id=\"CureDAO_image\" title=\"CureDAO\" src=\"https://app.curedao.org/img/logos/CureDAO-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
+     * Ex: <a href=\"https://curedao.org\"><img id=\"CureDAO_image\" title=\"CureDAO\" src=\"https://app.curedao.org/img/logos/CureDAO-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
      * @type {string}
      * @memberof DataSource
      */
@@ -1680,7 +1680,7 @@ export interface DataSource {
      */
     lastUpdate?: number;
     /**
-     * Ex: <a href=\"https://quantimo.do\">CureDAO</a>
+     * Ex: <a href=\"https://curedao.org\">CureDAO</a>
      * @type {string}
      * @memberof DataSource
      */
@@ -4206,7 +4206,7 @@ export interface ParticipantInstruction {
      */
     instructionsForCauseVariable?: string;
     /**
-     * Ex: <a href=\"https://quantimo.do\">Obtain CureDAO</a> and use it to record your Overall Mood. Once you have a <a href=\"https://quantimo.do\">CureDAO</a> account, <a href=\"https://app.curedao.org/#/app/import\">connect your  CureDAO account at CureDAO</a> to automatically import and analyze your data.
+     * Ex: <a href=\"https://curedao.org\">Obtain CureDAO</a> and use it to record your Overall Mood. Once you have a <a href=\"https://curedao.org\">CureDAO</a> account, <a href=\"https://app.curedao.org/#/app/import\">connect your  CureDAO account at CureDAO</a> to automatically import and analyze your data.
      * @type {string}
      * @memberof ParticipantInstruction
      */

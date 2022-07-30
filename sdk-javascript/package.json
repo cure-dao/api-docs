@@ -1,7 +1,7 @@
 {
   "name": "cure_dao_unified_health_api",
   "version": "0.0.1",
-  "description": "A_platform_for_participant_centered_research_and_personal_data_exploration",
+  "description": "A community-owned platform for crowdsourcing clincal research",
   "license": "GNU General Public License v3 (GPL-3)",
   "main": "dist/index.js",
   "scripts": {

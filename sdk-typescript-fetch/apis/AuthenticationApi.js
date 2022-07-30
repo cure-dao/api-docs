@@ -3,7 +3,7 @@
 /* eslint-disable */
 /**
  * CureDAO Unified Health API
- * A platform for participant-centered research and personal data exploration
+ * A community-owned platform for crowdsourced clinical research
  *
  * The version of the OpenAPI document: 0.0.1
  *

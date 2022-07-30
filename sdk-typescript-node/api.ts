@@ -2328,7 +2328,7 @@ export class DataSource {
     */
     'enabled': number;
     /**
-    * Ex: https://quantimo.do
+    * Ex: https://curedao.org
     */
     'getItUrl': string;
     /**
@@ -2340,7 +2340,7 @@ export class DataSource {
     */
     'image': string;
     /**
-    * Ex: <a href=\"https://quantimo.do\"><img id=\"quantimodo_image\" title=\"QuantiModo\" src=\"https://app.curedao.org/img/logos/quantimodo-logo-qm-rainbow-200-200.png\" alt=\"QuantiModo\"></a>
+    * Ex: <a href=\"https://curedao.org\"><img id=\"quantimodo_image\" title=\"QuantiModo\" src=\"https://app.curedao.org/img/logos/quantimodo-logo-qm-rainbow-200-200.png\" alt=\"QuantiModo\"></a>
     */
     'imageHtml': string;
     /**
@@ -2352,7 +2352,7 @@ export class DataSource {
     */
     'lastUpdate'?: number;
     /**
-    * Ex: <a href=\"https://quantimo.do\">QuantiModo</a>
+    * Ex: <a href=\"https://curedao.org\">QuantiModo</a>
     */
     'linkedDisplayNameHtml': string;
     /**
@@ -5971,7 +5971,7 @@ export class ParticipantInstruction {
     */
     'instructionsForCauseVariable'?: string;
     /**
-    * Ex: <a href=\"https://quantimo.do\">Obtain QuantiModo</a> and use it to record your Overall Mood. Once you have a <a href=\"https://quantimo.do\">QuantiModo</a> account, <a href=\"https://app.curedao.org/#/app/import\">connect your  QuantiModo account at QuantiModo</a> to automatically import and analyze your data.
+    * Ex: <a href=\"https://curedao.org\">Obtain QuantiModo</a> and use it to record your Overall Mood. Once you have a <a href=\"https://curedao.org\">QuantiModo</a> account, <a href=\"https://app.curedao.org/#/app/import\">connect your  QuantiModo account at QuantiModo</a> to automatically import and analyze your data.
     */
     'instructionsForEffectVariable'?: string;
 

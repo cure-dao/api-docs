@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: CureDAO Unified Health API
-  description: A platform for participant-centered research and personal data exploration
-  termsOfService: 'https://quantimo.do/tos'
+  description: A community-owned platform for crowdsourced clinical research
+  termsOfService: 'https://curedao.org/tos'
   contact:
     name: hello@curedao.org
   license:
