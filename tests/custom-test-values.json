@@ -1,0 +1,11 @@
+{
+  "clientId": "oauth_test_client",
+  "clientSecret": "oauth_test_client_secret",
+  "userId": 18535,
+  "limit": 10,
+  "offset": 0,
+    "sort": "created_at",
+    "order": "desc",
+    "effectVariableName": "Overall Mood",
+  "causeVariableName": "Daily Step Count"
+}
