@@ -59,6 +59,14 @@ export function mochawesome(failedTests: any[], cb: (err: any) => void) {
         })
     }).then((generatedReport: any[]) => {
         console.log("Merged report available here:-", generatedReport[0])
+        const slackOpts = {
+            ciProvider,
+            vcsProvider,
+            outputReportDir,
+            videoDirectory,
+            screenshotDirectory,
+            verbose,
+        }
         // tslint:disable-next-line: no-console
         console.log("Constructing Slack message with the following options", {
             ciProvider,
@@ -75,14 +83,7 @@ export function mochawesome(failedTests: any[], cb: (err: any) => void) {
                 console.error("env SLACK_WEBHOOK_URL not set!")
             } else {
                 // @ts-ignore
-                slackRunner(
-                    ciProvider,
-                    vcsProvider,
-                    outputReportDir,
-                    videoDirectory,
-                    screenshotDirectory,
-                    verbose,
-                )
+                await slackRunner(slackOpts)
                 // tslint:disable-next-line: no-console
                 // console.log("Finished slack upload")
             }
@@ -104,7 +105,7 @@ function copyCypressEnvConfigIfNecessary() {
     let cypressJsonObject: null
     try {
         cypressJsonObject = JSON.parse(cypressJsonString)
-    } catch (e) {
+    } catch (e: Error|any) {
         console.error("Could not parse  "+cypressJson+" because "+e.message+"! Here's the string "+cypressJsonString)
         const fixed = cypressJsonString.replace("}\n}", "}")
         console.error("Going to try replacing extra bracket. Here's the fixed version "+fixed)
@@ -210,7 +211,7 @@ function handleTestSuccess(results: any, context: string, cb: (err: any) => void
 }
 
 export function runOneCypressSpec(specName: string, cb: ((err: any) => void)) {
-    fs.writeFileSync(lastFailedCypressTestPath, specName) // Set last failed first so it exists if we have an exception
+    fs.writeFileSync(lastFailedCypressTestPath, specName) // Set last failed first, so it exists if we have an exception
     const specsPath = getSpecsPath()
     const specPath = specsPath + "/" + specName
     const browser = process.env.CYPRESS_BROWSER || "electron"
@@ -261,7 +262,7 @@ export function runCypressTests(cb?: (err: any) => void) {
     deleteSuccessFile()
     try {
         copyCypressEnvConfigIfNecessary()
-    } catch (e) {
+    } catch (e: Error | any) {
         console.error(e.message+"!  Going to try again...")
         copyCypressEnvConfigIfNecessary()
     }
@@ -321,7 +322,7 @@ export function runLastFailedCypressTest(cb: (err: any) => void) {
     deleteSuccessFile()
     try {
         copyCypressEnvConfigIfNecessary()
-    } catch (e) {
+    } catch (e: Error|any) {
         console.error(e.message+"!  Going to try again...")
         copyCypressEnvConfigIfNecessary()
     }
