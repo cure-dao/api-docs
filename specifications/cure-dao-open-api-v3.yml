@@ -5,12 +5,17 @@ info:
   termsOfService: 'https://curedao.org/tos'
   contact:
     name: hello@curedao.org
+    url: 'https://curedao.org'
+    email: api@curedao.org
   license:
     name: GNU General Public License v3 (GPL-3)
     url: 'https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)'
   version: 0.0.1
 servers:
   - url: 'https://api.curedao.org/api'
+    description: Production
+  - description: Local
+    url: 'http://localhost/api'
 tags:
   - name: units
     description: Available units for measurements
@@ -389,8 +394,8 @@ paths:
     post:
       tags:
         - measurements
-      summary: "Upload a spreadsheet with measurements"
-      description: "Import from a spreadsheet containing a Variable Name, Value, Measurement Event Time, and Abbreviated Unit Name field.  Here is an <a href=\"http://bit.ly/2jz7CNl\" target=\"_blank\">example spreadsheet</a> with allowed column names, units and time format."
+      summary: Upload a spreadsheet with measurements
+      description: 'Import from a spreadsheet containing a Variable Name, Value, Measurement Event Time, and Abbreviated Unit Name field.  Here is an <a href="http://bit.ly/2jz7CNl" target="_blank">example spreadsheet</a> with allowed column names, units and time format.'
       operationId: measurementSpreadsheetUpload
       requestBody:
         content:
@@ -398,7 +403,6 @@ paths:
             schema:
               type: object
               properties:
-                # 'file' will be the field name in this multipart request
                 file:
                   type: string
                   format: binary
@@ -411,6 +415,7 @@ paths:
             application/json:
               schema:
                 type: integer
+              examples: {}
       security:
         - bearerAuth: []
         - curedao_oauth2:
@@ -757,8 +762,7 @@ paths:
       tags:
         - authentication
       summary: Get a user access token
-      description: 'Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and 
-      receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you''ll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don''t have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application''s redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application''s client id. * `client_secret` Your application''s client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can''t use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](https://oauth.net/2/)'
+      description: 'Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and  receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you''ll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don''t have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application''s redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application''s client id. * `client_secret` Your application''s client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can''t use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](https://oauth.net/2/)'
       operationId: getAccessToken
       parameters:
         - $ref: '#/components/parameters/clientIdParam'
@@ -6210,10 +6214,10 @@ components:
       type: apiKey
       name: access_token
       in: query
-    bearerAuth: # arbitrary name for the security scheme
+    bearerAuth:
       type: http
       scheme: bearer
-      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+      bearerFormat: JWT
     client_id:
       type: apiKey
       name: clientId

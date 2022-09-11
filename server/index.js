@@ -12,7 +12,7 @@ const config = {
         security: {
             auth: {
                 access_token: () => { /* no-op */ },
-                bearerAuth: () => { /* no-op */ },
+                bearerAuth: () => {  },
                 client_id: () => { /* no-op */ },
                 curedao_oauth2: () => { /* no-op */ },
             }
