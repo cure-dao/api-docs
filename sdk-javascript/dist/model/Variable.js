@@ -964,25 +964,25 @@ Variable.prototype['imageUrl'] = undefined;
 
 Variable.prototype['informationalUrl'] = undefined;
 /**
- * Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.
+ * Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.
  * @member {Array.<module:model/Variable>} ingredientOfCommonTagVariables
  */
 
 Variable.prototype['ingredientOfCommonTagVariables'] = undefined;
 /**
- * Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.
+ * Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.
  * @member {Array.<module:model/Variable>} ingredientCommonTagVariables
  */
 
 Variable.prototype['ingredientCommonTagVariables'] = undefined;
 /**
- * User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.
+ * User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.
  * @member {Array.<module:model/Variable>} ingredientOfUserTagVariables
  */
 
 Variable.prototype['ingredientOfUserTagVariables'] = undefined;
 /**
- * User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.
+ * User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.
  * @member {Array.<module:model/Variable>} ingredientUserTagVariables
  */
 
@@ -1546,7 +1546,7 @@ Variable.prototype['variableCategory'] = undefined;
 
 Variable.prototype['joinedVariables'] = undefined;
 /**
- * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
+ * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
  * @member {String} valence
  */
 

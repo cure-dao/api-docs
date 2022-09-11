@@ -495,7 +495,7 @@ gulp.task('js-3-copy-everywhere', ['js-sdk-browserify-unzipped'], function(){
     } catch (error){
         logError(error, error);
     }
-    console.log("After completion, open repo, discard readme changes and commit new version to Github.  Then you can run js-4-release");
+    console.log("After completion, open repo, discard readme changes and commit new version to GitHub.  Then you can run js-4-release");
 });
 gulp.task('js-4-reset-package-json-readme', [], function(){
     resetNonGeneratedFiles();

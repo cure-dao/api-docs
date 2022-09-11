@@ -13,9 +13,9 @@ var th = require("../ts/test-helpers")
 var git = simpleGit()
 beforeEach(function (done) {
     var t = this.currentTest
-    this.timeout(10000) // Default 2000 is too fast for Github API
+    this.timeout(10000) // Default 2000 is too fast for GitHub API
     // @ts-ignore
-    qmGit.setGithubStatus("pending", t.title, "Running...", null, function (res) {
+    qmGit.setGitHubStatus("pending", t.title, "Running...", null, function (res) {
         var logResult = false
         if (logResult) {
             console.debug(res)
@@ -37,7 +37,7 @@ afterEach(function (done) {
         githubState = "failure"
     }
     // @ts-ignore
-    qmGit.setGithubStatus(githubState, t.title, t.title, null, function (res) {
+    qmGit.setGitHubStatus(githubState, t.title, t.title, null, function (res) {
         var logResult = false
         if (logResult) {
             console.debug(res)
@@ -47,7 +47,7 @@ afterEach(function (done) {
 })
 describe("git", function () {
     it.skip("sets commit status", function (done) {
-        qmGit.setGithubStatus("pending", "test context", "test description", "https://get-bent.com", function (res) {
+        qmGit.setGitHubStatus("pending", "test context", "test description", "https://get-bent.com", function (res) {
             chai_1.expect(res.status).to.eq(201)
             done()
         })

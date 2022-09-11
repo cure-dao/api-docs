@@ -758,7 +758,7 @@ export interface Chart {
      */
     chartTitle?: string;
     /**
-     * Ex: The chart above indicates that an increase in Sleep Duration is usually followed by an decrease in Overall Mood.
+     * Ex: The chart above indicates that an increase in Sleep Duration is usually followed by a decrease in Overall Mood.
      * @type {string}
      * @memberof Chart
      */
@@ -1665,7 +1665,7 @@ export interface DataSource {
      */
     linkedDisplayNameHtml: string;
     /**
-     * Ex: CureDAO is a Chrome extension, Android app, iOS app, and web app that allows you to easily track mood, symptoms, or any outcome you want to optimize in a fraction of a second.  You can also import your data from over 30 other apps and devices like Fitbit, Rescuetime, Jawbone Up, Withings, Facebook, Github, Google Calendar, Runkeeper, MoodPanda, Slice, Google Fit, and more.  CureDAO then analyzes your data to identify which hidden factors are most likely to be influencing your mood or symptoms and their optimal daily values.
+     * Ex: CureDAO is a Chrome extension, Android app, iOS app, and web app that allows you to easily track mood, symptoms, or any outcome you want to optimize in a fraction of a second.  You can also import your data from over 30 other apps and devices like Fitbit, Rescuetime, Jawbone Up, Withings, Facebook, GitHub, Google Calendar, Runkeeper, MoodPanda, Slice, Google Fit, and more.  CureDAO then analyzes your data to identify which hidden factors are most likely to be influencing your mood or symptoms and their optimal daily values.
      * @type {string}
      * @memberof DataSource
      */
@@ -3184,7 +3184,7 @@ export interface Measurement {
      */
     updatedAt?: string;
     /**
-     * Link to associated Facebook like or Github commit, for instance
+     * Link to associated Facebook like or GitHub commit, for instance
      * @type {string}
      * @memberof Measurement
      */
@@ -3232,7 +3232,7 @@ export interface Measurement {
      */
     userVariableVariableCategoryName?: string;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
      * @type {string}
      * @memberof Measurement
      */
@@ -3262,7 +3262,7 @@ export interface Measurement {
      */
     variableCategoryName?: Measurement.VariableCategoryNameEnum;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
      * @type {string}
      * @memberof Measurement
      */
@@ -5652,7 +5652,7 @@ export interface TrackingReminder {
      */
     numberOfUniqueValues?: number;
     /**
-     * Indicates whether or not the variable is usually an outcome of interest such as a symptom or emotion
+     * Indicates whether the variable is usually an outcome of interest such as a symptom or emotion
      * @type {boolean}
      * @memberof TrackingReminder
      */
@@ -5862,7 +5862,7 @@ export interface TrackingReminder {
      */
     userVariableVariableCategoryName?: string;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
      * @type {string}
      * @memberof TrackingReminder
      */
@@ -5898,7 +5898,7 @@ export interface TrackingReminder {
      */
     variableCategoryName: TrackingReminder.VariableCategoryNameEnum;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
      * @type {string}
      * @memberof TrackingReminder
      */
@@ -6117,7 +6117,7 @@ export interface TrackingReminderNotification {
      */
     defaultValue?: number;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
      * @type {string}
      * @memberof TrackingReminderNotification
      */
@@ -6213,7 +6213,7 @@ export interface TrackingReminderNotification {
      */
     numberOfUniqueValues?: number;
     /**
-     * Indicates whether or not the variable is usually an outcome of interest such as a symptom or emotion
+     * Indicates whether the variable is usually an outcome of interest such as a symptom or emotion
      * @type {boolean}
      * @memberof TrackingReminderNotification
      */
@@ -6435,7 +6435,7 @@ export interface TrackingReminderNotification {
      */
     userVariableVariableCategoryName?: string;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
      * @type {string}
      * @memberof TrackingReminderNotification
      */
@@ -7621,25 +7621,25 @@ export interface Variable {
      */
     informationalUrl?: string;
     /**
-     * Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.
+     * Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.
      * @type {Array<Variable>}
      * @memberof Variable
      */
     ingredientOfCommonTagVariables?: Array<Variable>;
     /**
-     * Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.
+     * Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.
      * @type {Array<Variable>}
      * @memberof Variable
      */
     ingredientCommonTagVariables?: Array<Variable>;
     /**
-     * User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.
+     * User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.
      * @type {Array<Variable>}
      * @memberof Variable
      */
     ingredientOfUserTagVariables?: Array<Variable>;
     /**
-     * User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.
+     * User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.
      * @type {Array<Variable>}
      * @memberof Variable
      */
@@ -8209,7 +8209,7 @@ export interface Variable {
      */
     joinedVariables?: Array<Variable>;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
      * @type {string}
      * @memberof Variable
      */

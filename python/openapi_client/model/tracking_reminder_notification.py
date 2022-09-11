@@ -364,7 +364,7 @@ class TrackingReminderNotification(ModelNormal):
             unit_id (int): Ex: 10. [optional]  # noqa: E501
             unit_name (str): Ex: 1 to 5 Rating. [optional]  # noqa: E501
             default_value (float): Default value to use for the measurement when tracking. [optional]  # noqa: E501
-            description (str): Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. . [optional]  # noqa: E501
+            description (str): Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. . [optional]  # noqa: E501
             email (bool): True if the reminders should be delivered via email. [optional]  # noqa: E501
             icon_icon (str): Ex: ion-sad-outline. [optional]  # noqa: E501
             image_url (str): Ex: https://rximage.nlm.nih.gov/image/images/gallery/original/55111-0129-60_RXNAVIMAGE10_B051D81E.jpg. [optional]  # noqa: E501
@@ -378,7 +378,7 @@ class TrackingReminderNotification(ModelNormal):
             notification_bar (bool): True if the reminders should appear in the notification bar. [optional]  # noqa: E501
             notified_at (str): Ex: UTC ISO 8601 YYYY-MM-DDThh:mm:ss. [optional]  # noqa: E501
             number_of_unique_values (int): Ex: 5. [optional]  # noqa: E501
-            outcome (bool): Indicates whether or not the variable is usually an outcome of interest such as a symptom or emotion. [optional]  # noqa: E501
+            outcome (bool): Indicates whether the variable is usually an outcome of interest such as a symptom or emotion. [optional]  # noqa: E501
             png_path (str): Ex: img/variable_categories/emotions.png. [optional]  # noqa: E501
             png_url (str): Ex: https://app.curedao.org/img/variable_categories/emotions.png. [optional]  # noqa: E501
             pop_up (bool): True if the reminders should appear as a popup notification. [optional]  # noqa: E501
@@ -414,7 +414,7 @@ class TrackingReminderNotification(ModelNormal):
             user_variable_unit_name (str): Ex: 1 to 5 Rating. [optional]  # noqa: E501
             user_variable_variable_category_id (int): Ex: 1. [optional]  # noqa: E501
             user_variable_variable_category_name (str): Ex: Emotions. [optional]  # noqa: E501
-            valence (str): Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. . [optional]  # noqa: E501
+            valence (str): Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. . [optional]  # noqa: E501
             variable_category_id (int): Ex: 1. [optional]  # noqa: E501
             variable_category_image_url (str): Ex: https://static.quantimo.do/img/variable_categories/theatre_mask-96.png. [optional]  # noqa: E501
             variable_category_name (str): Ex: Emotions, Treatments, Symptoms.... [optional]  # noqa: E501

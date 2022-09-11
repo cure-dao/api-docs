@@ -323,7 +323,7 @@ export class ConnectorsApi extends runtime.BaseAPI {
 export enum ConnectConnectorConnectorNameEnum {
     Facebook = 'facebook',
     Fitbit = 'fitbit',
-    Github = 'github',
+    GitHub = 'github',
     Googlecalendar = 'googlecalendar',
     Googlefit = 'googlefit',
     Medhelper = 'medhelper',
@@ -353,7 +353,7 @@ export enum ConnectConnectorConnectorNameEnum {
 export enum DisconnectConnectorConnectorNameEnum {
     Facebook = 'facebook',
     Fitbit = 'fitbit',
-    Github = 'github',
+    GitHub = 'github',
     Googlecalendar = 'googlecalendar',
     Googlefit = 'googlefit',
     Medhelper = 'medhelper',
@@ -383,7 +383,7 @@ export enum DisconnectConnectorConnectorNameEnum {
 export enum UpdateConnectorConnectorNameEnum {
     Facebook = 'facebook',
     Fitbit = 'fitbit',
-    Github = 'github',
+    GitHub = 'github',
     Googlecalendar = 'googlecalendar',
     Googlefit = 'googlefit',
     Medhelper = 'medhelper',

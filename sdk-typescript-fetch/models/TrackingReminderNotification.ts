@@ -177,7 +177,7 @@ export interface TrackingReminderNotification {
      */
     defaultValue?: number;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
      * @type {string}
      * @memberof TrackingReminderNotification
      */
@@ -273,7 +273,7 @@ export interface TrackingReminderNotification {
      */
     numberOfUniqueValues?: number;
     /**
-     * Indicates whether or not the variable is usually an outcome of interest such as a symptom or emotion
+     * Indicates whether the variable is usually an outcome of interest such as a symptom or emotion
      * @type {boolean}
      * @memberof TrackingReminderNotification
      */
@@ -495,7 +495,7 @@ export interface TrackingReminderNotification {
      */
     userVariableVariableCategoryName?: string;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables.
      * @type {string}
      * @memberof TrackingReminderNotification
      */

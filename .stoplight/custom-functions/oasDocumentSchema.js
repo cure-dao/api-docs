@@ -498,7 +498,7 @@ const OAS_2 = {
         },
         required: {
           type: 'boolean',
-          description: 'Determines whether or not this parameter is required or optional.',
+          description: 'Determines whether this parameter is required or optional.',
           default: false,
         },
         schema: {
@@ -517,7 +517,7 @@ const OAS_2 = {
       properties: {
         required: {
           type: 'boolean',
-          description: 'Determines whether or not this parameter is required or optional.',
+          description: 'Determines whether this parameter is required or optional.',
           default: false,
         },
         in: {
@@ -598,7 +598,7 @@ const OAS_2 = {
       properties: {
         required: {
           type: 'boolean',
-          description: 'Determines whether or not this parameter is required or optional.',
+          description: 'Determines whether this parameter is required or optional.',
           default: false,
         },
         in: {
@@ -684,7 +684,7 @@ const OAS_2 = {
       properties: {
         required: {
           type: 'boolean',
-          description: 'Determines whether or not this parameter is required or optional.',
+          description: 'Determines whether this parameter is required or optional.',
           default: false,
         },
         in: {
@@ -772,7 +772,7 @@ const OAS_2 = {
         required: {
           type: 'boolean',
           enum: [true],
-          description: 'Determines whether or not this parameter is required or optional.',
+          description: 'Determines whether this parameter is required or optional.',
         },
         in: {
           type: 'string',

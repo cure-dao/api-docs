@@ -453,7 +453,7 @@ Measurement.prototype['unitName'] = undefined;
 
 Measurement.prototype['updatedAt'] = undefined;
 /**
- * Link to associated Facebook like or Github commit, for instance
+ * Link to associated Facebook like or GitHub commit, for instance
  * @member {String} url
  */
 
@@ -501,7 +501,7 @@ Measurement.prototype['userVariableVariableCategoryId'] = undefined;
 
 Measurement.prototype['userVariableVariableCategoryName'] = undefined;
 /**
- * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
+ * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
  * @member {String} valence
  */
 
@@ -531,7 +531,7 @@ Measurement.prototype['variableCategoryImageUrl'] = undefined;
 
 Measurement.prototype['variableCategoryName'] = undefined;
 /**
- * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
+ * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
  * @member {String} variableDescription
  */
 

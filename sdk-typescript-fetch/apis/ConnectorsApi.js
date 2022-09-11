@@ -422,7 +422,7 @@ var ConnectConnectorConnectorNameEnum;
 (function (ConnectConnectorConnectorNameEnum) {
     ConnectConnectorConnectorNameEnum["Facebook"] = "facebook";
     ConnectConnectorConnectorNameEnum["Fitbit"] = "fitbit";
-    ConnectConnectorConnectorNameEnum["Github"] = "github";
+    ConnectConnectorConnectorNameEnum["GitHub"] = "github";
     ConnectConnectorConnectorNameEnum["Googlecalendar"] = "googlecalendar";
     ConnectConnectorConnectorNameEnum["Googlefit"] = "googlefit";
     ConnectConnectorConnectorNameEnum["Medhelper"] = "medhelper";
@@ -453,7 +453,7 @@ var DisconnectConnectorConnectorNameEnum;
 (function (DisconnectConnectorConnectorNameEnum) {
     DisconnectConnectorConnectorNameEnum["Facebook"] = "facebook";
     DisconnectConnectorConnectorNameEnum["Fitbit"] = "fitbit";
-    DisconnectConnectorConnectorNameEnum["Github"] = "github";
+    DisconnectConnectorConnectorNameEnum["GitHub"] = "github";
     DisconnectConnectorConnectorNameEnum["Googlecalendar"] = "googlecalendar";
     DisconnectConnectorConnectorNameEnum["Googlefit"] = "googlefit";
     DisconnectConnectorConnectorNameEnum["Medhelper"] = "medhelper";
@@ -484,7 +484,7 @@ var UpdateConnectorConnectorNameEnum;
 (function (UpdateConnectorConnectorNameEnum) {
     UpdateConnectorConnectorNameEnum["Facebook"] = "facebook";
     UpdateConnectorConnectorNameEnum["Fitbit"] = "fitbit";
-    UpdateConnectorConnectorNameEnum["Github"] = "github";
+    UpdateConnectorConnectorNameEnum["GitHub"] = "github";
     UpdateConnectorConnectorNameEnum["Googlecalendar"] = "googlecalendar";
     UpdateConnectorConnectorNameEnum["Googlefit"] = "googlefit";
     UpdateConnectorConnectorNameEnum["Medhelper"] = "medhelper";

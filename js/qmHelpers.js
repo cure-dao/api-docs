@@ -2023,7 +2023,7 @@ var qm = {
                 partialPath = ''
             }
             qm.api.getClientIdWithCallback(function(clientId){
-                // TODO: Stop using quantimodo.curedao.org for resource hosting on Github so we can point quantimodo.curedao.org to Netlify
+                // TODO: Stop using quantimodo.curedao.org for resource hosting on GitHub so we can point quantimodo.curedao.org to Netlify
                 if(clientId === 'quantimodo'){ clientId = 'web' }
                 let url = "https://" + clientId + ".curedao.org/" + partialPath
                 url = qm.urlHelper.addUrlQueryParamsToUrlString({clientId}, url)
@@ -3434,9 +3434,9 @@ var qm = {
             },
         },
         createStatusToCommit(statusOptions, callback){
-            qm.github.createStatusToCommit(statusOptions, qm.gitHelper.getGithubOptions(), callback)
+            qm.github.createStatusToCommit(statusOptions, qm.gitHelper.getGitHubOptions(), callback)
         },
-        getGithubOptions(){
+        getGitHubOptions(){
             let options = {
                 // Required options: git_token, git_repo
                 // refer to https://help.github.com/articles/creating-an-access-token-for-command-line-use/
@@ -3453,7 +3453,7 @@ var qm = {
                 git_option: {
                     // refer to https://www.npmjs.com/package/github for more options
                     //host: 'github.mycorp.com',
-                    // You may require this when you using Enterprise Github
+                    // You may require this when you using Enterprise GitHub
                     //pathPrefix: '/api/v3'
                 },
                 // Provide your own jshint reporter, optional

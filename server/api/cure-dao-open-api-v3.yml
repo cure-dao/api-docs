@@ -1924,7 +1924,7 @@ components:
           description: 'Ex: Overall Mood following Sleep Duration (R = -0.173)'
         explanation:
           type: string
-          description: 'Ex: The chart above indicates that an increase in Sleep Duration is usually followed by an decrease in Overall Mood.'
+          description: 'Ex: The chart above indicates that an increase in Sleep Duration is usually followed by a decrease in Overall Mood.'
         svgUrl:
           type: string
           description: Url to a static svg of the chart
@@ -2435,7 +2435,7 @@ components:
           description: 'Ex: <a href="https://curedao.org">CureDAO</a>'
         longDescription:
           type: string
-          description: 'Ex: CureDAO is a Chrome extension, Android app, iOS app, and web app that allows you to easily track mood, symptoms, or any outcome you want to optimize in a fraction of a second.  You can also import your data from over 30 other apps and devices like Fitbit, Rescuetime, Jawbone Up, Withings, Facebook, Github, Google Calendar, Runkeeper, MoodPanda, Slice, Google Fit, and more.  CureDAO then analyzes your data to identify which hidden factors are most likely to be influencing your mood or symptoms and their optimal daily values.'
+          description: 'Ex: CureDAO is a Chrome extension, Android app, iOS app, and web app that allows you to easily track mood, symptoms, or any outcome you want to optimize in a fraction of a second.  You can also import your data from over 30 other apps and devices like Fitbit, Rescuetime, Jawbone Up, Withings, Facebook, GitHub, Google Calendar, Runkeeper, MoodPanda, Slice, Google Fit, and more.  CureDAO then analyzes your data to identify which hidden factors are most likely to be influencing your mood or symptoms and their optimal daily values.'
         message:
           type: string
           description: 'Ex: Got 412 new measurements on 2017-07-31 10:10:34'
@@ -3015,7 +3015,7 @@ components:
           description: 'Ex: 2017-07-30 21:08:36'
         url:
           type: string
-          description: 'Link to associated Facebook like or Github commit, for instance'
+          description: 'Link to associated Facebook like or GitHub commit, for instance'
         userVariableUnitAbbreviatedName:
           type: string
           description: 'Ex: count'
@@ -3039,7 +3039,7 @@ components:
           description: 'Ex: Treatments'
         valence:
           type: string
-          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
+          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
         value:
           type: number
           description: Converted measurement value in requested unit
@@ -3079,7 +3079,7 @@ components:
             - Vital Signs
         variableDescription:
           type: string
-          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
+          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
         variableId:
           type: integer
           description: 'Ex: 5956846'
@@ -4060,7 +4060,7 @@ components:
           description: 'Ex: 1'
         outcome:
           type: boolean
-          description: Indicates whether or not the variable is usually an outcome of interest such as a symptom or emotion
+          description: Indicates whether the variable is usually an outcome of interest such as a symptom or emotion
         pngPath:
           type: string
           description: 'Ex: img/variable_categories/symptoms.png'
@@ -4172,7 +4172,7 @@ components:
           description: 'Ex: Symptoms'
         valence:
           type: string
-          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
+          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
         valueAndFrequencyTextDescription:
           type: string
           description: 'Ex: Rate daily'
@@ -4214,7 +4214,7 @@ components:
             - Vital Signs
         variableDescription:
           type: string
-          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
+          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
         variableId:
           type: integer
           description: Id for the variable to be tracked
@@ -4305,7 +4305,7 @@ components:
           format: float
         description:
           type: string
-          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
+          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
         email:
           type: boolean
           description: True if the reminders should be delivered via email
@@ -4356,7 +4356,7 @@ components:
           description: 'Ex: 5'
         outcome:
           type: boolean
-          description: Indicates whether or not the variable is usually an outcome of interest such as a symptom or emotion
+          description: Indicates whether the variable is usually an outcome of interest such as a symptom or emotion
         pngPath:
           type: string
           description: 'Ex: img/variable_categories/emotions.png'
@@ -4475,7 +4475,7 @@ components:
           description: 'Ex: Emotions'
         valence:
           type: string
-          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
+          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
         variableCategoryId:
           type: integer
           description: 'Ex: 1'
@@ -5059,22 +5059,22 @@ components:
           description: 'Ex: https://google.com'
         ingredientOfCommonTagVariables:
           type: array
-          description: 'Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.'
+          description: 'Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.'
           items:
             $ref: '#/components/schemas/Variable'
         ingredientCommonTagVariables:
           type: array
-          description: 'Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.'
+          description: 'Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.'
           items:
             $ref: '#/components/schemas/Variable'
         ingredientOfUserTagVariables:
           type: array
-          description: 'User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.'
+          description: 'User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.'
           items:
             $ref: '#/components/schemas/Variable'
         ingredientUserTagVariables:
           type: array
-          description: 'User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption and we can use this data to see how sugar might be affecting you.'
+          description: 'User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.'
           items:
             $ref: '#/components/schemas/Variable'
         inputType:
@@ -5407,7 +5407,7 @@ components:
             $ref: '#/components/schemas/Variable'
         valence:
           type: string
-          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
+          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
         variableCategoryId:
           type: integer
           description: 'Ex: 6'

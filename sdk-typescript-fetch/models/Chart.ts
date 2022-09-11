@@ -38,7 +38,7 @@ export interface Chart {
      */
     chartTitle?: string;
     /**
-     * Ex: The chart above indicates that an increase in Sleep Duration is usually followed by an decrease in Overall Mood.
+     * Ex: The chart above indicates that an increase in Sleep Duration is usually followed by a decrease in Overall Mood.
      * @type {string}
      * @memberof Chart
      */

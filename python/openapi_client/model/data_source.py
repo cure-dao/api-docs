@@ -193,7 +193,7 @@ class DataSource(ModelNormal):
             image (str): Ex: https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png
             image_html (str): Ex: <a href=\"https://curedao.org\"><img id=\"curedao_image\" title=\"CureDAO\" src=\"https://app.curedao.org/img/logos/curedao-logo-qm-rainbow-200-200.png\" alt=\"CureDAO\"></a>
             linked_display_name_html (str): Ex: <a href=\"https://curedao.org\">CureDAO</a>
-            long_description (str): Ex: CureDAO is a Chrome extension, Android app, iOS app, and web app that allows you to easily track mood, symptoms, or any outcome you want to optimize in a fraction of a second.  You can also import your data from over 30 other apps and devices like Fitbit, Rescuetime, Jawbone Up, Withings, Facebook, Github, Google Calendar, Runkeeper, MoodPanda, Slice, Google Fit, and more.  CureDAO then analyzes your data to identify which hidden factors are most likely to be influencing your mood or symptoms and their optimal daily values.
+            long_description (str): Ex: CureDAO is a Chrome extension, Android app, iOS app, and web app that allows you to easily track mood, symptoms, or any outcome you want to optimize in a fraction of a second.  You can also import your data from over 30 other apps and devices like Fitbit, Rescuetime, Jawbone Up, Withings, Facebook, GitHub, Google Calendar, Runkeeper, MoodPanda, Slice, Google Fit, and more.  CureDAO then analyzes your data to identify which hidden factors are most likely to be influencing your mood or symptoms and their optimal daily values.
             name (str): Ex: curedao
             short_description (str): Ex: Tracks anything
 

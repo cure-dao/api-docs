@@ -213,7 +213,7 @@ export interface Measurement {
      */
     updatedAt?: string;
     /**
-     * Link to associated Facebook like or Github commit, for instance
+     * Link to associated Facebook like or GitHub commit, for instance
      * @type {string}
      * @memberof Measurement
      */
@@ -261,7 +261,7 @@ export interface Measurement {
      */
     userVariableVariableCategoryName?: string;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
      * @type {string}
      * @memberof Measurement
      */
@@ -291,7 +291,7 @@ export interface Measurement {
      */
     variableCategoryName?: MeasurementVariableCategoryNameEnum;
     /**
-     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
+     * Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. 
      * @type {string}
      * @memberof Measurement
      */

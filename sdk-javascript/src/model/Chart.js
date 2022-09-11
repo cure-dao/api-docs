@@ -91,7 +91,7 @@ Chart.prototype['chartId'] = undefined;
 Chart.prototype['chartTitle'] = undefined;
 
 /**
- * Ex: The chart above indicates that an increase in Sleep Duration is usually followed by an decrease in Overall Mood.
+ * Ex: The chart above indicates that an increase in Sleep Duration is usually followed by a decrease in Overall Mood.
  * @member {String} explanation
  */
 Chart.prototype['explanation'] = undefined;

@@ -291,7 +291,7 @@ class Measurement(ModelNormal):
             unit_id (int): Ex: 23. [optional]  # noqa: E501
             unit_name (str): Ex: Count. [optional]  # noqa: E501
             updated_at (str): Ex: 2017-07-30 21:08:36. [optional]  # noqa: E501
-            url (str): Link to associated Facebook like or Github commit, for instance. [optional]  # noqa: E501
+            url (str): Link to associated Facebook like or GitHub commit, for instance. [optional]  # noqa: E501
             user_variable_unit_abbreviated_name (str): Ex: count. [optional]  # noqa: E501
             user_variable_unit_category_id (int): Ex: 6. [optional]  # noqa: E501
             user_variable_unit_category_name (str): Ex: Miscellany. [optional]  # noqa: E501
@@ -299,11 +299,11 @@ class Measurement(ModelNormal):
             user_variable_unit_name (str): Ex: Count. [optional]  # noqa: E501
             user_variable_variable_category_id (int): Ex: 13. [optional]  # noqa: E501
             user_variable_variable_category_name (str): Ex: Treatments. [optional]  # noqa: E501
-            valence (str): Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. . [optional]  # noqa: E501
+            valence (str): Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. . [optional]  # noqa: E501
             variable_category_id (int): Ex: 13. [optional]  # noqa: E501
             variable_category_image_url (str): Ex: https://static.quantimo.do/img/variable_categories/pill-96.png. [optional]  # noqa: E501
             variable_category_name (str): Ex: Emotions, Treatments, Symptoms.... [optional]  # noqa: E501
-            variable_description (str): Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. . [optional]  # noqa: E501
+            variable_description (str): Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. . [optional]  # noqa: E501
             variable_id (int): Ex: 5956846. [optional]  # noqa: E501
             display_name (str): Ex: Trader Joe's Bedtime Tea. [optional]  # noqa: E501
         """

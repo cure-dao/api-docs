@@ -13,9 +13,9 @@ import {Configuration, ConnectorsApiFactory} from "../typescript-fetch-client";
 const git = simpleGit();
 beforeEach(function (done) {
     let t = this.currentTest
-    this.timeout(10000) // Default 2000 is too fast for Github API
+    this.timeout(10000) // Default 2000 is too fast for GitHub API
     // @ts-ignore
-    qmGit.setGithubStatus("pending", t.title, "Running...", null, function (res) {
+    qmGit.setGitHubStatus("pending", t.title, "Running...", null, function (res) {
         const logResult = false
         if(logResult){console.debug(res)}
         done();
@@ -33,7 +33,7 @@ afterEach(function (done) {
     let githubState = "success";
     if (state === "failed") {githubState = "failure" }
     // @ts-ignore
-    qmGit.setGithubStatus(githubState, t.title, t.title, null, function (res) {
+    qmGit.setGitHubStatus(githubState, t.title, t.title, null, function (res) {
         const logResult = false
         if(logResult){console.debug(res)}
         done();
@@ -41,7 +41,7 @@ afterEach(function (done) {
 });
 describe("git", () => {
     it.skip("sets commit status", function (done) { // skipping because it pollutes the status checks
-        qmGit.setGithubStatus("pending", "test context", "test description", "https://get-bent.com", function (res) {
+        qmGit.setGitHubStatus("pending", "test context", "test description", "https://get-bent.com", function (res) {
             expect(res.status).to.eq(201);
             done();
         });

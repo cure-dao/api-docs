@@ -145,7 +145,7 @@ class Chart(ModelNormal):
             highchart_config ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}):  Highcharts config that can be used if you have highcharts.js included on the page. [optional]  # noqa: E501
             chart_id (str): Ex: correlationScatterPlot. [optional]  # noqa: E501
             chart_title (str): Ex: Overall Mood following Sleep Duration (R = -0.173). [optional]  # noqa: E501
-            explanation (str): Ex: The chart above indicates that an increase in Sleep Duration is usually followed by an decrease in Overall Mood.. [optional]  # noqa: E501
+            explanation (str): Ex: The chart above indicates that an increase in Sleep Duration is usually followed by a decrease in Overall Mood.. [optional]  # noqa: E501
             svg_url (str): Url to a static svg of the chart. [optional]  # noqa: E501
             svg (str): SVG string than can be embedded directly in HTML. [optional]  # noqa: E501
         """
