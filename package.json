@@ -42,11 +42,17 @@
     "swagger-node-codegen": "^1.6.3"
   },
   "devDependencies": {
+    "@octokit/rest": "19.0.4",
     "@openapi-codegen/cli": "1.5.2",
     "@openapi-codegen/typescript": "4.0.1",
+    "@types/remote-origin-url": "2.0.1",
+    "@types/underscore.string": "0.0.38",
     "ajv": "8.11.0",
+    "app-root-path": "3.1.0",
     "chai": "4.3.6",
     "chakram": "1.5.0",
+    "cypress": "10.7.0",
+    "cypress-slack-reporter": "1.5.0",
     "download-file": "0.1.5",
     "expect": "28.1.1",
     "expect.js": "0.3.1",
@@ -55,11 +61,14 @@
     "openapi-typescript-codegen": "0.23.0",
     "rdme": "^7.0.1",
     "react-query": "3.39.1",
+    "remote-origin-url": "2.0.0",
+    "rimraf": "3.0.2",
     "simple-git": "^3.7.1",
     "snippet-enricher-cli": "0.0.8",
     "superagent": "7.1.6",
     "supertest": "6.2.4",
     "swagger-ts-generator": "latest",
-    "swagger-typescript-codegen": "3.0.2"
+    "swagger-typescript-codegen": "3.0.2",
+    "underscore.string": "3.3.6"
   }
 }

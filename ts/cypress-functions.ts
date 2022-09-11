@@ -118,12 +118,12 @@ function copyCypressEnvConfigIfNecessary() {
     }
     console.info("Cypress Configuration: " + cypressJsonString)
 }
-function setGithubStatusAndUploadTestResults(failedTests: any[] | null, context: string, cb: (err: any) => void) {
+function setGitHubStatusAndUploadTestResults(failedTests: any[] | null, context: string, cb: (err: any) => void) {
     // @ts-ignore
     const failedTestTitle = failedTests[0].title[1]
     // @ts-ignore
     const errorMessage = failedTests[0].error
-    qmGit.setGithubStatus("failure", context, failedTestTitle + ": " +
+    qmGit.setGitHubStatus("failure", context, failedTestTitle + ": " +
         errorMessage, getReportUrl(), function() {
         uploadTestResults(function() {
             console.error(errorMessage)
@@ -155,7 +155,7 @@ function logFailedTests(failedTests: any[], context: string, cb: (err: any) => v
         console.error("==============================================")
     }
     mochawesome(failedTests, function() {
-        setGithubStatusAndUploadTestResults(failedTests, context, cb)
+        setGitHubStatusAndUploadTestResults(failedTests, context, cb)
     })
 }
 
@@ -174,7 +174,7 @@ export function runWithRecording(specName: string, cb: (err: any) => void) {
         if ("runUrl" in recordingResults) {
             runUrl = recordingResults.runUrl
         }
-        qmGit.setGithubStatus("error", context, "View recording of "+specName,
+        qmGit.setGitHubStatus("error", context, "View recording of "+specName,
             runUrl)
         qmGit.createCommitComment(context, "\nView recording of "+specName+"\n"+
             "[Cypress Dashboard]("+runUrl+")")
@@ -204,7 +204,7 @@ function getFailedTestsFromResults(results: any) {
 function handleTestSuccess(results: any, context: string, cb: (err: any) => void) {
     deleteLastFailedCypressTest()
     console.info(results.totalPassed + " tests PASSED!")
-    qmGit.setGithubStatus("success", context, results.totalPassed +
+    qmGit.setGitHubStatus("success", context, results.totalPassed +
         " tests passed")
     cb(false)
 }
@@ -215,7 +215,7 @@ export function runOneCypressSpec(specName: string, cb: ((err: any) => void)) {
     const specPath = specsPath + "/" + specName
     const browser = process.env.CYPRESS_BROWSER || "electron"
     const context = specName.replace("_spec.js", "") + "-" + releaseStage
-    qmGit.setGithubStatus("pending", context, `Running ${context} Cypress tests...`)
+    qmGit.setGitHubStatus("pending", context, `Running ${context} Cypress tests...`)
     // noinspection JSUnresolvedFunction
     cypress.run({
         browser,
@@ -246,7 +246,7 @@ export function runOneCypressSpec(specName: string, cb: ((err: any) => void)) {
             }
         }
     }).catch((runtimeError: any) => {
-        qmGit.setGithubStatus("error", context, runtimeError, getReportUrl(), function() {
+        qmGit.setGitHubStatus("error", context, runtimeError, getReportUrl(), function() {
             console.error(runtimeError)
             process.exit(1)
         })

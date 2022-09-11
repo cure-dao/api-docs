@@ -127,12 +127,12 @@ function copyCypressEnvConfigIfNecessary() {
     }
     console.info("Cypress Configuration: " + cypressJsonString);
 }
-function setGithubStatusAndUploadTestResults(failedTests, context, cb) {
+function setGitHubStatusAndUploadTestResults(failedTests, context, cb) {
     // @ts-ignore
     var failedTestTitle = failedTests[0].title[1];
     // @ts-ignore
     var errorMessage = failedTests[0].error;
-    qmGit.setGithubStatus("failure", context, failedTestTitle + ": " +
+    qmGit.setGitHubStatus("failure", context, failedTestTitle + ": " +
         errorMessage, getReportUrl(), function () {
         uploadTestResults(function () {
             console.error(errorMessage);
@@ -163,7 +163,7 @@ function logFailedTests(failedTests, context, cb) {
         console.error("==============================================");
     }
     mochawesome(failedTests, function () {
-        setGithubStatusAndUploadTestResults(failedTests, context, cb);
+        setGitHubStatusAndUploadTestResults(failedTests, context, cb);
     });
 }
 function runWithRecording(specName, cb) {
@@ -181,7 +181,7 @@ function runWithRecording(specName, cb) {
         if ("runUrl" in recordingResults) {
             runUrl = recordingResults.runUrl;
         }
-        qmGit.setGithubStatus("error", context, "View recording of " + specName, runUrl);
+        qmGit.setGitHubStatus("error", context, "View recording of " + specName, runUrl);
         qmGit.createCommitComment(context, "\nView recording of " + specName + "\n" +
             "[Cypress Dashboard](" + runUrl + ")");
         cb(recordingResults);
@@ -210,7 +210,7 @@ function getFailedTestsFromResults(results) {
 function handleTestSuccess(results, context, cb) {
     deleteLastFailedCypressTest();
     console.info(results.totalPassed + " tests PASSED!");
-    qmGit.setGithubStatus("success", context, results.totalPassed +
+    qmGit.setGitHubStatus("success", context, results.totalPassed +
         " tests passed");
     cb(false);
 }
@@ -220,7 +220,7 @@ function runOneCypressSpec(specName, cb) {
     var specPath = specsPath + "/" + specName;
     var browser = process.env.CYPRESS_BROWSER || "electron";
     var context = specName.replace("_spec.js", "") + "-" + releaseStage;
-    qmGit.setGithubStatus("pending", context, "Running " + context + " Cypress tests...");
+    qmGit.setGitHubStatus("pending", context, "Running " + context + " Cypress tests...");
     // noinspection JSUnresolvedFunction
     cypress.run({
         browser: browser,
@@ -254,7 +254,7 @@ function runOneCypressSpec(specName, cb) {
             }
         }
     }).catch(function (runtimeError) {
-        qmGit.setGithubStatus("error", context, runtimeError, getReportUrl(), function () {
+        qmGit.setGitHubStatus("error", context, runtimeError, getReportUrl(), function () {
             console.error(runtimeError);
             process.exit(1);
         });

@@ -133,7 +133,7 @@ exports.githubStatusStates = {
  * state can be one of `error`, `failure`, `pending`, or `success`.
  */
 // tslint:disable-next-line:max-line-length
-function setGithubStatus(testState, context, description, url, cb) {
+function setGitHubStatus(testState, context, description, url, cb) {
     description = underscore_string_1.default.truncate(description, 135);
     url = url || test_helpers_1.getBuildLink();
     if (!url) {
@@ -166,7 +166,7 @@ function setGithubStatus(testState, context, description, url, cb) {
         // throw err
     });
 }
-exports.setGithubStatus = setGithubStatus;
+exports.setGitHubStatus = setGitHubStatus;
 // tslint:disable-next-line:max-line-length
 function createCommitComment(context, body, cb) {
     body += "\n### " + context + "\n";

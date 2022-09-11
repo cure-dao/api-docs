@@ -114,7 +114,7 @@ export const githubStatusStates = {
  * state can be one of `error`, `failure`, `pending`, or `success`.
  */
 // tslint:disable-next-line:max-line-length
-export function setGithubStatus(testState: "error" | "failure" | "pending" | "success", context: string,
+export function setGitHubStatus(testState: "error" | "failure" | "pending" | "success", context: string,
                                 description: string, url?: string | null, cb?: ((arg0: any) => void) | undefined) {
     description = _str.truncate(description, 135)
     url = url || getBuildLink()
@@ -176,21 +176,7 @@ export function getBranchName() {
         throw new Error("Branch name not set!")
     }
 }
-export function deleteLocalFeatureBranches() {
-    git.branchLocal(function(branches: []) {
-        branches.forEach(function(branch: string) {
-            if(branch.indexOf("feature/") !== -1) {
-                git.deleteLocalBranch(branch)
-            }
-        })
-    })
-}
 export function createFeatureBranch(featureName: string) {
     const branchName = "feature/" + featureName
-    try {
-        qmShell.executeSynchronously(`git checkout -b ${branchName} develop`, false)
-    } catch (e) {
-        qmLog.error(e)
-        return
-    }
+    qmShell.executeSynchronously(`git checkout -b ${branchName} develop`, false)
 }

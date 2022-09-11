@@ -47,7 +47,7 @@ function handleTestErrors(errorMessage) {
     if (!context || context === "") {
         context = "unknown-context";
     }
-    qmGit.setGithubStatus("error", context, errorMessage, th.getBuildLink(), function () {
+    qmGit.setGitHubStatus("error", context, errorMessage, th.getBuildLink(), function () {
         throw Error(context + " Error: " + errorMessage);
     });
 }
@@ -85,7 +85,7 @@ exports.gi = {
                 console.error(logObject.output + " at " + logObject.url);
             }
         }
-        qmGit.setGithubStatus("failure", exports.gi.context, name, url, function () {
+        qmGit.setGitHubStatus("failure", exports.gi.context, name, url, function () {
             process.exit(1);
         });
     },
@@ -136,7 +136,7 @@ exports.gi = {
         var options = exports.gi.getOptions(startUrl);
         var test = tests.pop();
         var testUrl = "https://app.ghostinspector.com/tests/" + test._id;
-        qmGit.setGithubStatus("pending", exports.gi.context, options.apiUrl, testUrl);
+        qmGit.setGitHubStatus("pending", exports.gi.context, options.apiUrl, testUrl);
         logTestParameters(options.apiUrl, options.startUrl, testUrl);
         getGhostInspector().executeTest(test._id, options, function (err, testResults, passing) {
             console.info("RESULTS:");
@@ -145,13 +145,13 @@ exports.gi = {
             }
             if (!passing) {
                 exports.gi.outputErrorsForTest(testResults);
-                qmGit.setGithubStatus("failure", exports.gi.context, options.apiUrl, testUrl, function () {
+                qmGit.setGitHubStatus("failure", exports.gi.context, options.apiUrl, testUrl, function () {
                     process.exit(1);
                 });
             }
             else {
                 console.log(test.name + " passed! :D");
-                qmGit.setGithubStatus("success", exports.gi.context, test.name + " passed! :D", testUrl, function () {
+                qmGit.setGitHubStatus("success", exports.gi.context, test.name + " passed! :D", testUrl, function () {
                     if (tests && tests.length) {
                         exports.gi.runTests(tests, callback, startUrl);
                     }
@@ -198,7 +198,7 @@ exports.gi = {
         var options = exports.gi.getOptions(startUrl);
         var testSuiteUrl = "https://app.ghostinspector.com/suites/" + suiteId;
         logTestParameters(options.apiUrl, startUrl, testSuiteUrl);
-        qmGit.setGithubStatus("pending", exports.gi.context, options.apiUrl, testSuiteUrl);
+        qmGit.setGitHubStatus("pending", exports.gi.context, options.apiUrl, testSuiteUrl);
         getGhostInspector().executeSuite(suiteId, options, function (err, suiteResults, passing) {
             console.info("RESULTS:");
             if (err) {
@@ -216,7 +216,7 @@ exports.gi = {
             }
             else {
                 console.log(testSuiteUrl + " " + " passed! :D");
-                qmGit.setGithubStatus("success", exports.gi.context, options.apiUrl, testSuiteUrl, callback);
+                qmGit.setGitHubStatus("success", exports.gi.context, options.apiUrl, testSuiteUrl, callback);
             }
         });
     },
