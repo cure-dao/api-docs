@@ -3,12 +3,6 @@ The CureDAO API has two main components:
 -   **Connect** - UI to facilitate data source connections
 -   **Data API** - Endpoints to pull user data from
 
-To quickly grasp how an integration with CureDAO API works, it is helpful to view the following diagram:
-
-![](https://files.readme.io/QI3KkBPJQBGZyUJrhayA_Screen%20Shot%202015-11-19%20at%201.39.13%20PM.png "Screen Shot 2015-11-19 at 1.39.13 PM.png")
-
-In the diagram, you'll see your application and server in orange, CureDAO API components and actions in blue, and all external data sources the user is trying to connect to in gray.
-
 The flow here is simple:
 
 **A**: A user of your application launches CureDAO Connect to connect a data source  

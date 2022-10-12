@@ -1,4 +1,6 @@
 openapi: 3.0.1
+x-stoplight:
+  id: e2dd35f0e728f
 info:
   title: CureDAO Unified Health API
   description: A community-owned platform for crowd-sourced clinical research
@@ -389,8 +391,8 @@ paths:
     post:
       tags:
         - measurements
-      summary: "Upload a spreadsheet with measurements"
-      description: "Import from a spreadsheet containing a Variable Name, Value, Measurement Event Time, and Abbreviated Unit Name field.  Here is an <a href=\"http://bit.ly/2jz7CNl\" target=\"_blank\">example spreadsheet</a> with allowed column names, units and time format."
+      summary: Upload a spreadsheet with measurements
+      description: 'Import from a spreadsheet containing a Variable Name, Value, Measurement Event Time, and Abbreviated Unit Name field.  Here is an <a href="http://bit.ly/2jz7CNl" target="_blank">example spreadsheet</a> with allowed column names, units and time format.'
       operationId: measurementSpreadsheetUpload
       requestBody:
         content:
@@ -398,7 +400,6 @@ paths:
             schema:
               type: object
               properties:
-                # 'file' will be the field name in this multipart request
                 file:
                   type: string
                   format: binary
@@ -757,8 +758,7 @@ paths:
       tags:
         - authentication
       summary: Get a user access token
-      description: 'Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and 
-      receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you''ll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don''t have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application''s redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application''s client id. * `client_secret` Your application''s client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can''t use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](https://oauth.net/2/)'
+      description: 'Client provides authorization token obtained from /api/v3/oauth2/authorize to this endpoint and  receives an access token. Access token can then be used to query API endpoints. ### Request Access Token After user approves your access to the given scope form the https:/api.curedao.org/v1/oauth2/authorize endpoint, you''ll receive an authorization code to request an access token. This time make a `POST` request to `/api/v1/oauth/access_token` with parameters including: * `grant_type` Can be `authorization_code` or `refresh_token` since we are getting the `access_token` for the first time we don''t have a `refresh_token` so this must be `authorization_code`. * `code` Authorization code you received with the previous request. * `redirect_uri` Your application''s redirect url. ### Refreshing Access Token Access tokens expire at some point, to continue using our api you need to refresh them with `refresh_token` you received along with the `access_token`. To do this make a `POST` request to `/api/v1/oauth/access_token` with correct parameters, which are: * `grant_type` This time grant type must be `refresh_token` since we have it. * `clientId` Your application''s client id. * `client_secret` Your application''s client secret. * `refresh_token` The refresh token you received with the `access_token`. Every request you make to this endpoint will give you a new refresh token and make the old one expired. So you can keep getting new access tokens with new refresh tokens. ### Using Access Token Currently we support 2 ways for this, you can''t use both at the same time. * Adding access token to the request header as `Authorization: Bearer {access_token}` * Adding to the url as a query parameter `?access_token={access_token}` You can read more about OAuth2 from [here](https://oauth.net/2/)'
       operationId: getAccessToken
       parameters:
         - $ref: '#/components/parameters/clientIdParam'
@@ -1884,10 +1884,6 @@ components:
           type: object
           properties: {}
           description: 'Key value pairs derived from user input fields, button clicks, or preset defaults'
-        relatedCards:
-          type: array
-          items:
-            $ref: '#/components/schemas/Card'
         selectedButton:
           $ref: '#/components/schemas/Button'
         sharingBody:
@@ -1995,6 +1991,341 @@ components:
           type: number
           description: This specifies the order of conversion steps starting with 0
           format: double
+    HyperParameterCorrelation:
+      required:
+        - causeVariableName
+        - effectVariableName
+      type: object
+      properties:
+        averageDailyHighCause:
+          type: number
+          description: 'Ex: 4.19'
+          format: double
+        averageDailyLowCause:
+          type: number
+          description: 'Ex: 1.97'
+          format: double
+        averageEffect:
+          type: number
+          description: 'Ex: 3.0791054117396'
+          format: double
+        averageEffectFollowingHighCause:
+          type: number
+          description: 'Ex: 3.55'
+          format: double
+        averageEffectFollowingLowCause:
+          type: number
+          description: 'Ex: 2.65'
+          format: double
+        averageForwardPearsonCorrelationOverOnsetDelays:
+          type: number
+          description: 'Ex: 0.396'
+          format: double
+        averageReversePearsonCorrelationOverOnsetDelays:
+          type: number
+          description: 'Ex: 0.453667'
+          format: double
+        averageVote:
+          type: number
+          description: 'Ex: 0.9855'
+        causeChanges:
+          type: integer
+          description: 'Ex: 164'
+        causeDataSource:
+          $ref: '#/components/schemas/DataSource'
+        causeUserVariableShareUserMeasurements:
+          type: integer
+          description: 'Ex: 1'
+        causeVariableCategoryId:
+          type: integer
+          description: 'Ex: 6'
+        causeVariableCategoryName:
+          type: string
+          description: 'Ex: Sleep'
+        causeVariableCombinationOperation:
+          type: string
+          description: 'Ex: MEAN'
+        causeVariableUnitAbbreviatedName:
+          type: string
+          description: 'Ex: /5'
+        causeVariableId:
+          type: integer
+          description: 'Ex: 1448'
+        causeVariableMostCommonConnectorId:
+          type: integer
+          description: 'Ex: 6'
+        causeVariableName:
+          type: string
+          description: 'Ex: Sleep Quality'
+        confidenceInterval:
+          type: number
+          description: 'Ex: 0.14344467795996'
+          format: double
+        confidenceLevel:
+          type: string
+          description: 'Ex: high'
+        correlationCoefficient:
+          type: number
+          description: 'Ex: 0.538'
+          format: double
+        correlationIsContradictoryToOptimalValues:
+          type: boolean
+          description: 'Ex: false'
+        createdAt:
+          type: string
+          description: 'Ex: 2016-12-28 20:47:30 UTC ISO 8601 YYYY-MM-DDThh:mm:ss'
+        criticalTValue:
+          type: number
+          description: 'Calculated Statistic: Ex: 1.646'
+          format: double
+        direction:
+          type: string
+          description: 'Ex: higher'
+        durationOfAction:
+          type: integer
+          description: 'User-Defined Variable Setting: The amount of time over which a predictor/stimulus event can exert an observable influence on an outcome variable value. For instance, aspirin (stimulus/predictor) typically decreases headache severity for approximately four hours (duration of action) following the onset delay.  Unit: Seconds'
+        durationOfActionInHours:
+          type: number
+          description: 'User-Defined Variable Setting: The amount of time over which a predictor/stimulus event can exert an observable influence on an outcome variable value. For instance, aspirin (stimulus/predictor) typically decreases headache severity for approximately four hours (duration of action) following the onset delay.  Unit: Hours'
+          format: float
+        degreesOfFreedom:
+          type: integer
+          description: 'Ex: 200'
+        effectNumberOfProcessedDailyMeasurements:
+          type: integer
+          description: 'Ex: 145'
+        error:
+          type: string
+          description: 'Ex: optimalPearsonProduct is not defined'
+        effectChanges:
+          type: integer
+          description: 'Ex: 193'
+        effectDataSource:
+          $ref: '#/components/schemas/DataSource'
+        effectSize:
+          type: string
+          description: 'Ex: moderately positive'
+        effectUnit:
+          type: string
+          description: 'Ex: /5'
+        effectUserVariableShareUserMeasurements:
+          type: integer
+          description: 'Ex: 1'
+        effectVariableCategoryId:
+          type: integer
+          description: 'Ex: 1'
+        effectVariableCategoryName:
+          type: string
+          description: 'Ex: Emotions'
+        effectVariableCombinationOperation:
+          type: string
+          description: 'Ex: MEAN'
+        effectVariableCommonAlias:
+          type: string
+          description: 'Ex: Mood_(psychology)'
+        effectVariableUnitAbbreviatedName:
+          type: string
+          description: 'Ex: /5'
+        effectVariableUnitId:
+          type: integer
+          description: 'Ex: 10'
+        effectVariableUnitName:
+          type: string
+          description: 'Ex: 1 to 5 Rating'
+        effectVariableId:
+          type: integer
+          description: 'Ex: 1398'
+        effectVariableMostCommonConnectorId:
+          type: integer
+          description: 'Ex: 10'
+        effectVariableName:
+          type: string
+          description: 'Ex: Overall Mood'
+        experimentEndTime:
+          type: string
+          description: 'Ex: 2014-07-30 12:50:00 UTC ISO 8601 YYYY-MM-DDThh:mm:ss'
+        experimentStartTime:
+          type: string
+          description: 'Ex: 2012-05-06 21:15:00 UTC ISO 8601 YYYY-MM-DDThh:mm:ss'
+        forwardSpearmanCorrelationCoefficient:
+          type: number
+          description: 'Ex: 0.528359'
+          format: double
+        numberOfPairs:
+          type: integer
+          description: 'Ex: 298'
+        onsetDelay:
+          type: integer
+          description: 'Ex: 0'
+        onsetDelayInHours:
+          type: number
+          description: 'Ex: 0'
+          format: float
+        onsetDelayWithStrongestPearsonCorrelation:
+          type: integer
+          description: 'Ex: -86400'
+        onsetDelayWithStrongestPearsonCorrelationInHours:
+          type: number
+          description: 'Ex: -24'
+          format: float
+        optimalPearsonProduct:
+          type: number
+          description: 'Ex: 0.68582816186982'
+          format: double
+        outcomeFillingValue:
+          type: integer
+          description: 'User-Defined Variable Setting: Ex: -1. Unit: User-specified or common.'
+        outcomeMaximumAllowedValue:
+          type: number
+          description: 'User-Defined Variable Setting: Ex: 23. Unit: User-specified or common.'
+          format: double
+        outcomeMinimumAllowedValue:
+          type: number
+          description: 'User-Defined Variable Setting: Ex: 0.1. Unit: User-specified or common.'
+          format: double
+        pearsonCorrelationWithNoOnsetDelay:
+          type: number
+          description: 'Ex: 0.477'
+          format: double
+        predictivePearsonCorrelation:
+          type: number
+          description: 'Ex: 0.538'
+          format: double
+        predictivePearsonCorrelationCoefficient:
+          type: number
+          description: 'Ex: 0.538'
+          format: double
+        predictorDataSources:
+          type: string
+          description: 'Ex: RescueTime'
+        predictorFillingValue:
+          type: integer
+          description: 'Ex: -1. Unit: User-specified or common.'
+        predictorMaximumAllowedValue:
+          type: number
+          description: 'Ex: 200. Unit: User-specified or common.'
+          format: double
+        predictorMinimumAllowedValue:
+          type: number
+          description: 'Ex: 30. Unit: User-specified or common.'
+          format: double
+        predictsHighEffectChange:
+          type: integer
+          description: 'Ex: 17. Unit: User-specified or common.'
+        predictsLowEffectChange:
+          type: integer
+          description: 'Ex: -11. Unit: User-specified or common.'
+        pValue:
+          type: number
+          description: 'Ex: 0.39628900511586'
+          format: double
+        qmScore:
+          type: number
+          description: 'Ex: 0.528'
+          format: double
+        reversePearsonCorrelationCoefficient:
+          type: number
+          description: 'Ex: 0.01377184270977'
+          format: double
+        shareUserMeasurements:
+          type: boolean
+          description: Would you like to make this study publicly visible?
+        sharingDescription:
+          type: string
+          description: 'Ex: N1 Study: Sleep Quality Predicts Higher Overall Mood'
+        sharingTitle:
+          type: string
+          description: 'Ex: N1 Study: Sleep Quality Predicts Higher Overall Mood'
+        significantDifference:
+          type: boolean
+          description: 'Ex: 1'
+        statisticalSignificance:
+          type: number
+          description: 'Ex: 0.9813'
+          format: double
+        strengthLevel:
+          type: string
+          description: 'Ex: moderate'
+        strongestPearsonCorrelationCoefficient:
+          type: number
+          description: 'Ex: 0.613'
+          format: double
+        studyHtml:
+          $ref: '#/components/schemas/StudyHtml'
+        studyImages:
+          $ref: '#/components/schemas/StudyImages'
+        studyLinks:
+          $ref: '#/components/schemas/StudyLinks'
+        studyText:
+          $ref: '#/components/schemas/StudyText'
+        tValue:
+          type: number
+          description: 'Ex: 9.6986079652717'
+          format: double
+        updatedAt:
+          type: string
+          description: 'Ex: 2017-05-06 15:40:38 UTC ISO 8601 YYYY-MM-DDThh:mm:ss'
+        userId:
+          type: integer
+          description: 'Ex: 230'
+        userVote:
+          type: integer
+          description: 'Ex: 1'
+        valuePredictingHighOutcome:
+          type: number
+          description: 'Ex: 4.14'
+          format: double
+        valuePredictingLowOutcome:
+          type: number
+          description: 'Ex: 3.03'
+          format: double
+        outcomeDataSources:
+          type: string
+          description: Sources used to collect data for the outcome variable
+        principalInvestigator:
+          type: string
+          description: Mike Sinn
+        reverseCorrelation:
+          type: number
+          description: 'Correlation when cause and effect are reversed. For any causal relationship, the forward correlation should exceed the reverse correlation.'
+        averagePearsonCorrelationCoefficientOverOnsetDelays:
+          type: number
+          description: 'Ex: '
+          format: float
+        causeNumberOfRawMeasurements:
+          type: integer
+          description: 'Ex: 14764'
+        numberOfUsers:
+          type: number
+          description: 'Ex: 1'
+        rawCauseMeasurementSignificance:
+          type: number
+          description: 'Ex: 1'
+          format: double
+        rawEffectMeasurementSignificance:
+          type: number
+          description: 'Ex: 1'
+          format: double
+        reversePairsCount:
+          type: string
+          description: 'Ex: 1'
+        voteStatisticalSignificance:
+          type: integer
+          description: 'Ex: 1'
+        aggregateQMScore:
+          type: number
+          description: 'Ex: 0.011598441286655'
+          format: double
+        forwardPearsonCorrelationCoefficient:
+          type: number
+          description: 'Ex: 0.0333'
+          format: double
+        numberOfCorrelations:
+          type: integer
+          description: 'Ex: 6'
+        vote:
+          type: number
+          description: 'Ex: 1 or 0'
     Correlation:
       required:
         - causeVariableName
@@ -2303,12 +2634,12 @@ components:
           type: array
           description: Correlations calculated with various duration of action hyper-parameters
           items:
-            $ref: '#/components/schemas/Correlation'
+            $ref: '#/components/schemas/HyperParameterCorrelation'
         correlationsOverOnsetDelays:
           type: array
           description: Correlations calculated with various onset delay hyper-parameters
           items:
-            $ref: '#/components/schemas/Correlation'
+            $ref: '#/components/schemas/HyperParameterCorrelation'
         correlationsOverDurationsOfActionChartConfig:
           type: object
           properties: {}
@@ -4688,8 +5019,6 @@ components:
         administrator:
           type: boolean
           description: Is user administrator
-        authorizedClients:
-          $ref: '#/components/schemas/AuthorizedClients'
         avatar:
           type: string
           description: 'Ex: https://lh6.googleusercontent.com/-BHr4hyUWqZU/AAAAAAAAAAI/AAAAAAAIG28/2Lv0en738II/photo.jpg?sz=50'
@@ -4891,6 +5220,493 @@ components:
         tagVariableId:
           type: integer
           description: This is the id of the ingredient variable whose value is determined based on the value of the tagged variable.
+    TagVariable:
+      required:
+        - id
+        - name
+        - userId
+        - variableId
+      type: object
+      properties:
+        actionArray:
+          type: array
+          items:
+            $ref: '#/components/schemas/TrackingReminderNotificationAction'
+        alias:
+          type: string
+          description: 'User-Defined Variable Setting:  Alternative display name'
+        availableUnits:
+          type: array
+          items:
+            $ref: '#/components/schemas/Unit'
+        bestStudyLink:
+          type: string
+          description: Link to study comparing variable with strongest relationship for user or population
+        bestStudyCard:
+          $ref: '#/components/schemas/Card'
+        bestUserStudyLink:
+          type: string
+          description: Link to study comparing variable with strongest relationship for user
+        bestUserStudyCard:
+          $ref: '#/components/schemas/Card'
+        bestPopulationStudyLink:
+          type: string
+          description: Link to study comparing variable with strongest relationship for population
+        bestPopulationStudyCard:
+          $ref: '#/components/schemas/Card'
+        optimalValueMessage:
+          type: string
+          description: Description of relationship with variable with strongest relationship for user or population
+        commonOptimalValueMessage:
+          type: string
+          description: Description of relationship with variable with strongest relationship for population
+        userOptimalValueMessage:
+          type: string
+          description: Description of relationship with variable with strongest relationship for user
+        card:
+          $ref: '#/components/schemas/Card'
+        causeOnly:
+          type: boolean
+          description: 'User-Defined Variable Setting: True indicates that this variable is generally a cause in a causal relationship.  An example of a causeOnly variable would be a variable such as Cloud Cover which would generally not be influenced by the behaviour of the user'
+        charts:
+          $ref: '#/components/schemas/VariableCharts'
+        chartsLinkDynamic:
+          type: string
+          description: 'Ex: https://local.curedao.org/ionic/Modo/www/#/app/charts/Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png'
+        chartsLinkEmail:
+          type: string
+          description: 'Ex: mailto:?subject=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21&body=See%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20history%20at%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%0A%0AHave%20a%20great%20day!'
+        chartsLinkFacebook:
+          type: string
+          description: 'Ex: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png'
+        chartsLinkGoogle:
+          type: string
+          description: 'Ex: https://plus.google.com/share?url=https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png'
+        chartsLinkStatic:
+          type: string
+          description: 'Ex: https://local.curedao.org/api/v2/charts?variableName=Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29&userId=230&pngUrl=https%3A%2F%2Fapi.curedao.org%2Fionic%2FModo%2Fwww%2Fimg%2Fvariable_categories%2Ftreatments.png'
+        chartsLinkTwitter:
+          type: string
+          description: 'Ex: https://twitter.com/home?status=Check%20out%20my%20Trader%20Joes%20Bedtime%20Tea%20%2F%20Sleepytime%20Tea%20%28any%20Brand%29%20data%21%20https%3A%2F%2Flocal.curedao.org%2Fapi%2Fv2%2Fcharts%3FvariableName%3DTrader%2520Joes%2520Bedtime%2520Tea%2520%252F%2520Sleepytime%2520Tea%2520%2528any%2520Brand%2529%26userId%3D230%26pngUrl%3Dhttps%253A%252F%252Fapi.curedao.org%252Fionic%252FModo%252Fwww%252Fimg%252Fvariable_categories%252Ftreatments.png%20%40curedao'
+        clientId:
+          type: string
+          description: 'Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org'
+        combinationOperation:
+          type: string
+          description: 'User-Defined Variable Setting: How to aggregate measurements over time. SUM should be used for things like minutes of exercise.  If you use MEAN for exercise, then a person might exercise more minutes in one day but add separate measurements that were smaller.  So when we are doing correlational analysis, we would think that the person exercised less that day even though they exercised more.  Conversely, we must use MEAN for things such as ratings which cannot be SUMMED.'
+          enum:
+            - MEAN
+            - SUM
+        commonAlias:
+          type: string
+          description: 'Ex: Anxiety / Nervousness'
+        createdAt:
+          type: string
+          description: 'When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss  datetime format'
+        dataSourceNames:
+          type: string
+          description: Comma-separated list of source names to limit variables to those sources
+        dataSources:
+          type: array
+          description: These are sources of measurements for this variable
+          items:
+            $ref: '#/components/schemas/DataSource'
+        description:
+          type: string
+          description: 'User-Defined Variable Setting: Ex: Summary to be used in studies.'
+        displayName:
+          type: string
+          description: 'Ex: Trader Joe''s Bedtime Tea'
+        durationOfAction:
+          type: integer
+          description: 'The amount of time over which a predictor/stimulus event can exert an observable influence on an outcome variable value. For instance, aspirin (stimulus/predictor) typically decreases headache severity for approximately four hours (duration of action) following the onset delay. Unit: Seconds'
+          format: int32
+        durationOfActionInHours:
+          type: number
+          description: 'User-Defined Variable Setting: The amount of time over which a predictor/stimulus event can exert an observable influence on an outcome variable value. For instance, aspirin (stimulus/predictor) typically decreases headache severity for approximately four hours (duration of action) following the onset delay.  Unit: Hours'
+          format: float
+        earliestFillingTime:
+          type: integer
+          description: Earliest filling time
+          format: int32
+        earliestMeasurementTime:
+          type: integer
+          description: Earliest measurement time
+          format: int32
+        earliestSourceTime:
+          type: integer
+          description: Earliest source time
+          format: int32
+        errorMessage:
+          type: string
+          description: Error message from last analysis
+        experimentEndTime:
+          type: string
+          description: 'User-Defined Variable Setting: Latest measurement time to be used in analysis. Format: UTC ISO 8601 YYYY-MM-DDThh:mm:ss.'
+        experimentStartTime:
+          type: string
+          description: 'User-Defined Variable Setting: Earliest measurement time to be used in analysis. Format: UTC ISO 8601 YYYY-MM-DDThh:mm:ss.'
+        fillingType:
+          type: string
+          description: 'User-Defined Variable Setting: When it comes to analysis to determine the effects of this variable, knowing when it did not occur is as important as knowing when it did occur. For example, if you are tracking a medication, it is important to know when you did not take it, but you do not have to log zero values for all the days when you haven''t taken it. Hence, you can specify a filling value (typically 0) to insert whenever data is missing.'
+          enum:
+            - none
+            - zero-filling
+            - value-filling
+        fillingValue:
+          type: number
+          description: 'User-Defined Variable Setting: When it comes to analysis to determine the effects of this variable, knowing when it did not occur is as important as knowing when it did occur. For example, if you are tracking a medication, it is important to know when you did not take it, but you do not have to log zero values for all the days when you haven''t taken it. Hence, you can specify a filling value (typically 0) to insert whenever data is missing.  Unit: User-specified or common.'
+          format: float
+        iconIcon:
+          type: string
+          description: 'Ex: ion-sad-outline'
+        id:
+          type: integer
+          description: 'Ex: 95614'
+        imageUrl:
+          type: string
+        informationalUrl:
+          type: string
+          description: 'Ex: https://google.com'
+        inputType:
+          type: string
+          description: Type of input field to show for recording measurements
+        ionIcon:
+          type: string
+        joinWith:
+          type: integer
+          description: Duplicate variables. If the variable is joined with some other variable then it is not shown to user in the list of variables
+          format: int32
+        kurtosis:
+          type: number
+          description: Kurtosis
+          format: float
+        lastProcessedDailyValue:
+          type: number
+          description: 'Calculated Statistic: Ex: 500. Unit: User-specified or common.'
+          format: double
+        lastSuccessfulUpdateTime:
+          type: string
+          description: 'When this variable or its settings were last updated UTC ISO 8601 YYYY-MM-DDThh:mm:ss'
+        lastValue:
+          type: number
+          description: 'Calculated Statistic: Last measurement value in the common unit or user unit if different. Unit: User-specified or common.'
+          format: float
+        latestFillingTime:
+          type: integer
+          description: Latest filling time
+          format: int32
+        latestMeasurementTime:
+          type: integer
+          description: 'Latest measurement time. Format: Unix-time epoch seconds.'
+          format: int32
+        latestSourceTime:
+          type: integer
+          description: 'Latest source time. Format: Unix-time epoch seconds.'
+          format: int32
+        latestUserMeasurementTime:
+          type: integer
+          description: 'Ex: 1501383600. Format: Unix-time epoch seconds.'
+        latitude:
+          type: number
+          description: 'Latitude. Unit: User-specified or common.'
+          format: float
+        location:
+          type: string
+          description: Location
+        longitude:
+          type: number
+          description: Longitude
+          format: float
+        manualTracking:
+          type: boolean
+          description: True if the variable is an emotion or symptom rating that is not typically automatically collected by a device or app.
+        maximumAllowedDailyValue:
+          type: number
+          description: 'User-Defined Variable Setting: The maximum allowed value a daily aggregated measurement. Unit: User-specified or common.'
+          format: float
+        maximumAllowedValue:
+          type: number
+          description: 'User-Defined Variable Setting: The maximum allowed value a single measurement. While you can record a value above this maximum, it will be excluded from the correlation analysis.  Unit: User-specified or common.'
+          format: float
+        maximumRecordedDailyValue:
+          type: number
+          description: 'Calculated Statistic: Maximum recorded daily value of this variable. Unit: User-specified or common.'
+          format: float
+        maximumRecordedValue:
+          type: number
+          description: 'Calculated Statistic: Ex: 1. Unit: User-specified or common.'
+          format: double
+        mean:
+          type: number
+          description: 'Mean. Unit: User-specified or common.'
+          format: float
+        measurementsAtLastAnalysis:
+          type: integer
+          description: Number of measurements at last analysis
+          format: int32
+        median:
+          type: number
+          description: Median
+          format: float
+        minimumAllowedValue:
+          type: number
+          description: 'User-Defined Variable Setting: The minimum allowed value a single measurement. While you can record a value below this minimum, it will be excluded from the correlation analysis. Unit: User-specified or common'
+          format: float
+        minimumAllowedDailyValue:
+          type: number
+          description: 'User-Defined Variable Setting: The minimum allowed value a daily aggregated measurement.  For instance, you might set to 100 for steps to keep erroneous 0 daily steps out of the analysis. Unit: User-specified or common.'
+          format: float
+        minimumNonZeroValue:
+          type: number
+          description: 'User-Defined Variable Setting: The minimum allowed non-zero value a single measurement.  For instance, you might set to 100 mL for steps to keep erroneous 0 daily steps out of the analysis. Unit: User-specified or common.'
+          format: float
+        minimumRecordedValue:
+          type: number
+          description: 'Minimum recorded value of this variable. Unit: User-specified or common.'
+          format: float
+        mostCommonConnectorId:
+          type: integer
+          description: 'Ex: 51'
+        mostCommonOriginalUnitId:
+          type: integer
+          description: 'Ex: 23'
+        mostCommonUnitId:
+          type: integer
+          description: Most common Unit ID
+          format: int32
+        mostCommonValue:
+          type: number
+          description: 'Calculated Statistic: Most common value. Unit: User-specified or common.'
+          format: float
+        name:
+          type: string
+          description: 'Ex: Trader Joes Bedtime Tea / Sleepytime Tea (any Brand)'
+        numberOfAggregateCorrelationsAsCause:
+          type: integer
+          description: 'Ex: 1'
+        numberOfAggregateCorrelationsAsEffect:
+          type: integer
+          description: 'Ex: 310'
+        numberOfChanges:
+          type: integer
+          description: Number of changes
+          format: int32
+        numberOfCorrelations:
+          type: integer
+          description: Number of correlations for this variable
+          format: int32
+        numberOfCorrelationsAsCause:
+          type: integer
+          description: numberOfAggregateCorrelationsAsCause plus numberOfUserCorrelationsAsCause
+        numberOfCorrelationsAsEffect:
+          type: integer
+          description: numberOfAggregateCorrelationsAsEffect plus numberOfUserCorrelationsAsEffect
+        numberOfProcessedDailyMeasurements:
+          type: integer
+          description: Number of processed measurements
+          format: int32
+        numberOfRawMeasurements:
+          type: integer
+          description: 'Ex: 295'
+        numberOfTrackingReminders:
+          type: integer
+          description: 'Ex: 1'
+        numberOfUniqueDailyValues:
+          type: number
+          description: Number of unique daily values
+          format: float
+        numberOfUniqueValues:
+          type: integer
+          description: 'Ex: 2'
+        numberOfUserCorrelationsAsCause:
+          type: integer
+          description: 'Ex: 115'
+        numberOfUserCorrelationsAsEffect:
+          type: integer
+          description: 'Ex: 29014'
+        numberOfUserVariables:
+          type: integer
+          description: 'Ex: 2'
+        onsetDelay:
+          type: integer
+          description: 'The amount of time in seconds that elapses after the predictor/stimulus event before the outcome as perceived by a self-tracker is known as the onset delay. For example, the onset delay between the time a person takes an aspirin (predictor/stimulus event) and the time a person perceives a change in their headache severity (outcome) is approximately 30 minutes.'
+          format: int32
+        onsetDelayInHours:
+          type: number
+          description: 'User-Defined Variable Setting: The amount of time in seconds that elapses after the predictor/stimulus event before the outcome as perceived by a self-tracker is known as the onset delay. For example, the onset delay between the time a person takes an aspirin (predictor/stimulus event) and the time a person perceives a change in their headache severity (outcome) is approximately 30 minutes.'
+          format: double
+        outcome:
+          type: boolean
+          description: 'User-Defined Variable Setting: True for variables for which a human would generally want to identify the influencing factors. These include symptoms of illness, physique, mood, cognitive performance, etc.  Generally correlation calculations are only performed on outcome variables'
+        outcomeOfInterest:
+          type: boolean
+          description: Do you want to receive updates on newly discovered factors influencing this variable?
+        pngPath:
+          type: string
+          description: 'Ex: img/variable_categories/treatments.png'
+        pngUrl:
+          type: string
+          description: 'Ex: https://app.curedao.org/img/variable_categories/treatments.png'
+        predictorOfInterest:
+          type: integer
+          description: 'Ex: 0'
+        price:
+          type: number
+          description: 'Ex: 95.4'
+          format: double
+        productUrl:
+          type: string
+          description: Link to associated product for purchase
+        public:
+          type: boolean
+          description: Should this variable show up in automcomplete searches for users who do not already have measurements for it?
+        question:
+          type: string
+          description: 'Ex: How is your overall mood?'
+        longQuestion:
+          type: string
+          description: 'Ex: How is your overall mood on a scale of 1 to 5??'
+        rawMeasurementsAtLastAnalysis:
+          type: integer
+          description: 'Ex: 131'
+        secondMostCommonValue:
+          type: number
+          description: 'Calculated Statistic: Ex: 1. Unit: User-specified or common.'
+          format: double
+        secondToLastValue:
+          type: number
+          description: 'Calculated Statistic: Ex: 250. Unit: User-specified or common.'
+          format: double
+        shareUserMeasurements:
+          type: boolean
+          description: Would you like to make your measurements publicly visible?
+        skewness:
+          type: number
+          description: Skewness
+          format: float
+        standardDeviation:
+          type: number
+          description: 'Standard deviation Ex: 0.46483219855434'
+          format: double
+        status:
+          type: string
+          description: status
+        subtitle:
+          type: string
+          description: Based on sort filter and can be shown beneath variable name on search list
+        svgUrl:
+          type: string
+          description: 'Ex: https://app.curedao.org/img/variable_categories/treatments.svg'
+        thirdMostCommonValue:
+          type: number
+          description: 'Calculated Statistic: Ex: 6. Unit: User-specified or common.'
+          format: double
+        thirdToLastValue:
+          type: number
+          description: 'Calculated Statistic: Ex: 250. Unit: User-specified or common.'
+          format: double
+        trackingInstructions:
+          type: string
+          description: HTML instructions for tracking
+        trackingInstructionsCard:
+          $ref: '#/components/schemas/Card'
+        unit:
+          $ref: '#/components/schemas/Unit'
+        unitAbbreviatedName:
+          type: string
+          description: 'Ex: count'
+        unitCategoryId:
+          type: integer
+          description: 'Ex: 6'
+        unitCategoryName:
+          type: string
+          description: 'Ex: Miscellany'
+        unitId:
+          type: integer
+          description: ID of unit to use for this variable
+          format: int32
+        unitName:
+          type: string
+          description: 'User-Defined Variable Setting: Count'
+        upc:
+          type: string
+          description: Universal product code or similar
+        updated:
+          type: integer
+          description: updated
+          format: int32
+        updatedAt:
+          type: string
+          description: 'When the record in the database was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format'
+        updatedTime:
+          type: string
+          description: 'Ex: 2017-07-30 14:58:26'
+        userId:
+          type: integer
+          description: User ID
+          format: int32
+        userVariableUnitAbbreviatedName:
+          type: string
+          description: 'Ex: count'
+        userVariableUnitCategoryId:
+          type: integer
+          description: 'Ex: 6'
+        userVariableUnitCategoryName:
+          type: string
+          description: 'Ex: Miscellany'
+        userVariableUnitId:
+          type: integer
+          description: 'Ex: 23'
+        userVariableUnitName:
+          type: string
+          description: 'Ex: Count'
+        valence:
+          type: string
+          description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
+        variableCategoryId:
+          type: integer
+          description: 'Ex: 6'
+        variableCategoryName:
+          type: string
+          description: 'User-Defined Variable Setting: Variable category like Emotions, Sleep, Physical Activities, Treatments, Symptoms, etc.'
+          enum:
+            - Activity
+            - Books
+            - Causes of Illness
+            - Cognitive Performance
+            - Conditions
+            - Emotions
+            - Environment
+            - Foods
+            - Goals
+            - Locations
+            - Miscellaneous
+            - Movies and TV
+            - Music
+            - Nutrients
+            - Payments
+            - Physical Activities
+            - Physique
+            - Sleep
+            - Social Interactions
+            - Software
+            - Symptoms
+            - Treatments
+            - Vital Signs
+        variableId:
+          type: integer
+          description: 'Ex: 96380'
+        variableName:
+          type: string
+          description: 'Ex: Sleep Duration'
+        variance:
+          type: number
+          description: 'Statistic: Ex: 115947037.40816'
+          format: double
+        wikipediaTitle:
+          type: string
+          description: 'User-Defined Variable Setting: You can help to improve the studies by pasting the title of the most appropriate Wikipedia article for this variable'
     Variable:
       required:
         - id
@@ -4963,12 +5779,12 @@ components:
           type: array
           description: Commonly defined for all users. An example of a parent category variable would be Fruit when tagged with the child sub-type variables Apple.  Child variable (Apple) measurements will be included when the parent category (Fruit) is analyzed.  This allows us to see how Fruit consumption might be affecting without having to record both Fruit and Apple intake.
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         childUserTagVariables:
           type: array
           description: 'User-Defined Variable Setting: An example of a parent category variable would be Fruit when tagged with the child sub-type variables Apple.  Child variable (Apple) measurements will be included when the parent category (Fruit) is analyzed.  This allows us to see how Fruit consumption might be affecting without having to record both Fruit and Apple intake.'
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         clientId:
           type: string
           description: 'Your CureDAO client id can be obtained by creating an app at https://builder.curedao.org'
@@ -4984,11 +5800,11 @@ components:
         commonTaggedVariables:
           type: array
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         commonTagVariables:
           type: array
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         createdAt:
           type: string
           description: 'When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss  datetime format'
@@ -5061,22 +5877,22 @@ components:
           type: array
           description: 'Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.'
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         ingredientCommonTagVariables:
           type: array
           description: 'Commonly defined for all users. IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.'
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         ingredientOfUserTagVariables:
           type: array
           description: 'User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.'
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         ingredientUserTagVariables:
           type: array
           description: 'User-Defined Variable Setting: IngredientOf variable measurements will be included in analysis of the ingredient variable.  For instance, a ingredient of the variable Lollipop could be Sugar.  This way you only have to record Lollipop consumption, and we can use this data to see how sugar might be affecting you.'
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         inputType:
           type: string
           description: Type of input field to show for recording measurements
@@ -5086,12 +5902,12 @@ components:
           type: array
           description: 'Commonly defined for all users.  Joining can be used used to merge duplicate variables. For instance, if two variables called Apples (Red Delicious) and Red Delicious Apples are joined, when one of them is analyzed, the measurements for the other will be included as well.'
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         joinedUserTagVariables:
           type: array
           description: 'User-Defined Variable Setting: Joining can be used used to merge duplicate variables. For instance, if two variables called Apples (Red Delicious) and Red Delicious Apples are joined, when one of them is analyzed, the measurements for the other will be included as well.'
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         joinWith:
           type: integer
           description: Duplicate variables. If the variable is joined with some other variable then it is not shown to user in the list of variables
@@ -5265,12 +6081,12 @@ components:
           type: array
           description: Commonly defined for all users.  An example of a parent category variable would be Fruit when tagged with the child sub-type variables Apple.  Child variable (Apple) measurements will be included when the parent category (Fruit) is analyzed.  This allows us to see how Fruit consumption might be affecting without having to record both Fruit and Apple intake.
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         parentUserTagVariables:
           type: array
           description: User-defined. An example of a parent category variable would be Fruit when tagged with the child sub-type variables Apple.  Child variable (Apple) measurements will be included when the parent category (Fruit) is analyzed.  This allows us to see how Fruit consumption might be affecting without having to record both Fruit and Apple intake.
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         pngPath:
           type: string
           description: 'Ex: img/variable_categories/treatments.png'
@@ -5378,11 +6194,11 @@ components:
         userTaggedVariables:
           type: array
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         userTagVariables:
           type: array
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         userVariableUnitAbbreviatedName:
           type: string
           description: 'Ex: count'
@@ -5404,7 +6220,7 @@ components:
           type: array
           description: Array of Variables that are joined with this Variable
           items:
-            $ref: '#/components/schemas/Variable'
+            $ref: '#/components/schemas/TagVariable'
         valence:
           type: string
           description: 'Valence indicates what type of buttons should be used when recording measurements for this variable. positive - Face buttons with the happiest face equating to a 5/5 rating where higher is better like Overall Mood. negative - Face buttons with the happiest face equating to a 1/5 rating where lower is better like Headache Severity. numeric - Just 1 to 5 numeric buttons for neutral variables. '
@@ -6210,10 +7026,10 @@ components:
       type: apiKey
       name: access_token
       in: query
-    bearerAuth: # arbitrary name for the security scheme
+    bearerAuth:
       type: http
       scheme: bearer
-      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+      bearerFormat: JWT
     client_id:
       type: apiKey
       name: clientId
